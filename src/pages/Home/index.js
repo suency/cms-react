@@ -1,6 +1,6 @@
 function Home () {
   return (
-    <div>home page</div>
+    <div>home page dashboard</div>
   )
 }
 

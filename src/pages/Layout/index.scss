@@ -1,9 +1,26 @@
 .ant-layout-sider-children .logo {
   height: 32px;
   margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
 }
 
 .site-layout .site-layout-background {
   background: #fff;
+}
+
+.site-layout .top-header {
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.site-layout .top-header .logout {
+  cursor: pointer;
 }

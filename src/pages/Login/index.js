@@ -1,9 +1,30 @@
 import './index.scss'
-import { Button, Checkbox, Form, Input } from 'antd'
+import { Button, Checkbox, Form, Input, message } from 'antd'
 import cover from '@/assets/cover-blockchain.jpg'
+import useStore from '@/store'
+import { observer } from 'mobx-react-lite'
+import { useNavigate } from 'react-router-dom'
+
+
 const Login = () => {
-  const onFinish = values => {
-    console.log('Success:', values)
+  const navigate = useNavigate()
+  const loginSuccess = () => {
+    message.success('login success!')
+  }
+
+  const loginError = (info) => {
+    message.error(info)
+  }
+  const onFinish = async values => {
+    await useStore.loginStore.setToken(values.username, values.password)
+    if (useStore.loginStore.status === "OK") {
+      //console.log("nb")
+      loginSuccess()
+      navigate('/')
+    } else {
+      //console.log("bye")
+      loginError(useStore.loginStore.error)
+    }
   }
 
   const onFinishFailed = errorInfo => {
@@ -18,7 +39,7 @@ const Login = () => {
         </div>
         <Form
           name="login-form"
-          initialValues={{ remember: true, password: 66 }}
+          initialValues={{ remember: true, password: '111', username: 'sk' }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
@@ -57,4 +78,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default observer(Login)

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const http = axios.create({
-  baseURL: 'http://geek.itheima.net/v1_0',
+  baseURL: 'http://localhost:8888/',
   timeout: 5000
 })
 // 添加请求拦截器
@@ -22,4 +22,4 @@ http.interceptors.response.use((response) => {
   return Promise.reject(error)
 })
 
-export { http }
+export default http

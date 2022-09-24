@@ -11,10 +11,11 @@ import {
   AppleOutlined,
   LogoutOutlined
 } from '@ant-design/icons'
-import { Breadcrumb, Layout, Menu, Avatar, Dropdown } from 'antd'
+import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image } from 'antd'
 import React, { useState } from 'react'
 import './index.scss'
 import { Outlet, Link, useLocation } from 'react-router-dom'
+import iconGeng from '@/assets/sprout.png'
 const { Header, Content, Footer, Sider } = Layout
 
 const topRightMenu = (
@@ -29,6 +30,7 @@ const topRightMenu = (
   />
 )
 
+
 function getItem (label, key, icon, children) {
   return {
     key,
@@ -39,26 +41,28 @@ function getItem (label, key, icon, children) {
 }
 
 const items = [
-  getItem(<Link to="/">Dashboard</Link>, '1', <PieChartOutlined />),
-  getItem(<Link to="/setting">Settings</Link>, '2', <SettingOutlined />),
-  getItem('People', 'sub1', <UserOutlined />, [
-    getItem(<Link to="people/admins">Admins</Link>, '3', <SolutionOutlined />),
-    getItem(<Link to="people/roles">Roles</Link>, '4', <TrademarkCircleOutlined />),
-    getItem(<Link to="people/users">Users</Link>, '5', <CommentOutlined />),
+  getItem(<Link to="/">Dashboard</Link>, '/', <PieChartOutlined />),
+  getItem(<Link to="/setting">Settings</Link>, '/setting', <SettingOutlined />),
+  getItem('People', 'people', <UserOutlined />, [
+    getItem(<Link to="/people/admins">Admins</Link>, '/people/admins', <SolutionOutlined />),
+    getItem(<Link to="/people/roles">Roles</Link>, '/people/roles', <TrademarkCircleOutlined />),
+    getItem(<Link to="/people/users">Users</Link>, '/people/users', <CommentOutlined />),
   ]),
-  getItem('Team', 'sub2', <TeamOutlined />, [
-    getItem(<Link to="team/team1">team1</Link>, '6', <AndroidOutlined />),
-    getItem(<Link to="team/team2">team2</Link>, '8', <AppleOutlined />)
+  getItem('Team', 'team', <TeamOutlined />, [
+    getItem(<Link to="/team/team1">team1</Link>, '/team/team1', <AndroidOutlined />),
+    getItem(<Link to="/team/team2">team2</Link>, '/team/team2', <AppleOutlined />)
   ]),
-  getItem(<Link to="/tools">Tools</Link>, '9', <ToolOutlined />),
+  getItem(<Link to="/tools">Tools</Link>, '/tools', <ToolOutlined />),
 ]
 
 const MyLayout = () => {
   const [collapsed, setCollapsed] = useState(false)
   const location = useLocation()
-  const pathArr = location.pathname.split("/").map(item => item.charAt(0).toUpperCase() + item.slice(1))
-  const firstPath = pathArr[1] ? pathArr[1] : "Dashboard"
+  const pathArr = location.pathname.split("/")
+  const firstPath = pathArr[1] ? (pathArr[1].charAt(0).toUpperCase() + pathArr[1].slice(1)) : "Dashboard"
   const secondPath = firstPath ? pathArr[2] : "undefined"
+
+  const defaultOpenKeys = pathArr[1] ? pathArr[1] : "dashboard"
 
   return (
     <Layout
@@ -67,8 +71,14 @@ const MyLayout = () => {
       }}
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        <div className="logo" >CMS</div>
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+        <div className="logo" >
+          <Image
+            width={30}
+            src={iconGeng}
+          />
+          <div style={{ marginLeft: '5px' }}>CMS</div>
+        </div>
+        <Menu theme="dark" defaultOpenKeys={[defaultOpenKeys]} defaultSelectedKeys={[location.pathname]} mode="inline" items={items} />
       </Sider>
       <Layout className="site-layout">
         <Header

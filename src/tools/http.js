@@ -1,4 +1,5 @@
 import axios from 'axios'
+import tool from '@/tools/index.js'
 
 const http = axios.create({
   baseURL: 'http://localhost:8888/',
@@ -6,6 +7,11 @@ const http = axios.create({
 })
 // 添加请求拦截器
 http.interceptors.request.use((config) => {
+  const token = tool.getToken()
+  if (token) {
+    config.headers.Authorization = token
+  }
+  //console.log(token)
   return config
 }, (error) => {
   return Promise.reject(error)

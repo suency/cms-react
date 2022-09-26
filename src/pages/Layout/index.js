@@ -1,4 +1,4 @@
-import {
+/* import {
   SettingOutlined,
   ToolOutlined,
   PieChartOutlined,
@@ -10,22 +10,28 @@ import {
   AndroidOutlined,
   AppleOutlined,
   LogoutOutlined
-} from '@ant-design/icons'
-import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image } from 'antd'
+} from '@ant-design/icons' */
+import * as AllIcon from '@ant-design/icons'
+import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image, message } from 'antd'
 import React, { useState } from 'react'
 import './index.scss'
-import { Outlet, Link, useLocation } from 'react-router-dom'
+import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import iconGeng from '@/assets/sprout.png'
-const { Header, Content, Footer, Sider } = Layout
+import useStore from '@/store'
+import { useEffect } from 'react'
+import { deepClone } from '@/tools'
+import DynComp from '@/components/DynamicComponent'
+import http from '@/tools/http'
 
+const { Header, Content, Footer, Sider } = Layout
 const topRightMenu = (
   <Menu
     items={[
-      getItem(<Link to="/">Dashboard</Link>, '0', <PieChartOutlined />),
+      getItem(<Link to="/">Dashboard</Link>, '0', <AllIcon.PieChartOutlined />),
       {
         type: 'divider',
       },
-      getItem(<Link to="/logout">Logout</Link>, '1', <LogoutOutlined />),
+      getItem(<Link to="/logout">Logout</Link>, '1', <AllIcon.LogoutOutlined />),
     ]}
   />
 )
@@ -40,22 +46,99 @@ function getItem (label, key, icon, children) {
   }
 }
 
-const items = [
+/* let items = [
   getItem(<Link to="/">Dashboard</Link>, '/', <PieChartOutlined />),
   getItem(<Link to="/setting">Settings</Link>, '/setting', <SettingOutlined />),
-  getItem('People', 'people', <UserOutlined />, [
+  getItem('People', '/people', <UserOutlined />, [
     getItem(<Link to="/people/admins">Admins</Link>, '/people/admins', <SolutionOutlined />),
     getItem(<Link to="/people/roles">Roles</Link>, '/people/roles', <TrademarkCircleOutlined />),
     getItem(<Link to="/people/users">Users</Link>, '/people/users', <CommentOutlined />),
   ]),
-  getItem('Team', 'team', <TeamOutlined />, [
-    getItem(<Link to="/team/team1">team1</Link>, '/team/team1', <AndroidOutlined />),
-    getItem(<Link to="/team/team2">team2</Link>, '/team/team2', <AppleOutlined />)
+  getItem('Team', '/team', <TeamOutlined />, [
+    getItem(<Link to="/team/team1">Team1</Link>, '/team/team1', <AndroidOutlined />),
+    getItem(<Link to="/team/team2">Team2</Link>, '/team/team2', <AppleOutlined />)
   ]),
   getItem(<Link to="/tools">Tools</Link>, '/tools', <ToolOutlined />),
-]
+] */
+
+function organzeMenu (list) {
+  let copy = deepClone(list)
+  copy.forEach(ele => {
+    if (ele["children"] && ele["children"].length !== 0) {
+      ele["children"].forEach(child => {
+        child.icon = <DynComp Obj={AllIcon} name={child.icon} />
+        child.label = <Link to={child.key}>{child.label}</Link>
+      })
+    } else {
+      ele.label = <Link to={ele.key}>{ele.label}</Link>
+    }
+    ele.icon = <DynComp Obj={AllIcon} name={ele.icon} />
+
+  })
+
+  return copy
+}
+//for test
+/* let items = [
+  {
+    label: "Dashboard",
+    key: "/",
+    icon: "PieChartOutlined"
+  }, {
+    label: "Settings",
+    key: "/setting",
+    icon: "SettingOutlined"
+  },
+  {
+    label: "People",
+    key: "/people",
+    icon: "UserOutlined",
+    children: [
+      {
+        label: "Admins",
+        key: "/people/admins",
+        icon: "SolutionOutlined"
+      },
+      {
+        label: "Roles",
+        key: "/people/roles",
+        icon: "TrademarkCircleOutlined"
+      },
+      {
+        label: "Users",
+        key: "/people/users",
+        icon: "CommentOutlined"
+      }
+    ]
+  },
+  {
+    label: "Team",
+    key: "/team",
+    icon: "TeamOutlined",
+    children: [
+      {
+        label: "Team1",
+        key: "/team/team1",
+        icon: "AndroidOutlined"
+      },
+      {
+        label: "Team2",
+        key: "/team/team2",
+        icon: "AppleOutlined"
+      }
+    ]
+  },
+  {
+    label: "Tools",
+    key: "/tools",
+    icon: "ToolOutlined"
+  }
+] */
 
 const MyLayout = () => {
+  const loginError = (info) => {
+    message.error(info)
+  }
   const [collapsed, setCollapsed] = useState(false)
   const location = useLocation()
   const pathArr = location.pathname.split("/")
@@ -64,7 +147,50 @@ const MyLayout = () => {
 
   const defaultOpenKeys = pathArr[1] ? pathArr[1] : "dashboard"
 
-  return (
+  const navigate = useNavigate()
+  //let isCurrentMenu = location.pathname === "/"
+
+  //console.log(isCurrentMenu, location)
+  let [menuList, setMenuList] = useState([])
+  useEffect(() => {
+    if (!useStore.loginStore.token) {
+      navigate("/Login")
+    } else {
+      let response = async () => {
+        try {
+          message.loading({
+            content: 'Loading Menus...',
+            key: 'loading',
+          })
+          let result = await http.post('/menuList', { role: "admin" })
+          //console.log(JSON.stringify(result.data.info.menuList))
+          if (result.data.status === "OK") {
+            message.success({
+              content: 'Loaded!',
+              key: 'loading',
+              duration: 2,
+            })
+            setMenuList(organzeMenu(result.data.info.menuList))
+          } else {
+            loginError(result.data.info.error)
+            setTimeout(() => {
+              navigate("/Login")
+            }, 2000)
+          }
+        } catch (e) {
+          loginError(e)
+          setTimeout(() => {
+            navigate("/Login")
+          }, 2000)
+        }
+
+      }
+      response()
+    }
+    // eslint-disable-next-line
+  }, [])
+
+  return menuList.length > 0 && (
     <Layout
       style={{
         minHeight: '100vh',
@@ -78,14 +204,14 @@ const MyLayout = () => {
           />
           <div style={{ marginLeft: '5px' }}>CMS</div>
         </div>
-        <Menu theme="dark" defaultOpenKeys={[defaultOpenKeys]} defaultSelectedKeys={[location.pathname]} mode="inline" items={items} />
+        <Menu theme="dark" defaultOpenKeys={[defaultOpenKeys]} defaultSelectedKeys={[location.pathname]} mode="inline" items={menuList} />
       </Sider>
       <Layout className="site-layout">
         <Header
           className="top-header"
         >
           <Dropdown arrow={true} overlay={topRightMenu} trigger={['click']}>
-            <Avatar className='logout' icon={<UserOutlined />} />
+            <Avatar className='logout' icon={<AllIcon.UserOutlined />} />
           </Dropdown>
 
         </Header>

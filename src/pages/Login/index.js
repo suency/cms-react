@@ -3,11 +3,13 @@ import { Button, Checkbox, Form, Input, message } from 'antd'
 import cover from '@/assets/cover-blockchain.jpg'
 import useStore from '@/store'
 import { observer } from 'mobx-react-lite'
+import { removeToken } from '@/tools'
 import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
   const navigate = useNavigate()
+  removeToken()
   const loginSuccess = () => {
     message.success('login success!')
   }
@@ -18,11 +20,9 @@ const Login = () => {
   const onFinish = async values => {
     await useStore.loginStore.setToken(values.username, values.password)
     if (useStore.loginStore.status === "OK") {
-      //console.log("nb")
       loginSuccess()
       navigate('/')
     } else {
-      //console.log("bye")
       loginError(useStore.loginStore.error)
     }
   }

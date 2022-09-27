@@ -1,7 +1,7 @@
 // 对外暴露一个函数
 // 存储token
 const tokenKey = "token"
-
+const _ = require('underscore')
 module.exports = {
   setToken: (token) => {
     localStorage.setItem(tokenKey, token)
@@ -13,21 +13,52 @@ module.exports = {
     localStorage.removeItem(tokenKey)
   },
   deepClone: (o) => {
-    // 判断如果不是引用类型，直接返回数据即可
-    if (typeof o === 'string' || typeof o === 'number' || typeof o === 'boolean' || typeof o === 'undefined') {
-      return o
-    } else if (Array.isArray(o)) { // 如果是数组，则定义一个新数组，完成复制后返回
-      // 注意，这里判断数组不能用typeof，因为typeof Array 返回的是object
-      //console.log(typeof [])  // --> object
-      var _arr = []
-      o.forEach(item => { _arr.push(item) })
-      return _arr
-    } else if (typeof o === 'object') {
-      var _o = {}
-      for (let key in o) {
-        _o[key] = this.deepClone(o[key])
-      }
-      return _o
-    }
+    return JSON.parse(JSON.stringify(o))
+  },
+  convertPathToMenu: (menuList, list) => {
+    menuList = JSON.parse(JSON.stringify(menuList))
+    list = JSON.parse(JSON.stringify(list))
+    let finalList = []
+    // [ '/setting' ]
+    let singleParent = _.filter(_.filter(list, item => item.split("/").length === 2), item => {
+      return !_.some(menuList, item2 => { return item === item2.key && item2["children"] && item2["children"].length > 0 })
+    })
+
+    _.each(singleParent, item => {
+      let subGroup = _.find(menuList, findItem => {
+        return findItem.key === item
+      })
+
+      finalList.push(subGroup)
+    })
+
+    // [ '/people/admins', '/people/users', '/people/roles', '/team/team1' ]
+    let childNode = list.filter((item) => {
+      return (item.split("/")).length === 3
+    })
+
+    //let testGroup = ['/people/admins', '/team/team1', '/people/users', '/fei/enen1', '/people/roles', '/team/team2', '/team/team1', '/fei/enen2']
+
+    let familyGroup = _.groupBy(childNode, item => { return item.split("/")[1] })
+
+    _.each(familyGroup, (item, key) => {
+      let subGroup = _.find(menuList, findItem => {
+        return findItem.key === "/" + key
+      })
+
+      subGroup["children"] = _.filter(subGroup["children"], filterItem => {
+        return _.some(item, someItem => {
+          return someItem === filterItem.key
+        })
+      })
+      finalList.push(subGroup)
+
+    })
+
+    finalList.unshift(_.find(menuList, findItem => {
+      return findItem.key === "/"
+    }))
+    return finalList
+    //console.log(finalList)
   }
 }

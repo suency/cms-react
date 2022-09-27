@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom'
-import { observer } from 'mobx-react-lite'
+//import { observer } from 'mobx-react-lite'
 import * as AllPages from './pages/index'
 import { useState } from 'react'
 import useStore from '@/store'
@@ -134,4 +134,4 @@ function App () {
     ) */
 }
 
-export default observer(App)
+export default App

@@ -162,7 +162,7 @@ const MyLayout = () => {
             content: 'Loading Menus...',
             key: 'loading',
           })
-          let result = await http.post('/menuList', { role: "admin" })
+          let result = await http.post('/menuList', { role: useStore.loginStore.role })
           //console.log(JSON.stringify(result.data.info.menuList))
           if (result.data.status === "OK") {
             message.success({
@@ -170,6 +170,7 @@ const MyLayout = () => {
               key: 'loading',
               duration: 2,
             })
+            useStore.menuStore.setMenuList(result.data.info.menuList)
             setMenuList(organzeMenu(result.data.info.menuList))
           } else {
             loginError(result.data.info.error)

@@ -1,14 +1,20 @@
 import './index.scss'
-import { removeToken } from "@/tools"
+import { removeToken, removeLoginInfo } from "@/tools"
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function NotFound () {
   removeToken()
+  removeLoginInfo()
   const navicate = useNavigate()
   const backLogin = () => {
     navicate("./Login")
   }
+
+  useEffect(() => {
+    navicate("./Login")
+  }, [navicate])
   return (
     <div className="wrapper">
 

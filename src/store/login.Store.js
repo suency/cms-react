@@ -1,6 +1,7 @@
 import { makeAutoObservable, runInAction } from 'mobx'
 import http from '@/tools/http.js'
 import tool from '@/tools/index.js'
+import { UserOutlined } from '@ant-design/icons'
 
 class LoginStore {
   token = ''
@@ -10,6 +11,8 @@ class LoginStore {
   { path: "/Login", element: "Login" },
   { path: "*", element: "NotFound" }]
   role = ""
+  username = 'not login'
+  avatar = <UserOutlined />
   constructor() {
     makeAutoObservable(this, { routerList: false })
   }
@@ -25,9 +28,14 @@ class LoginStore {
           //console.log(response.data.info.routerList)
           //this.menuList = response.data.info.menuList
           this.role = response.data.info.role
+          this.avatar = response.data.info.avatar
+          this.username = response.data.info.username
+          tool.setLoginInfo(response.data.info)
+          //console.log(response.data.info.avatar)
         } else {
           this.status = "fail"
           this.error = response.data.info.error
+          tool.setLoginInfo(response.data.info)
         }
       })
 

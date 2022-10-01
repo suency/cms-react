@@ -3,13 +3,14 @@ import { Button, Checkbox, Form, Input, message } from 'antd'
 import cover from '@/assets/cover-blockchain.jpg'
 import useStore from '@/store'
 import { observer } from 'mobx-react-lite'
-import { removeToken } from '@/tools'
+import { removeToken, removeLoginInfo, getUserInfo, setUserInfo, removeUserInfo } from '@/tools'
 import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
   const navigate = useNavigate()
   removeToken()
+  removeLoginInfo()
   const loginSuccess = () => {
     message.success('login success!')
   }
@@ -18,6 +19,16 @@ const Login = () => {
     message.error(info)
   }
   const onFinish = async values => {
+
+    //console.log(values)
+
+    if (values.remember) {
+      setUserInfo(values)
+    } else {
+      removeUserInfo()
+    }
+
+
     await useStore.loginStore.setToken(values.username, values.password)
     if (useStore.loginStore.status === "OK") {
       loginSuccess()
@@ -31,6 +42,7 @@ const Login = () => {
     console.log('Failed:', errorInfo)
   }
 
+
   return (
     <div className="login-page">
       <div className="login-box">
@@ -39,7 +51,11 @@ const Login = () => {
         </div>
         <Form
           name="login-form"
-          initialValues={{ remember: true, password: '111', username: 'sk' }}
+          initialValues={{
+            remember: (getUserInfo())?.remember,
+            password: (getUserInfo())?.password,
+            username: (getUserInfo())?.username
+          }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >

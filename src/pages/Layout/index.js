@@ -12,14 +12,14 @@
   LogoutOutlined
 } from '@ant-design/icons' */
 import * as AllIcon from '@ant-design/icons'
-import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image, message } from 'antd'
+import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image, message, Space, Tag } from 'antd'
 import React, { useState } from 'react'
 import './index.scss'
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import iconGeng from '@/assets/sprout.png'
 import useStore from '@/store'
 import { useEffect } from 'react'
-import { deepClone } from '@/tools'
+import { deepClone, baseURL } from '@/tools'
 import DynComp from '@/components/DynamicComponent'
 import http from '@/tools/http'
 
@@ -163,7 +163,7 @@ const MyLayout = () => {
             key: 'loading',
           })
           let result = await http.post('/menuList', { role: useStore.loginStore.role })
-          //console.log(JSON.stringify(result.data.info.menuList))
+
           if (result.data.status === "OK") {
             message.success({
               content: 'Loaded!',
@@ -211,9 +211,17 @@ const MyLayout = () => {
         <Header
           className="top-header"
         >
-          <Dropdown arrow={true} overlay={topRightMenu} trigger={['click']}>
-            <Avatar className='logout' icon={<AllIcon.UserOutlined />} />
-          </Dropdown>
+          <Space>
+            <div>
+              <Tag color="success">{useStore.loginStore.username}</Tag>
+              <Tag color="processing">{useStore.loginStore.role}</Tag>
+            </div>
+            <Dropdown arrow={true} overlay={topRightMenu} trigger={['click']}>
+              <Avatar className='logout' src={baseURL + 'static/' + useStore.loginStore.avatar} />
+            </Dropdown>
+          </Space>
+
+
 
         </Header>
         <Content

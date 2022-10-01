@@ -1,8 +1,8 @@
 import axios from 'axios'
-import tool from '@/tools/index.js'
+import tool, { baseURL } from '@/tools/index.js'
 
 const http = axios.create({
-  baseURL: 'http://localhost:8888/',
+  baseURL,
   timeout: 5000
 })
 // 添加请求拦截器

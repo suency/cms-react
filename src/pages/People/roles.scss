@@ -1,0 +1,29 @@
+.roleGap {
+  margin: 20px 0;
+}
+
+.ant-segmented-item-label {
+  padding: 6px 6px;
+  line-height: normal;
+  width: 70px;
+  height: 70px;
+}
+
+.avatarList {
+  width: 35px;
+}
+
+.avatarOption {
+  height: 45px;
+}
+
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
+  .ant-select-selector::after,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-item,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-placeholder {
+  line-height: 35px;
+}

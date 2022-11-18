@@ -165,6 +165,7 @@ function Roles () {
   const [roleData, setRoleData] = useState({ roleId: 1, roleName: "admin", resultMenu: [], resultRouter: [] })
   const [avatarList, setAvatarList] = useState({})
 
+
   const [editRoleForm] = Form.useForm()
 
   const [editTreeOptions, editSetTreeOptions] = useState({ treeData: [] })
@@ -220,6 +221,7 @@ function Roles () {
         loginError(e)
       }
     }
+    console.log(AllIcon)
     response()
     // eslint-disable-next-line
   }, [refreshValue])
@@ -377,6 +379,10 @@ function Roles () {
       let newRouter = '[{"path": "/", "element": "Layout", "children": [{"path": "/", "element": "Home"}]}, {"path": "/Login", "element": "Login"}, {"path": "*", "element": "NotFound"}]' */
       console.log("createRole")
     }
+  }
+
+  const onFinishAddMenu = () => {
+    console.log("add menu")
   }
   return (
     treeOptions.treeData.length > 0 &&
@@ -545,7 +551,60 @@ function Roles () {
               treeData={editTreeOptions.treeData}
             />
             <Space size="small">
-              <Button type="primary">Add Menu</Button>
+              <Button type="primary" onClick={() => {
+                showModal(
+                  "addMenu",
+                  "Add Menu",
+                  <Row style={{ marginTop: 20 }} gutter={16}>
+                    <Col className="gutter-row" span={24}>
+                      <Form
+                        labelCol={{ span: 8 }}
+                        wrapperCol={{ span: 8 }}
+                        layout="horizontal"
+                        onFinish={onFinishAddMenu}
+                        initialValues={{ menuIcon: "PlayCircleOutlined" }}
+                      >
+                        <Form.Item label="Add menu" name="level">
+                          <Select style={{ width: 200 }} placeholder="Select a Role" size="large" className="avatarSelect">
+                            <Select.Option value="hehe">a</Select.Option>
+                          </Select>
+                        </Form.Item>
+                        <Form.Item label="Add Name" name="menuName"
+                          rules={[
+                            {
+                              required: true,
+                              message: "Can be empty!"
+                            },
+                          ]}
+                        >
+                          <Input style={{ width: 200 }} />
+                        </Form.Item>
+                        <Form.Item label="Upload Icon" name="menuIcon">
+                          <Select style={{ width: 100 }} size="large" className="avatarSelect">
+                            {_.map(AllIcon, (value, key) => {
+                              return (
+                                <Select.Option key={key} value={key} className="avatarOption">
+                                  {/* <DynComp Obj={AllIcon} name={key} value={key} /> */}
+                                  {(() => { value })()}
+                                </Select.Option>
+                              )
+                            })}
+                          </Select>
+                        </Form.Item>
+
+                        <Form.Item wrapperCol={{ offset: 8 }}>
+                          <Space>
+                            <Button type="primary" htmlType="submit">
+                              Save Role
+                            </Button>
+                          </Space>
+
+                        </Form.Item>
+                      </Form>
+                    </Col>
+                  </Row>
+                )
+              }}>Add Menu</Button>
             </Space>
 
           </Card>

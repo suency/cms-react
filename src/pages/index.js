@@ -13,5 +13,6 @@ import Users from './People/users'
 import Login from './Login'
 
 import Layout from './Layout'
+import Loading from './404/Loading'
 
-export { Home, NotFound, Setting, Tools, Team1, Team2, Admins, Roles, Users, Layout, Login }
+export { Home, NotFound, Setting, Tools, Team1, Team2, Admins, Roles, Users, Layout, Login, Loading }

@@ -285,7 +285,7 @@ function Roles() {
   const onFinish = (values) => {
     console.log("finish", values)
     let newMenu = JSON.stringify([{ "key": "/", "icon": "PieChartOutlined", "label": "Dashboard" }])
-    let newRouter = JSON.stringify([{ "path": "/", "element": "Layout", "children": [{ "path": "/", "element": "Home" }] }, { "path": "/Login", "element": "Login" }, { "path": "*", "element": "NotFound" }])
+    let newRouter = JSON.stringify([{ "path": "/", "element": "Layout", "children": [{ "path": "/", "element": "Home" }] }, { "path": "/Login", "element": "Login" }, { "path": "/Logout", "element": "Login" }, { "path": "*", "element": "NotFound" }])
     http.post('/roles/createRole', { newMenu, newRouter, ...values }).then(res => {
       console.log(res)
       if (res.data.status === "OK") {
@@ -381,7 +381,7 @@ function Roles() {
 
     if (confirmModal.from === "createRole") {
       /* let newMenu = '[{"key": "/", "icon": "PieChartOutlined", "label": "Dashboard"}]'
-      let newRouter = '[{"path": "/", "element": "Layout", "children": [{"path": "/", "element": "Home"}]}, {"path": "/Login", "element": "Login"}, {"path": "*", "element": "NotFound"}]' */
+      let newRouter = '[{"path": "/", "element": "Layout", "children": [{"path": "/", "element": "Home"}]}, {"path": "/Login", "element": "Login"}, { "path": "/Logout", "element": "Login" },{"path": "*", "element": "NotFound"}]' */
       //console.log("createRole")
     }
   }

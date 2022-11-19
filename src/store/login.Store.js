@@ -10,6 +10,7 @@ class LoginStore {
   routerList = [
     { path: "/", element: "Layout" },
     { path: "/Login", element: "Login" },
+    { path: "/Logout", element: "Login" },
     { path: "*", element: "NotFound" }
   ]
   role = ""
@@ -27,13 +28,12 @@ class LoginStore {
           this.status = "OK"
           this.token = response.data.info.token
           this.routerList = response.data.info.routerList
-          //console.log(response.data.info.routerList)
-          //this.menuList = response.data.info.menuList
+
           this.role = response.data.info.role
           this.avatar = response.data.info.avatar
           this.username = response.data.info.username
           tool.setLoginInfo(response.data.info)
-          //console.log(response.data.info.avatar)
+
         } else {
           this.status = "fail"
           this.error = response.data.info.error

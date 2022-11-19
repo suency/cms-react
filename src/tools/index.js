@@ -125,13 +125,10 @@ module.exports = {
       })
     })
 
-    finalList.push({
-      "path": "/Login",
-      "element": "Login"
-    }, {
-      "path": "*",
-      "element": "NotFound"
-    })
+    finalList.push(
+      { "path": "/Login", "element": "Login" },
+      { "path": "/Logout", "element": "Login" },
+      { "path": "*", "element": "NotFound" })
 
     return finalList
   }

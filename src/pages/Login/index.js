@@ -20,7 +20,7 @@ const Login = () => {
   }
   const onFinish = async values => {
 
-    //console.log(values)
+    //setUserInfo used to do remember function
 
     if (values.remember) {
       setUserInfo(values)

@@ -1,5 +1,5 @@
 import * as AllIcon from '@ant-design/icons'
-import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image, message, Space, Tag } from 'antd'
+import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image, Space, Tag } from 'antd'
 import React, { useState } from 'react'
 import './index.scss'
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
@@ -8,7 +8,7 @@ import useStore from '@/store'
 import { useEffect } from 'react'
 import { deepClone, baseURL } from '@/tools'
 import DynComp from '@/components/DynamicComponent'
-import http from '@/tools/http'
+//import http from '@/tools/http'
 import tool from '@/tools/index.js'
 
 const { Header, Content, Footer, Sider } = Layout
@@ -124,32 +124,43 @@ function organzeMenu(list) {
 ] */
 
 const MyLayout = () => {
-  const loginError = (info) => {
+  /* const loginError = (info) => {
     message.error(info)
-  }
+  } */
   const [collapsed, setCollapsed] = useState(false)
   const location = useLocation()
   const pathArr = location.pathname.split("/")
   const firstPath = pathArr[1] ? (pathArr[1].charAt(0).toUpperCase() + pathArr[1].slice(1)) : "Dashboard"
   const secondPath = firstPath ? pathArr[2] : "undefined"
 
-  const defaultOpenKeys = pathArr[1] ? pathArr[1] : "dashboard"
+  let defaultOpenKeys = pathArr[1] ? '/' + pathArr[1] : "dashboard"
 
   const navigate = useNavigate()
 
   let [menuList, setMenuList] = useState([])
   useEffect(() => {
 
-    if (!useStore.loginStore.token) {
+    if (!tool.getToken()) {
       navigate("/Login")
     } else {
-      let response = async () => {
+      //keep same with login store, refresh to keep login
+      useStore.loginStore.status = "OK"
+      useStore.loginStore.token = tool.getLoginInfo().token
+      useStore.loginStore.routerList = tool.getLoginInfo().routerList
+
+      useStore.loginStore.role = tool.getLoginInfo().role
+      useStore.loginStore.avatar = tool.getLoginInfo().avatar
+      useStore.loginStore.username = tool.getLoginInfo().username
+
+      useStore.menuStore.setMenuList(tool.getLoginInfo().menuList)
+      setMenuList(organzeMenu(tool.getLoginInfo().menuList))
+      /* let response = async () => {
         try {
           message.loading({
             content: 'Loading Menus...',
             key: 'loading',
           })
-          //let result = await http.post('/menuList', { role: useStore.loginStore.role })
+
           let result = await http.post('/menuList', { role: tool.getLoginInfo().role })
 
           if (result.data.status === "OK") {
@@ -174,74 +185,76 @@ const MyLayout = () => {
         }
 
       }
-      response()
+      response() */
     }
     // eslint-disable-next-line
   }, [])
 
   return menuList.length > 0 && (
-    <Layout
-      style={{
-        minHeight: '100vh',
-      }}
-    >
-      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        <div className="logo" >
-          <Image
-            width={30}
-            src={iconGeng}
-          />
-          <div style={{ marginLeft: '5px' }}>CMS</div>
-        </div>
-        <Menu theme="dark" defaultOpenKeys={[defaultOpenKeys]} defaultSelectedKeys={[location.pathname]} mode="inline" items={menuList} />
-      </Sider>
-      <Layout className="site-layout">
-        <Header
-          className="top-header"
-        >
-          <Space>
-            <div>
-              <Tag color="success">{useStore.loginStore.username}</Tag>
-              <Tag color="processing">{useStore.loginStore.role}</Tag>
-            </div>
-            <Dropdown arrow={true} overlay={topRightMenu} trigger={['click']}>
-              <Avatar className='logout' src={baseURL + 'static/' + useStore.loginStore.avatar} />
-            </Dropdown>
-          </Space>
-
-        </Header>
-        <Content
-          style={{
-            margin: '0 16px',
-          }}
-        >
-          <Breadcrumb
-            style={{
-              margin: '16px 0',
-            }}
-          >
-            <Breadcrumb.Item>{firstPath}</Breadcrumb.Item>
-            <Breadcrumb.Item>{secondPath}</Breadcrumb.Item>
-          </Breadcrumb>
-          <div
-            className="site-layout-background"
-            style={{
-              padding: 24,
-              minHeight: 360,
-            }}
-          >
-            <Outlet />
+    <>
+      <Layout
+        style={{
+          minHeight: '100vh',
+        }}
+      >
+        <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+          <div className="logo" >
+            <Image
+              width={30}
+              src={iconGeng}
+            />
+            <div style={{ marginLeft: '5px' }}>CMS</div>
           </div>
-        </Content>
-        <Footer
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          enen.me ©2022 Created by genggeng
-        </Footer>
+          <Menu theme="dark" defaultOpenKeys={[defaultOpenKeys]} defaultSelectedKeys={[location.pathname]} mode="inline" items={menuList} />
+        </Sider>
+        <Layout className="site-layout">
+          <Header
+            className="top-header"
+          >
+            <Space>
+              <div>
+                <Tag color="success">{useStore.loginStore.username}</Tag>
+                <Tag color="processing">{useStore.loginStore.role}</Tag>
+              </div>
+              <Dropdown arrow={true} overlay={topRightMenu} trigger={['click']}>
+                <Avatar className='logout' src={baseURL + 'static/' + useStore.loginStore.avatar} />
+              </Dropdown>
+            </Space>
+
+          </Header>
+          <Content
+            style={{
+              margin: '0 16px',
+            }}
+          >
+            <Breadcrumb
+              style={{
+                margin: '16px 0',
+              }}
+            >
+              <Breadcrumb.Item>{firstPath}</Breadcrumb.Item>
+              <Breadcrumb.Item>{secondPath}</Breadcrumb.Item>
+            </Breadcrumb>
+            <div
+              className="site-layout-background"
+              style={{
+                padding: 24,
+                minHeight: 360,
+              }}
+            >
+              <Outlet />
+            </div>
+          </Content>
+          <Footer
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            enen.me ©2022 Created by genggeng
+          </Footer>
+        </Layout>
       </Layout>
-    </Layout>
+    </>
   )
 }
 

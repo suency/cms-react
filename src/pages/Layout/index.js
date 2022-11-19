@@ -144,16 +144,26 @@ const MyLayout = () => {
       navigate("/Login")
     } else {
       //keep same with login store, refresh to keep login
-      useStore.loginStore.status = "OK"
+      useStore.loginStore.loginInfo = {
+        status: "OK",
+        token: tool.getLoginInfo().token,
+        routerList: tool.getLoginInfo().routerList,
+        role: tool.getLoginInfo().role,
+        avatar: tool.getLoginInfo().avatar,
+        username: tool.getLoginInfo().username
+      }
+
+      useStore.menuStore.setMenuList(tool.getLoginInfo().menuList)
+      setMenuList(organzeMenu(tool.getLoginInfo().menuList))
+
+      /* useStore.loginStore.status = "OK"
       useStore.loginStore.token = tool.getLoginInfo().token
       useStore.loginStore.routerList = tool.getLoginInfo().routerList
 
       useStore.loginStore.role = tool.getLoginInfo().role
       useStore.loginStore.avatar = tool.getLoginInfo().avatar
-      useStore.loginStore.username = tool.getLoginInfo().username
+      useStore.loginStore.username = tool.getLoginInfo().username */
 
-      useStore.menuStore.setMenuList(tool.getLoginInfo().menuList)
-      setMenuList(organzeMenu(tool.getLoginInfo().menuList))
       /* let response = async () => {
         try {
           message.loading({
@@ -213,11 +223,11 @@ const MyLayout = () => {
           >
             <Space>
               <div>
-                <Tag color="success">{useStore.loginStore.username}</Tag>
-                <Tag color="processing">{useStore.loginStore.role}</Tag>
+                <Tag color="success">{useStore.loginStore.loginInfo.username}</Tag>
+                <Tag color="processing">{useStore.loginStore.loginInfo.role}</Tag>
               </div>
               <Dropdown arrow={true} overlay={topRightMenu} trigger={['click']}>
-                <Avatar className='logout' src={baseURL + 'static/' + useStore.loginStore.avatar} />
+                <Avatar className='logout' src={baseURL + 'static/' + useStore.loginStore.loginInfo.avatar} />
               </Dropdown>
             </Space>
 

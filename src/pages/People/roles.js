@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import {
   message, Tree, Avatar, Segmented, Card, Row, Col, Button, Modal, Divider, Space,
-  Form, Input, Image, Select, Tag, Switch
+  Form, Input, Image, Select, Tag
 } from 'antd'
 import http from "@/tools/http"
 import { deepClone, convertPathToMenu, convertPathToRouter } from "@/tools"
@@ -11,9 +11,6 @@ import { baseURL } from "@/tools"
 import './roles.scss'
 //import useStore from "@/store"
 import _ from "underscore"
-
-//import iconGeng from '@/assets/sprout.png'
-
 
 // convert to tree menu including icon for ant design format
 function organzeTreeMenu(list, roleName = "admin", targetRole = "admin") {
@@ -176,8 +173,6 @@ function Roles() {
 
   const [refreshValue, setRefreshValue] = useState(false)
   useEffect(() => {
-    //import all avatar
-    //console.log("render")
     const importAll = require =>
       require.keys().reduce((acc, next) => {
         acc[next.replace("./", "")] = require(next)
@@ -204,6 +199,12 @@ function Roles() {
           })
 
           let allServerData = result.data.info.roles
+
+          //['/', '/setting', '/people', '/team', '/tools']
+          // let testData = allServerData[0].menu_list;
+          // let allMenuKeys = _.pluck(testData, 'key');
+          //console.log(_.pluck(testData, 'key'));
+
           let adminMenu = getAllMenuListByRole(result.data.info.roles)
           setTreeOptions({
             ...treeOptions,
@@ -225,7 +226,7 @@ function Roles() {
         loginError(e)
       }
     }
-    //console.log(AllIcon)
+
     response()
     // eslint-disable-next-line
   }, [refreshValue])
@@ -274,13 +275,11 @@ function Roles() {
 
   const showModal = (from, title, content) => {
     setConfirmModal({ ...confirmModal, from, title, content, show: true })
-    //console.log(from)
   }
 
   const hideModal = () => {
     setConfirmModal({ ...confirmModal, show: false })
   }
-
 
   const onFinish = (values) => {
     console.log("finish", values)
@@ -387,15 +386,44 @@ function Roles() {
   }
 
   const onFinishAddMenu = () => {
+    let submitData = addMenuForm.getFieldsValue();
+    //let createRouterOrNot = true;
+    if (submitData.parentMenu === "/") {
+      //no router for root menu, must create submenu to match router
+      //createRouterOrNot = false;
+    }
+
+    //app1 {"key": "/app1", "icon": "menuIcon", "label": "App1"}
+    //no router
+
+    //app1/users
+    // {"key": "/app1/users", "icon": "SolutionOutlined", "label": "Users"}
+    // {"path": "/app1/users", "element": "Users"}
+
+    //create app1 folder, users.js, add router config in index.js
+
+    //hideModal()
+    /* let mockData = {
+      menuIcon: "ChromeOutlined",
+      menuName: "abc",
+      parentMenu: "/setting"
+    } */
+
+    //menu
+    //{"key": "/people/admins", "icon": "SolutionOutlined", "label": "Admins"} have children
+    //{"key": "/setting", "icon": "SettingOutlined", "label": "Settings"} no children
+
+    //router
+    //{"path": "/setting", "element": "Setting"}
+    //{"path": "/team/team1", "element": "Team1"}
     console.log(addMenuForm.getFieldsValue());
   }
 
   const onAddMenuChangeSwitch = () => {
-
-    //setAddMenu({ ...addMenu, checkedButton: !addMenu.checkedButton })
     setAddMenu(pre => {
       return { ...pre, checkedButton: !pre.checkedButton }
     })
+    addMenuForm.setFieldValue("menuName", "12222")
 
   }
 
@@ -451,6 +479,7 @@ function Roles() {
                     <Col className="gutter-row" span={24}>
                       <Form
                         labelCol={{ span: 8 }}
+                        preserve={false}
                         wrapperCol={{ span: 8 }}
                         layout="horizontal"
                         onFinish={onFinish}
@@ -503,6 +532,7 @@ function Roles() {
                         layout="horizontal"
                         onFinish={onFinishEdit}
                         form={editRoleForm}
+                        preserve={false}
                       >
                         <Form.Item label="Edit role" name="editRoleId">
                           <Select onChange={editChangeRole} style={{ width: 200 }} placeholder="Select a Role" size="large" className="avatarSelect">
@@ -580,25 +610,27 @@ function Roles() {
                         wrapperCol={{ span: 8 }}
                         layout="horizontal"
                         onFinish={onFinishAddMenu}
-                        initialValues={{ menuIcon: "PlayCircleOutlined" }}
+                        initialValues={
+                          {
+                            menuIcon: "ClockCircleOutlined",
+                            parentMenu: "/"
+                          }
+                        }
                         form={addMenuForm}
                       >
-                        <Form.Item label="Main or Sub3" name="isMain3">
-                          <button>{addMenu.checkedButton.toString()}</button>
-                        </Form.Item>
-                        <Form.Item label="Main or Sub" name="isMain" valuePropName="checked">
-                          <Switch onChange={onAddMenuChangeSwitch} />
-                        </Form.Item>
-                        <Form.Item label="Add menu" name="level">
-                          <Select style={{ width: 200 }} placeholder="Select a Role" size="large" className="avatarSelect">
-                            <Select.Option value="hehe">a</Select.Option>
+                        <Form.Item label="Select Parent Menu" name="parentMenu">
+                          <Select style={{ width: 200 }} placeholder="Select a Menu" size="large" className="avatarSelect">
+                            {
+                              _.map(_.pluck(treeOptions.allMenu[0].menu_list, 'key'), item => {
+                                return (
+                                  <Select.Option value={item} key={item}>{item}</Select.Option>
+                                )
+                              })
+                            }
                           </Select>
                         </Form.Item>
-                        <Form.Item label="Main or Sub2" name="isMain2" >
-                          <Input style={{ width: 200 }} value="2" />
-                        </Form.Item>
 
-                        <Form.Item label="Add Name" name="menuName"
+                        <Form.Item label="Menu Name" name="menuName"
                           rules={[
                             {
                               required: true,
@@ -609,13 +641,13 @@ function Roles() {
                           <Input style={{ width: 200 }} />
                         </Form.Item>
                         <Form.Item label="Upload Icon" name="menuIcon">
-                          <Select style={{ width: 100 }} size="large" className="avatarSelect">
-                            {_.map(AllIcon, (value, key) => {
+                          <Select style={{ width: 200 }} size="large" className="avatarSelect">
+                            {_.map(_.allKeys(AllIcon).slice(100, 200), (key) => {
                               return (
-                                <Select.Option key={key} value={key} className="avatarOption">
-                                  {/* <DynComp Obj={AllIcon} name={key} value={key} /> */}
-                                  {/* {(() => { value })()} */}
+                                <Select.Option key={key} value={key} className="avatarOption" >
+                                  <DynComp Obj={AllIcon} name={key} />
                                 </Select.Option>
+
                               )
                             })}
                           </Select>
@@ -665,6 +697,7 @@ function Roles() {
         okText="confirm"
         cancelText="cancel"
         forceRender
+        destroyOnClose={true}
       >
         <div>{confirmModal.content}</div>
       </Modal>

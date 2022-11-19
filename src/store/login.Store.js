@@ -4,18 +4,21 @@ import tool from '@/tools/index.js'
 import { UserOutlined } from '@ant-design/icons'
 
 class LoginStore {
-  token = ''
-  status = ''
-  error = ''
-  routerList = [
-    { path: "/", element: "Layout" },
-    { path: "/Login", element: "Login" },
-    { path: "/Logout", element: "Login" },
-    { path: "*", element: "NotFound" }
-  ]
-  role = ""
-  username = 'not login'
-  avatar = <UserOutlined />
+  loginInfo = {
+    token: '',
+    status: '',
+    error: '',
+    routerList: [
+      { path: "/", element: "Layout" },
+      { path: "/Login", element: "Login" },
+      { path: "/Logout", element: "Login" },
+      { path: "*", element: "NotFound" }
+    ],
+    role: "",
+    username: 'not login',
+    avatar: <UserOutlined />,
+  }
+
   constructor() {
     makeAutoObservable(this, { routerList: false })
   }
@@ -24,19 +27,27 @@ class LoginStore {
       let response = await http.post('/login', { username, password })
       runInAction(() => {
         if (response.data.status === "OK") {
+          this.loginInfo = {
+            status: "OK",
+            token: response.data.info.token,
+            routerList: response.data.info.routerList,
+            role: response.data.info.role,
+            avatar: response.data.info.avatar,
+            username: response.data.info.username
+          }
           tool.setToken(response.data.info.token)
-          this.status = "OK"
+          tool.setLoginInfo(response.data.info)
+
+          /* this.status = "OK"
           this.token = response.data.info.token
           this.routerList = response.data.info.routerList
 
           this.role = response.data.info.role
           this.avatar = response.data.info.avatar
-          this.username = response.data.info.username
-          tool.setLoginInfo(response.data.info)
-
+          this.username = response.data.info.username */
         } else {
-          this.status = "fail"
-          this.error = response.data.info.error
+          this.loginInfo.status = "fail"
+          this.loginInfo.error = response.data.info.error
           tool.setLoginInfo(response.data.info)
         }
       })

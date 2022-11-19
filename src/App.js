@@ -80,7 +80,7 @@ function App() {
     }
     //setRouterData(organzeRouter(useStore.loginStore.routerList))
     // eslint-disable-next-line
-  }, [useStore.loginStore.token])
+  }, [useStore.loginStore.loginInfo.token])
 
   return useRoutes(routerData)
 }

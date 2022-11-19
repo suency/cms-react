@@ -30,11 +30,11 @@ const Login = () => {
 
 
     await useStore.loginStore.setToken(values.username, values.password)
-    if (useStore.loginStore.status === "OK") {
+    if (useStore.loginStore.loginInfo.status === "OK") {
       loginSuccess()
       navigate('/')
     } else {
-      loginError(useStore.loginStore.error)
+      loginError(useStore.loginStore.loginInfo.error)
     }
   }
 

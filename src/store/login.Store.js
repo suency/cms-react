@@ -7,16 +7,18 @@ class LoginStore {
   token = ''
   status = ''
   error = ''
-  routerList = [{ path: "/", element: "Layout" },
-  { path: "/Login", element: "Login" },
-  { path: "*", element: "NotFound" }]
+  routerList = [
+    { path: "/", element: "Layout" },
+    { path: "/Login", element: "Login" },
+    { path: "*", element: "NotFound" }
+  ]
   role = ""
   username = 'not login'
   avatar = <UserOutlined />
   constructor() {
     makeAutoObservable(this, { routerList: false })
   }
-  async setToken (username, password) {
+  async setToken(username, password) {
     try {
       let response = await http.post('/login', { username, password })
       runInAction(() => {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import {
   message, Tree, Avatar, Segmented, Card, Row, Col, Button, Modal, Divider, Space,
-  Form, Input, Image, Select, Tag
+  Form, Input, Image, Select, Tag, Switch
 } from 'antd'
 import http from "@/tools/http"
 import { deepClone, convertPathToMenu, convertPathToRouter } from "@/tools"
@@ -16,7 +16,7 @@ import _ from "underscore"
 
 
 // convert to tree menu including icon for ant design format
-function organzeTreeMenu (list, roleName = "admin", targetRole = "admin") {
+function organzeTreeMenu(list, roleName = "admin", targetRole = "admin") {
   let handleList = []
   list.forEach(item => {
     if (item.name === roleName) {
@@ -48,7 +48,7 @@ function organzeTreeMenu (list, roleName = "admin", targetRole = "admin") {
   return handleList
 }
 
-function organzeTreeMenuEdit (list, roleName = "admin", targetRole = "admin") {
+function organzeTreeMenuEdit(list, roleName = "admin", targetRole = "admin") {
   let handleList = []
   list.forEach(item => {
     if (item.name === roleName) {
@@ -97,12 +97,13 @@ function organzeTreeMenuEdit (list, roleName = "admin", targetRole = "admin") {
   return handleList
 }
 const editMenu = (value) => {
-  console.log("edit", value)
+  //console.log("edit", value)
+
 }
 const deleteMenu = (value) => {
   console.log("delete", value)
 }
-function getAllKeys (list) {
+function getAllKeys(list) {
   list = deepClone(list)
   let handleList = []
   _.each(list, item => {
@@ -118,7 +119,7 @@ function getAllKeys (list) {
 }
 
 //delete the parent key if children keys are not all selected
-function selectMyKeys (allMenu, targetMenu) {
+function selectMyKeys(allMenu, targetMenu) {
   allMenu = deepClone(allMenu)
   targetMenu = deepClone(targetMenu)
 
@@ -149,7 +150,7 @@ function selectMyKeys (allMenu, targetMenu) {
   return _.difference(targetMenuKeys, deleteArr)
 }
 // get menulist by role, default admin(all menu)
-function getAllMenuListByRole (list, roleName = "admin") {
+function getAllMenuListByRole(list, roleName = "admin") {
   let handleList = []
   list.forEach(item => {
     if (item.name === roleName) {
@@ -159,21 +160,24 @@ function getAllMenuListByRole (list, roleName = "admin") {
   return handleList
 }
 
-function Roles () {
+function Roles() {
   const [treeOptions, setTreeOptions] = useState({ treeData: [], onCheck: () => { }, checkedKeys: [] })
   const [confirmModal, setConfirmModal] = useState({ from: '', show: false, title: "", content: "" })
   const [roleData, setRoleData] = useState({ roleId: 1, roleName: "admin", resultMenu: [], resultRouter: [] })
   const [avatarList, setAvatarList] = useState({})
+  const [addMenu, setAddMenu] = useState({ checkedButton: true, treeData: [] }) //use reactive in modal form
+  //const [modalVisble, setModalVisible] = useState(false)
 
-
+  const [addMenuForm] = Form.useForm()
   const [editRoleForm] = Form.useForm()
 
   const [editTreeOptions, editSetTreeOptions] = useState({ treeData: [] })
 
+
   const [refreshValue, setRefreshValue] = useState(false)
   useEffect(() => {
     //import all avatar
-    console.log("render")
+    //console.log("render")
     const importAll = require =>
       require.keys().reduce((acc, next) => {
         acc[next.replace("./", "")] = require(next)
@@ -221,7 +225,7 @@ function Roles () {
         loginError(e)
       }
     }
-    console.log(AllIcon)
+    //console.log(AllIcon)
     response()
     // eslint-disable-next-line
   }, [refreshValue])
@@ -232,7 +236,7 @@ function Roles () {
     const finalResult = selectMyKeys(adminMenu.menu_list, result.menu_list)
     //const finalResult = getAllKeys(result.menu_list)
 
-    console.log("result.name", result.name)
+    //console.log("result.name", result.name)
 
     setRoleData({
       ...roleData,
@@ -249,7 +253,7 @@ function Roles () {
   }
 
   const mySuperCheck = (checkedKeys, info) => {
-    console.log("checkedKeys-super", checkedKeys)
+    //console.log("checkedKeys-super", checkedKeys)
     let adminRoleInfo = _.find(treeOptions.allMenu, item => item.name === 'admin')
     let filterDashKey = _.filter(checkedKeys, item => item !== "/")
 
@@ -263,8 +267,8 @@ function Roles () {
       resultMenu: JSON.stringify(resultMenu),
       resultRouter: JSON.stringify(resultRouter)
     })
-    console.log("resultMenu", resultMenu)
-    console.log("resultRouter", resultRouter)
+    //console.log("resultMenu", resultMenu)
+    //console.log("resultRouter", resultRouter)
 
   }
 
@@ -276,6 +280,7 @@ function Roles () {
   const hideModal = () => {
     setConfirmModal({ ...confirmModal, show: false })
   }
+
 
   const onFinish = (values) => {
     console.log("finish", values)
@@ -377,17 +382,30 @@ function Roles () {
     if (confirmModal.from === "createRole") {
       /* let newMenu = '[{"key": "/", "icon": "PieChartOutlined", "label": "Dashboard"}]'
       let newRouter = '[{"path": "/", "element": "Layout", "children": [{"path": "/", "element": "Home"}]}, {"path": "/Login", "element": "Login"}, {"path": "*", "element": "NotFound"}]' */
-      console.log("createRole")
+      //console.log("createRole")
     }
   }
 
   const onFinishAddMenu = () => {
-    console.log("add menu")
+    console.log(addMenuForm.getFieldsValue());
   }
+
+  const onAddMenuChangeSwitch = () => {
+
+    //setAddMenu({ ...addMenu, checkedButton: !addMenu.checkedButton })
+    setAddMenu(pre => {
+      return { ...pre, checkedButton: !pre.checkedButton }
+    })
+
+  }
+
   return (
     treeOptions.treeData.length > 0 &&
     <>
+      <button>{addMenu.checkedButton.toString()}</button>
+      <button onClick={onAddMenuChangeSwitch}>click</button>
       <Row gutter={16}>
+
         <Col className="gutter-row" span={15}>
           <Card title="Roles Management (can only update by one role once)">
             <Segmented onChange={changeRole}
@@ -540,7 +558,7 @@ function Roles () {
           </Card>
         </Col>
 
-        {/* eidt menu */}
+        {/* eidt menu  Add Menu*/}
         <Col className="gutter-row" span={9}>
           <Card title="Edit or Create Menu">
             <Divider orientation="left">All avaiable menu</Divider>
@@ -563,12 +581,23 @@ function Roles () {
                         layout="horizontal"
                         onFinish={onFinishAddMenu}
                         initialValues={{ menuIcon: "PlayCircleOutlined" }}
+                        form={addMenuForm}
                       >
+                        <Form.Item label="Main or Sub3" name="isMain3">
+                          <button>{addMenu.checkedButton.toString()}</button>
+                        </Form.Item>
+                        <Form.Item label="Main or Sub" name="isMain" valuePropName="checked">
+                          <Switch onChange={onAddMenuChangeSwitch} />
+                        </Form.Item>
                         <Form.Item label="Add menu" name="level">
                           <Select style={{ width: 200 }} placeholder="Select a Role" size="large" className="avatarSelect">
                             <Select.Option value="hehe">a</Select.Option>
                           </Select>
                         </Form.Item>
+                        <Form.Item label="Main or Sub2" name="isMain2" >
+                          <Input style={{ width: 200 }} value="2" />
+                        </Form.Item>
+
                         <Form.Item label="Add Name" name="menuName"
                           rules={[
                             {
@@ -585,7 +614,7 @@ function Roles () {
                               return (
                                 <Select.Option key={key} value={key} className="avatarOption">
                                   {/* <DynComp Obj={AllIcon} name={key} value={key} /> */}
-                                  {(() => { value })()}
+                                  {/* {(() => { value })()} */}
                                 </Select.Option>
                               )
                             })}
@@ -595,7 +624,7 @@ function Roles () {
                         <Form.Item wrapperCol={{ offset: 8 }}>
                           <Space>
                             <Button type="primary" htmlType="submit">
-                              Save Role
+                              Save Menu
                             </Button>
                           </Space>
 

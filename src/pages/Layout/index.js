@@ -1,16 +1,3 @@
-/* import {
-  SettingOutlined,
-  ToolOutlined,
-  PieChartOutlined,
-  TeamOutlined,
-  UserOutlined,
-  SolutionOutlined,
-  TrademarkCircleOutlined,
-  CommentOutlined,
-  AndroidOutlined,
-  AppleOutlined,
-  LogoutOutlined
-} from '@ant-design/icons' */
 import * as AllIcon from '@ant-design/icons'
 import { Breadcrumb, Layout, Menu, Avatar, Dropdown, Image, message, Space, Tag } from 'antd'
 import React, { useState } from 'react'
@@ -22,6 +9,7 @@ import { useEffect } from 'react'
 import { deepClone, baseURL } from '@/tools'
 import DynComp from '@/components/DynamicComponent'
 import http from '@/tools/http'
+import tool from '@/tools/index.js'
 
 const { Header, Content, Footer, Sider } = Layout
 const topRightMenu = (
@@ -37,7 +25,7 @@ const topRightMenu = (
 )
 
 
-function getItem (label, key, icon, children) {
+function getItem(label, key, icon, children) {
   return {
     key,
     icon,
@@ -61,7 +49,7 @@ function getItem (label, key, icon, children) {
   getItem(<Link to="/tools">Tools</Link>, '/tools', <ToolOutlined />),
 ] */
 
-function organzeMenu (list) {
+function organzeMenu(list) {
   let copy = deepClone(list)
   copy.forEach(ele => {
     if (ele["children"] && ele["children"].length !== 0) {
@@ -148,11 +136,10 @@ const MyLayout = () => {
   const defaultOpenKeys = pathArr[1] ? pathArr[1] : "dashboard"
 
   const navigate = useNavigate()
-  //let isCurrentMenu = location.pathname === "/"
 
-  //console.log(isCurrentMenu, location)
   let [menuList, setMenuList] = useState([])
   useEffect(() => {
+
     if (!useStore.loginStore.token) {
       navigate("/Login")
     } else {
@@ -162,7 +149,8 @@ const MyLayout = () => {
             content: 'Loading Menus...',
             key: 'loading',
           })
-          let result = await http.post('/menuList', { role: useStore.loginStore.role })
+          //let result = await http.post('/menuList', { role: useStore.loginStore.role })
+          let result = await http.post('/menuList', { role: tool.getLoginInfo().role })
 
           if (result.data.status === "OK") {
             message.success({
@@ -220,8 +208,6 @@ const MyLayout = () => {
               <Avatar className='logout' src={baseURL + 'static/' + useStore.loginStore.avatar} />
             </Dropdown>
           </Space>
-
-
 
         </Header>
         <Content

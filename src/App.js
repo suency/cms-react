@@ -6,12 +6,13 @@ import useStore from '@/store'
 import DynComp from '@/components/DynamicComponent'
 import { deepClone } from '@/tools'
 import { useEffect } from 'react'
+//import tool from '@/tools/index.js'
 //import http from '@/tools/http'
 //import * as AllIcon from '@ant-design/icons'
 
 
 
-function organzeRouter (list) {
+function organzeRouter(list) {
   let copy = deepClone(list)
   copy.forEach(ele => {
     if (ele["children"] && ele["children"].length !== 0) {
@@ -25,7 +26,7 @@ function organzeRouter (list) {
   return copy
 }
 
-function App () {
+function App() {
   /*   let routerDataList = [
       {
         label: "Setting",
@@ -88,7 +89,6 @@ function App () {
   let [routerData, setRouterData] = useState(organzeRouter(initRouter))
 
   useEffect(() => {
-
     /* let resultRouter = [
       {
         path: "/",
@@ -107,11 +107,11 @@ function App () {
       { path: "/Login", element: "Login" },
       { path: "*", element: "NotFound" },
     ] */
+    //console.log(33);
     setRouterData(organzeRouter(useStore.loginStore.routerList))
-    //console.log(useStore.loginStore.routerList)
     // eslint-disable-next-line
   }, [useStore.loginStore.token])
-
+  //console.log(66);
   return useRoutes(routerData)
 
   /*   return (

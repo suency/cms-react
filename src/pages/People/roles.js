@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import {
   message, Tree, Avatar, Segmented, Card, Row, Col, Button, Modal, Divider, Space,
-  Form, Input, Image, Select, Tag
+  Form, Input, Image, Select, Tag, Descriptions
 } from 'antd'
 import http from "@/tools/http"
 import { deepClone, convertPathToMenu, convertPathToRouter } from "@/tools"
@@ -162,14 +162,11 @@ function Roles() {
   const [confirmModal, setConfirmModal] = useState({ from: '', show: false, title: "", content: "" })
   const [roleData, setRoleData] = useState({ roleId: 1, roleName: "admin", resultMenu: [], resultRouter: [] })
   const [avatarList, setAvatarList] = useState({})
-  const [addMenu, setAddMenu] = useState({ checkedButton: true, treeData: [] }) //use reactive in modal form
-  //const [modalVisble, setModalVisible] = useState(false)
 
   const [addMenuForm] = Form.useForm()
   const [editRoleForm] = Form.useForm()
 
   const [editTreeOptions, editSetTreeOptions] = useState({ treeData: [] })
-
 
   const [refreshValue, setRefreshValue] = useState(false)
   useEffect(() => {
@@ -387,14 +384,14 @@ function Roles() {
 
   const onFinishAddMenu = () => {
     let submitData = addMenuForm.getFieldsValue();
-    //let createRouterOrNot = true;
+
+    //generate both root menu and router
     if (submitData.parentMenu === "/") {
-      //no router for root menu, must create submenu to match router
-      //createRouterOrNot = false;
+      console.log(submitData);
     }
 
-    //app1 {"key": "/app1", "icon": "menuIcon", "label": "App1"}
-    //no router
+    //app1 {"key": "/app1", "icon": "menuIcon", "label": "App1"} 直接push到总菜单
+    //no router //第一个元素下的children push([0].children) {"path": "/app1", "element": "App1"}
 
     //app1/users
     // {"key": "/app1/users", "icon": "SolutionOutlined", "label": "Users"}
@@ -404,6 +401,7 @@ function Roles() {
 
     //hideModal()
     /* let mockData = {
+      isRootMenu:false,
       menuIcon: "ChromeOutlined",
       menuName: "abc",
       parentMenu: "/setting"
@@ -416,23 +414,53 @@ function Roles() {
     //router
     //{"path": "/setting", "element": "Setting"}
     //{"path": "/team/team1", "element": "Team1"}
-    console.log(addMenuForm.getFieldsValue());
+    //console.log(addMenuForm.getFieldsValue());
   }
 
-  const onAddMenuChangeSwitch = () => {
+  /* const addMenuRootControl = (value) => {
+    if (value.target.checked) {
+      addMenuForm.setFieldValue("parentMenu", "/")
+    }
+
+  } */
+
+  /* const onAddMenuChangeSwitch = () => {
     setAddMenu(pre => {
       return { ...pre, checkedButton: !pre.checkedButton }
     })
     addMenuForm.setFieldValue("menuName", "12222")
 
-  }
+  } */
 
   return (
     treeOptions.treeData.length > 0 &&
     <>
-      <button>{addMenu.checkedButton.toString()}</button>
-      <button onClick={onAddMenuChangeSwitch}>click</button>
-      <Row gutter={16}>
+      {/* <button>{addMenu.checkedButton.toString()}</button>
+      <button onClick={onAddMenuChangeSwitch}>click</button> */}
+      <Row gutter={[16, 16]}>
+        <Col className="gutter-row" span={24}>
+          <Descriptions title="Operations Notice (Developer Only, Carefully for adding and deleting)" bordered column={1} size="small">
+            <Descriptions.Item label="First Case" labelStyle={{ width: 120 }}>
+              Create root menu like [Setting], if so, it have both corresponding router and menu. But
+              it can not have submenu, otherwise it will report an error! <b>(One menu, one router)</b >
+            </Descriptions.Item>
+            <Descriptions.Item label="Second Case">
+              Create a new root menu and also you must add at least one submenu, the root menu does not
+              have corresponding router. The submenu have have both corresponding router and menu
+              <b> (One root menu, one submenu, and a router for submenu)</b >
+            </Descriptions.Item>
+            <Descriptions.Item label="Third Case">
+              Just create a submenu, not a root menu
+              <b> (One submenu, one router for submenu)</b >
+            </Descriptions.Item>
+            <Descriptions.Item label="Others">
+              Once you have created new, you should add corresponding pages and configure router!
+              BTW, deleting is also the same method!
+            </Descriptions.Item>
+          </Descriptions></Col>
+      </Row>
+
+      <Row gutter={[16, 16]}>
 
         <Col className="gutter-row" span={15}>
           <Card title="Roles Management (can only update by one role once)">
@@ -602,35 +630,33 @@ function Roles() {
               <Button type="primary" onClick={() => {
                 showModal(
                   "addMenu",
-                  "Add Menu",
+                  "Add Root Menu",
                   <Row style={{ marginTop: 20 }} gutter={16}>
                     <Col className="gutter-row" span={24}>
-                      <Form
-                        labelCol={{ span: 8 }}
-                        wrapperCol={{ span: 8 }}
-                        layout="horizontal"
+                      <Form labelCol={{ span: 8 }} wrapperCol={{ span: 8 }} layout="horizontal"
                         onFinish={onFinishAddMenu}
-                        initialValues={
-                          {
-                            menuIcon: "ClockCircleOutlined",
-                            parentMenu: "/"
-                          }
-                        }
+                        initialValues={{ menuIcon: "ClockCircleOutlined", parentMenu: "/" }}
                         form={addMenuForm}
                       >
-                        <Form.Item label="Select Parent Menu" name="parentMenu">
+                        <Form.Item label="Select Menu" name="parentMenu" tooltip="/ for root menu, others for submenu">
                           <Select style={{ width: 200 }} placeholder="Select a Menu" size="large" className="avatarSelect">
+                            <Select.Option value="/" key="/">/</Select.Option> {/* for root menu and others together */}
                             {
-                              _.map(_.pluck(treeOptions.allMenu[0].menu_list, 'key'), item => {
+                              treeOptions.allMenu[0].menu_list.map(e1 => {
+                                if (e1.hasOwnProperty('children')) {
+                                  return e1.key;
+                                } else { return undefined }
+                              }).filter(e2 => e2 !== undefined).map(e3 => {
                                 return (
-                                  <Select.Option value={item} key={item}>{item}</Select.Option>
+                                  <Select.Option value={e3} key={e3}>{e3}</Select.Option>
                                 )
                               })
                             }
+
                           </Select>
                         </Form.Item>
 
-                        <Form.Item label="Menu Name" name="menuName"
+                        <Form.Item label="Menu Name" name="menuName" tooltip="Do not contain '/', best for a unique word"
                           rules={[
                             {
                               required: true,
@@ -665,7 +691,7 @@ function Roles() {
                     </Col>
                   </Row>
                 )
-              }}>Add Menu</Button>
+              }}>Add Root Menu</Button>
             </Space>
 
           </Card>

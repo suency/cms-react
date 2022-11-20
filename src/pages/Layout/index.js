@@ -12,7 +12,21 @@ import DynComp from '@/components/DynamicComponent'
 import tool from '@/tools/index.js'
 
 const { Header, Content, Footer, Sider } = Layout
-const topRightMenu = (
+
+const topRightMenu = [
+  {
+    key: '0', label: (<Link to="/">Dashboard</Link>), icon: <AllIcon.PieChartOutlined />
+  },
+  {
+    type: 'divider',
+  },
+  {
+    key: '1', label: (<Link to="/logout">Logout</Link>), icon: <AllIcon.LogoutOutlined />
+  }
+
+];
+//4.23.1
+/* const topRightMenu = (
   <Menu
     items={[
       getItem(<Link to="/">Dashboard</Link>, '0', <AllIcon.PieChartOutlined />),
@@ -22,17 +36,17 @@ const topRightMenu = (
       getItem(<Link to="/logout">Logout</Link>, '1', <AllIcon.LogoutOutlined />),
     ]}
   />
-)
+) */
 
-
-function getItem(label, key, icon, children) {
+//4.23.1
+/* function getItem(label, key, icon, children) {
   return {
     key,
     icon,
     children,
     label,
   }
-}
+} */
 
 /* let items = [
   getItem(<Link to="/">Dashboard</Link>, '/', <PieChartOutlined />),
@@ -226,7 +240,7 @@ const MyLayout = () => {
                 <Tag color="success">{useStore.loginStore.loginInfo.username}</Tag>
                 <Tag color="processing">{useStore.loginStore.loginInfo.role}</Tag>
               </div>
-              <Dropdown arrow={true} overlay={topRightMenu} trigger={['click']}>
+              <Dropdown arrow={true} menu={{ items: topRightMenu }} trigger={['click']}>
                 <Avatar className='logout' src={baseURL + 'static/' + useStore.loginStore.loginInfo.avatar} />
               </Dropdown>
             </Space>

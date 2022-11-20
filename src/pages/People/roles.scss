@@ -10,20 +10,19 @@
 }
 
 .avatarList {
-  width: 35px;
+  width: 80px;
 }
 
 .avatarOption {
-  height: 45px;
+  height: 80px;
 }
 
-.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
-  .ant-select-selector::after,
-.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
-  .ant-select-selector
-  .ant-select-selection-item,
-.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
-  .ant-select-selector
-  .ant-select-selection-placeholder {
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector::after,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-placeholder {
   line-height: 35px;
+}
+
+.gutter-row {
+  margin-bottom: 20px;
 }

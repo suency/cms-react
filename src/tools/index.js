@@ -4,6 +4,14 @@ const tokenKey = "token"
 const loginKey = "loginKey"
 const userKey = "userKey"
 const _ = require('underscore')
+const getAllLabelsFromMenu = (menu, result = []) => {
+  menu.forEach(element => {
+    result.push(element.label)
+    if (element.hasOwnProperty("children")) {
+      getAllLabelsFromMenu(element.children, result)
+    }
+  });
+}
 module.exports = {
   baseURL: 'http://localhost:8888/',
   setToken: (token) => {
@@ -131,6 +139,6 @@ module.exports = {
       { "path": "*", "element": "NotFound" })
 
     return finalList
-  }
-
+  },
+  getAllLabelsFromMenu
 }

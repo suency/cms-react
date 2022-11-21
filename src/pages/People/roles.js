@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from 'react-router-dom'
 import {
   message, Tree, Avatar, Segmented, Card, Row, Col, Button, Modal, Divider, Space,
   Form, Input, Image, Select, Tag, Descriptions
 } from 'antd'
 import http from "@/tools/http"
-import { deepClone, convertPathToMenu, convertPathToRouter } from "@/tools"
+import { deepClone, convertPathToMenu, convertPathToRouter, getAllLabelsFromMenu } from "@/tools"
 import DynComp from '@/components/DynamicComponent'
 import * as AllIcon from '@ant-design/icons'
 import { baseURL } from "@/tools"
@@ -163,6 +164,7 @@ function Roles() {
   const [roleData, setRoleData] = useState({ roleId: 1, roleName: "admin", resultMenu: [], resultRouter: [] })
   const [avatarList, setAvatarList] = useState({})
 
+  const navicate = useNavigate()
   const [addMenuForm] = Form.useForm()
   const [editRoleForm] = Form.useForm()
 
@@ -280,8 +282,13 @@ function Roles() {
 
   const onFinish = (values) => {
     console.log("finish", values)
+    if (treeOptions.allMenu.length > 5) {
+      message.error("roles number can not exceed 6")
+      return
+    }
     let newMenu = JSON.stringify([{ "key": "/", "icon": "PieChartOutlined", "label": "Dashboard" }])
     let newRouter = JSON.stringify([{ "path": "/", "element": "Layout", "children": [{ "path": "/", "element": "Home" }] }, { "path": "/Login", "element": "Login" }, { "path": "/Logout", "element": "Login" }, { "path": "*", "element": "NotFound" }])
+
     http.post('/roles/createRole', { newMenu, newRouter, ...values }).then(res => {
       console.log(res)
       if (res.data.status === "OK") {
@@ -382,12 +389,58 @@ function Roles() {
     }
   }
 
+  const onlyConfirmModal = (from, title, content, callback, params) => {
+    Modal.success({
+      title,
+      content,
+      onOk: () => {
+        callback(...params)
+      }
+    });
+  }
+  const isValid = str => {
+    var reg = /^[a-zA-Z0-9_]+$/g;
+    return !reg.test(str);
+  }
   const onFinishAddMenu = () => {
     let submitData = addMenuForm.getFieldsValue();
+    let existingMenuNames = []
+    getAllLabelsFromMenu(treeOptions.allMenu[0].menu_list, existingMenuNames)
+    existingMenuNames.push("Login")
+    existingMenuNames.push("NotFound")
+    existingMenuNames.push("Layout")
+    existingMenuNames.push("Home")
+    existingMenuNames = existingMenuNames.map(item => item.toLowerCase())
 
+    if (isValid(submitData.menuName)) {
+      message.error("name is not valid!")
+      addMenuForm.setFieldValue("menuName", "")
+      return
+    }
+
+    if (existingMenuNames.includes(submitData.menuName)) {
+      message.error("name exist, please change another one!")
+      addMenuForm.setFieldValue("menuName", "")
+      return
+    }
     //generate both root menu and router
     if (submitData.parentMenu === "/") {
+      http.post('/roles/addrootmenu', { ...submitData }).then(res => {
+        if (res.data.status === "OK") {
+          onlyConfirmModal(
+            "addRootMenuSuccess",
+            "Successfully Added New Root Menu",
+            "Please try to login to refresh!  Click OK button to redirect login page! And you should also configure pages first to make effective!",
+            navicate,
+            ["/Login"]
+          );
+        }
+      }).catch(err => {
+        message.error(err);
+      })
       console.log(submitData);
+    } else {
+
     }
 
     //app1 {"key": "/app1", "icon": "menuIcon", "label": "App1"} 直接push到总菜单
@@ -499,7 +552,7 @@ function Roles() {
                 "Update Role Menu",
                 `Are you sure updating role ${roleData.roleName} menu?`)}>
                 Save Settings</Button>
-              <Button type="ghost" onClick={() => {
+              <Button type="primary" onClick={() => {
                 showModal(
                   "createRole",
                   "Create New Role",
@@ -548,7 +601,7 @@ function Roles() {
                   </Row>
                 )
               }}>Create A Role</Button>
-              <Button type="ghost" onClick={() => {
+              <Button type="primary" onClick={() => {
                 showModal(
                   "editRole",
                   "Edit Role",

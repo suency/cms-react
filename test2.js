@@ -18,5 +18,10 @@ let result = a.map((e1) => {
   }
 }).filter(e2 => e2 !== undefined)
 
-console.log(result);
+let str = "$[0].children[1].element";
+
+//var str = "1,2,3,4,5,99999p-9";
+str = "$[1].label";
+str = str.replace(/\.([^\.]*)$/, '');
+console.log(str);
 //console.log(a[2].hasOwnProperty("children"));

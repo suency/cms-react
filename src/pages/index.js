@@ -1,20 +1,38 @@
-import Home from './Home'
-import NotFound from './404'
-import Setting from './Setting'
-import Tools from './Tools'
+import Home from "./Home";
+import NotFound from "./404";
+import Setting from "./Setting";
+import Tools from "./Tools";
 
-import Team1 from './Team/team1'
-import Team2 from './Team/team2'
+import Team1 from "./Team/team1";
+import Team2 from "./Team/team2";
 
-import Admins from './People/admins'
-import Roles from './People/roles'
-import Users from './People/users'
+import Admins from "./People/admins";
+import Roles from "./People/roles";
+import Users from "./People/users";
 
-import Login from './Login'
+import Login from "./Login";
 
-import Layout from './Layout'
-import Loading from './404/Loading'
+import Layout from "./Layout";
+import Loading from "./404/Loading";
 
-import App1 from "./App1"
+import Finance from "./App1";
+import Headphone from "./App1";
+import Paper from "./App1";
 
-export { Home, NotFound, Setting, Tools, Team1, Team2, Admins, Roles, Users, Layout, Login, Loading, App1 }
+export {
+    Home,
+    NotFound,
+    Setting,
+    Tools,
+    Team1,
+    Team2,
+    Admins,
+    Roles,
+    Users,
+    Layout,
+    Login,
+    Loading,
+    Finance,
+    Headphone,
+    Paper
+};

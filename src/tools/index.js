@@ -140,5 +140,11 @@ module.exports = {
 
     return finalList
   },
+  capital(str) {
+    if (str === '') {
+      return ''
+    }
+    return str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
+  },
   getAllLabelsFromMenu
 }

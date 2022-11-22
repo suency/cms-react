@@ -24,7 +24,7 @@ import {
   deepClone,
   convertPathToMenu,
   convertPathToRouter,
-  getAllLabelsFromMenu,
+  getAllLabelsFromMenu
 } from "@/tools";
 import DynComp from "@/components/DynamicComponent";
 import * as AllIcon from "@ant-design/icons";
@@ -58,6 +58,7 @@ function Roles() {
   const navicate = useNavigate();
   const [addMenuForm] = Form.useForm();
   const [editRoleForm] = Form.useForm();
+  const [addRootSubMenuForm] = Form.useForm();
 
   const [editTreeOptions, editSetTreeOptions] = useState({ treeData: [] });
 
@@ -515,6 +516,12 @@ function Roles() {
       return;
     }
 
+    if (submitData.menuName.length > 10) {
+      message.error("name is too long!");
+      addMenuForm.setFieldValue("menuName", "");
+      return;
+    }
+
     //name existing checking
     if (existingMenuNames.includes(submitData.menuName)) {
       message.error("name exist, please change another one!");
@@ -584,6 +591,84 @@ function Roles() {
     //{"path": "/team/team1", "element": "Team1"}
     //console.log(addMenuForm.getFieldsValue());
   };
+
+  const onFinishAddRootSubMenu = () => {
+    let submitData = addRootSubMenuForm.getFieldsValue();
+    let existingMenuNames = [];
+    getAllLabelsFromMenu(treeOptions.allMenu[0].menu_list, existingMenuNames);
+    existingMenuNames.push("Login");
+    existingMenuNames.push("NotFound");
+    existingMenuNames.push("Layout");
+    existingMenuNames.push("Home");
+    existingMenuNames = existingMenuNames.map((item) => item.toLowerCase());
+    /* let mockData = {
+      rootMenuIcon: "ClockCircleOutlined",
+      rootMenuName: "/",
+      subMenuIcon: "ClockCircleOutlined",
+      subMenuName: "/"
+    }; */
+
+    //console.log(submitData);
+    if (submitData.rootMenuName.length > 10) {
+      message.error("name is too long!");
+      addMenuForm.setFieldValue("rootMenuName", "");
+      return;
+    }
+
+    if (submitData.subMenuName.length > 10) {
+      message.error("name is too long!");
+      addMenuForm.setFieldValue("subMenuName", "");
+      return;
+    }
+    //name validation only for a-z A-Z and _
+    if (isValid(submitData.rootMenuName)) {
+      message.error("name is not valid!");
+      addMenuForm.setFieldValue("rootMenuName", "");
+      return;
+    }
+
+    if (isValid(submitData.subMenuName)) {
+      message.error("name is not valid!");
+      addMenuForm.setFieldValue("subMenuName", "");
+      return;
+    }
+
+    if (submitData.rootMenuName === submitData.subMenuName) {
+      message.error("root name can not be same as sub name");
+      addMenuForm.setFieldValue("subMenuName", "");
+      addMenuForm.setFieldValue("rootMenuName", "");
+      return;
+    }
+
+    //name existing checking
+    if (existingMenuNames.includes(submitData.rootMenuName)) {
+      message.error("rootname exist, please change another one!");
+      addMenuForm.setFieldValue("rootMenuName", "");
+      return;
+    }
+
+    if (existingMenuNames.includes(submitData.subMenuName)) {
+      message.error("subname exist, please change another one!");
+      addMenuForm.setFieldValue("rootMenuName", "");
+      return;
+    }
+
+    http.post("/roles/addrootsubmenu", { ...submitData })
+      .then((res) => {
+        if (res.data.status === "OK") {
+          onlyConfirmModal(
+            "addRootSubMenuSuccess",
+            "Successfully Added New Root Sub Menu",
+            "Please try to login to refresh!  Click OK button to redirect login page! And you should also configure pages first to make effective!",
+            navicate,
+            ["/Login"]
+          );
+        }
+      })
+      .catch((err) => {
+        message.error(err);
+      });
+  }
   const editMenu = (value) => {
     //console.log("edit", value)
   };
@@ -608,7 +693,7 @@ function Roles() {
                   onlyConfirmModal(
                     "DeleteRootMenuSuccess",
                     "Successfully Delete New Root Menu",
-                    "Please try to login to refresh!  Click OK button to redirect login page! And you should also configure pages first to make effective!",
+                    "Please try to login to refresh!  Click OK button to redirect login page! ",
                     navicate,
                     ["/Login"]
                   );
@@ -629,7 +714,25 @@ function Roles() {
             </div>
           ),
           onOk() {
-            console.log("ok");
+            //need two parme
+            //console.log(label);
+            //console.log(parentNode.children[0].label);
+            //return;
+            http.post("/roles/deletewholerootsubmenu", { parentLabel: label.parentLabel, childLabel: parentNode.children[0].label })
+              .then((res) => {
+                if (res.data.status === "OK") {
+                  onlyConfirmModal(
+                    "DeleteWholeParentSubMenuSuccess",
+                    "Successfully Delete parent and sub together!",
+                    "Please try to login to refresh!  Click OK button to redirect login page!",
+                    navicate,
+                    ["/Login"]
+                  );
+                }
+              })
+              .catch((err) => {
+                message.error(err);
+              });
           },
         });
       }
@@ -641,13 +744,13 @@ function Roles() {
           content: (
             <div>
               <p>
-                You can not delete in this case, if you want to delete, delete the root menu and
-                all of submenu will be deleted!
+                You can not delete in this case, if you want to delete, delete the <b>{label.parentLabel}</b> parent menu
+                and <b>{label.childLabel}</b> submenu will be deleted!
               </p>
             </div>
           )
         })
-      } else {
+      } else { // two more children submenu,just delete submenu
         Modal.confirm({
           title: `Delete a submenu`,
           content: (
@@ -656,7 +759,22 @@ function Roles() {
             </div>
           ),
           onOk() {
-            console.log("ok");
+            //sanme as delete just root menu
+            http.post("/roles/deleterootmenu", { label: label.childLabel })
+              .then((res) => {
+                if (res.data.status === "OK") {
+                  onlyConfirmModal(
+                    "DeleteRootMenuSuccess",
+                    "Successfully Delete sub Menu",
+                    "Please try to login to refresh!  Click OK button to redirect login page!",
+                    navicate,
+                    ["/Login"]
+                  );
+                }
+              })
+              .catch((err) => {
+                message.error(err);
+              });
           },
         });
       }
@@ -725,7 +843,7 @@ function Roles() {
         </Row>
 
         <Row gutter={[16, 16]}>
-          <Col className="gutter-row" span={15}>
+          <Col className="gutter-row" span={14}>
             <Card title="Roles Management (can only update by one role once)">
               <Segmented
                 onChange={changeRole}
@@ -947,8 +1065,8 @@ function Roles() {
             </Card>
           </Col>
 
-          {/* eidt menu  Add Menu*/}
-          <Col className="gutter-row" span={9}>
+          {/* eidt menu  Add sub Menu*/}
+          <Col className="gutter-row" span={10}>
             <Card title="Edit or Create Menu">
               <Divider orientation="left">All avaiable menu</Divider>
               <Tree
@@ -1062,6 +1180,115 @@ function Roles() {
                   }}
                 >
                   Add Root Menu
+                </Button>
+              </Space>
+              <Space size="small" style={{ marginLeft: 10 }}>
+                <Button
+                  type="primary"
+                  onClick={() => {
+                    showModal(
+                      "addRootSubMenu",
+                      "Add Root Sub Menu (create one root and one sub menu)",
+                      <Row style={{ marginTop: 20 }} gutter={16}>
+                        <Col className="gutter-row" span={24}>
+                          <Form
+                            labelCol={{ span: 8 }}
+                            wrapperCol={{ span: 8 }}
+                            layout="horizontal"
+                            onFinish={onFinishAddRootSubMenu}
+                            initialValues={{
+                              rootMenuIcon: "ControlTwoTone",
+                              subMenuIcon: "FileImageTwoTone",
+                              rootMenuName: "",
+                              subMenuName: ""
+                            }}
+                            form={addRootSubMenuForm}
+                          >
+                            <Form.Item
+                              label="Root Menu Name"
+                              name="rootMenuName"
+                              tooltip="Do not contain '/', best for a unique word"
+                              rules={[
+                                {
+                                  required: true,
+                                  message: "Can be empty!",
+                                },
+                              ]}
+                            >
+                              <Input style={{ width: 200 }} />
+                            </Form.Item>
+
+                            <Form.Item
+                              label="Sub Menu Name"
+                              name="subMenuName"
+                              tooltip="Do not contain '/', best for a unique word"
+                              rules={[
+                                {
+                                  required: true,
+                                  message: "Can be empty!",
+                                },
+                              ]}
+                            >
+                              <Input style={{ width: 200 }} />
+                            </Form.Item>
+                            <Form.Item label="Upload Root Icon" name="rootMenuIcon">
+                              <Select
+                                style={{ width: 200 }}
+                                size="large"
+                                className="avatarSelect"
+                              >
+                                {_.map(
+                                  _.allKeys(AllIcon).slice(150, 200),
+                                  (key) => {
+                                    return (
+                                      <Select.Option
+                                        key={key}
+                                        value={key}
+                                        className="avatarOption"
+                                      >
+                                        <DynComp Obj={AllIcon} name={key} />
+                                      </Select.Option>
+                                    );
+                                  }
+                                )}
+                              </Select>
+                            </Form.Item>
+                            <Form.Item label="Upload Sub Icon" name="subMenuIcon">
+                              <Select
+                                style={{ width: 200 }}
+                                size="large"
+                                className="avatarSelect"
+                              >
+                                {_.map(
+                                  _.allKeys(AllIcon).slice(250, 300),
+                                  (key) => {
+                                    return (
+                                      <Select.Option
+                                        key={key}
+                                        value={key}
+                                        className="avatarOption"
+                                      >
+                                        <DynComp Obj={AllIcon} name={key} />
+                                      </Select.Option>
+                                    );
+                                  }
+                                )}
+                              </Select>
+                            </Form.Item>
+                            <Form.Item wrapperCol={{ offset: 8 }}>
+                              <Space>
+                                <Button type="primary" htmlType="submit">
+                                  Save Menu
+                                </Button>
+                              </Space>
+                            </Form.Item>
+                          </Form>
+                        </Col>
+                      </Row>
+                    );
+                  }}
+                >
+                  Add Root Sub Menu
                 </Button>
               </Space>
             </Card>

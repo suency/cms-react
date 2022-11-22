@@ -15,9 +15,6 @@ import Login from "./Login";
 import Layout from "./Layout";
 import Loading from "./404/Loading";
 
-import Finance from "./App1";
-import Headphone from "./App1";
-import Paper from "./App1";
 
 export {
     Home,
@@ -31,8 +28,5 @@ export {
     Users,
     Layout,
     Login,
-    Loading,
-    Finance,
-    Headphone,
-    Paper
+    Loading
 };

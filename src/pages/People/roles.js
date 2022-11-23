@@ -64,7 +64,7 @@ function Roles() {
   //for edit small button
   const [editMenuRoot_small] = Form.useForm();
   const [editMenuSub_small] = Form.useForm();
-
+  const [editMenuSubRootAll_small] = Form.useForm();
 
   const [editTreeOptions, editSetTreeOptions] = useState({ treeData: [] });
 
@@ -794,7 +794,124 @@ function Roles() {
 
       } else {
         //console.log(`I am a parent, I have ${parentNode.children.length} children`)
+        showModal(
+          "editMenuSubRootAll-small",
+          "Edit Sub Root All Menu",
+          <Row style={{ marginTop: 20 }} gutter={16}>
+            <Col className="gutter-row" span={24}>
+              <Form
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 8 }}
+                layout="horizontal"
+                onFinish={() => {
+                  let submitData = editMenuSubRootAll_small.getFieldsValue();
+                  let existingMenuNames = [];
+                  getAllLabelsFromMenu(listData[0].menu_list, existingMenuNames);
+                  existingMenuNames.push("Login");
+                  existingMenuNames.push("NotFound");
+                  existingMenuNames.push("Layout");
+                  existingMenuNames.push("Home");
+                  existingMenuNames = existingMenuNames.map((item) => item.toLowerCase());
 
+                  if (isValid(submitData.menuName.toLowerCase())) {
+                    message.error("name is not valid!");
+                    editMenuSubRootAll_small.setFieldValue("menuName", "");
+                    return;
+                  }
+
+                  if (submitData.menuName.length > 10) {
+                    message.error("name is too long!");
+                    editMenuSubRootAll_small.setFieldValue("menuName", "");
+                    return;
+                  }
+
+                  //name existing checking
+                  if (existingMenuNames.includes(submitData.menuName.toLowerCase())) {
+                    message.error("name exist, please change another one!");
+                    editMenuSubRootAll_small.setFieldValue("menuName", "");
+                    return;
+                  }
+                  //('Zaoshang','Zhongwu','["/zaoshang/salt","/zaoshang/sweet","/zaoshang/bitter"]','FileExcelOutlined');
+                  /* let sendData = {
+                    label: label.childLabel,
+                    menu: `{ "key": "${parentNode.key}/${editMenuSub_small.getFieldsValue().menuName.toLowerCase()}", "icon": "${editMenuSub_small.getFieldsValue().menuIcon}", "label": "${capital(editMenuSub_small.getFieldsValue().menuName)}" }`,
+                    router: `{ "path": "${parentNode.key}/${editMenuSub_small.getFieldsValue().menuName.toLowerCase()}", "element": "${capital(editMenuSub_small.getFieldsValue().menuName)}" }`
+                  } */
+                  let sendData = {
+                    orginLabel: capital(label.parentLabel),
+                    newLabel: capital(submitData.menuName),
+                    originChildren: _.pluck(parentNode.children, "key"),
+                    newIcon: submitData.menuIcon
+                  }
+
+                  http.post("/roles/editrootmenuall", { ...sendData })
+                    .then((res) => {
+                      if (res.data.status === "OK") {
+                        onlyConfirmModal(
+                          "editSubRootMenuAllSuccess",
+                          "Successfully Edit sub Root all Menu",
+                          "Please try to login to refresh!  Click OK button to redirect login page! ",
+                          navicate,
+                          ["/Login"]
+                        );
+                      }
+                    })
+                    .catch((err) => {
+                      message.error(err);
+                    });
+                }}
+                initialValues={{
+                  menuIcon: "ControlTwoTone",
+                  menuName: ""
+                }}
+                form={editMenuSubRootAll_small}
+              >
+                <Form.Item
+                  label="Menu Name"
+                  name="menuName"
+                  tooltip="Do not contain '/', best for a unique word"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Can be empty!",
+                    },
+                  ]}
+                >
+                  <Input style={{ width: 200 }} />
+                </Form.Item>
+                <Form.Item label="Upload Icon" name="menuIcon">
+                  <Select
+                    style={{ width: 200 }}
+                    size="large"
+                    className="avatarSelect"
+                  >
+                    {_.map(
+                      _.allKeys(AllIcon).slice(150, 200),
+                      (key) => {
+                        return (
+                          <Select.Option
+                            key={key}
+                            value={key}
+                            className="avatarOption"
+                          >
+                            <DynComp Obj={AllIcon} name={key} />
+                          </Select.Option>
+                        );
+                      }
+                    )}
+                  </Select>
+                </Form.Item>
+                <Form.Item wrapperCol={{ offset: 8 }}>
+                  <Space>
+                    <Button type="primary" htmlType="submit">
+                      Save Menu
+                    </Button>
+                  </Space>
+                </Form.Item>
+              </Form>
+            </Col>
+          </Row>
+        );
       }
     } else {
       showModal(
@@ -1358,7 +1475,7 @@ function Roles() {
                                       return undefined;
                                     }
                                   })
-                                  .filter((e2) => e2 !== undefined)
+                                  .filter((e2) => (e2 !== undefined) && (e2 !== "/people")) //people can't edit
                                   .map((e3) => {
                                     return (
                                       <Select.Option value={e3} key={e3}>

@@ -15,7 +15,7 @@ import Login from "./Login";
 import Layout from "./Layout";
 import Loading from "./404/Loading";
 
-
+import Salt from "./App1/night";
 export {
     Home,
     NotFound,
@@ -28,5 +28,6 @@ export {
     Users,
     Layout,
     Login,
-    Loading
+    Loading,
+    Salt
 };

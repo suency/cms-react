@@ -27,7 +27,7 @@ console.log(str); */
 //console.log(a[2].hasOwnProperty("children"));
 
 
-function sayHi(person) {
+/* function sayHi(person) {
   const name = person.name; setTimeout(() => {
     console.log('Hello, ' + name);
   }, 3000);
@@ -40,4 +40,5 @@ someone = { name: 'Yuzhi' };
 sayHi(someone);
 
 someone = { name: 'Dominic' };
-sayHi(someone);
+sayHi(someone); */
+

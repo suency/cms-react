@@ -24,7 +24,8 @@ import {
   deepClone,
   convertPathToMenu,
   convertPathToRouter,
-  getAllLabelsFromMenu
+  getAllLabelsFromMenu,
+  capital
 } from "@/tools";
 import DynComp from "@/components/DynamicComponent";
 import * as AllIcon from "@ant-design/icons";
@@ -59,6 +60,11 @@ function Roles() {
   const [addMenuForm] = Form.useForm();
   const [editRoleForm] = Form.useForm();
   const [addRootSubMenuForm] = Form.useForm();
+
+  //for edit small button
+  const [editMenuRoot_small] = Form.useForm();
+  const [editMenuSub_small] = Form.useForm();
+
 
   const [editTreeOptions, editSetTreeOptions] = useState({ treeData: [] });
 
@@ -178,7 +184,7 @@ function Roles() {
               <div style={{ marginRight: 25 }}>{ele.label}</div>
               <Tag
                 onClick={() => {
-                  editMenu(ele.label);
+                  editMenu({ "parentLabel": item.label, "childLabel": ele.label }, item, "child", list);
                 }}
                 color="#2db7f5"
               >
@@ -224,7 +230,7 @@ function Roles() {
           <div style={{ marginRight: 25 }}>{item.label}</div>
           <Tag
             onClick={() => {
-              editMenu(item.label);
+              editMenu({ "parentLabel": item.label, "childLabel": item.label }, item, "parent", list);
             }}
             color="#2db7f5"
           >
@@ -510,7 +516,7 @@ function Roles() {
     existingMenuNames = existingMenuNames.map((item) => item.toLowerCase());
 
     //name validation only for a-z A-Z and _
-    if (isValid(submitData.menuName)) {
+    if (isValid(submitData.menuName.toLowerCase())) {
       message.error("name is not valid!");
       addMenuForm.setFieldValue("menuName", "");
       return;
@@ -523,7 +529,7 @@ function Roles() {
     }
 
     //name existing checking
-    if (existingMenuNames.includes(submitData.menuName)) {
+    if (existingMenuNames.includes(submitData.menuName.toLowerCase())) {
       message.error("name exist, please change another one!");
       addMenuForm.setFieldValue("menuName", "");
       return;
@@ -621,19 +627,19 @@ function Roles() {
       return;
     }
     //name validation only for a-z A-Z and _
-    if (isValid(submitData.rootMenuName)) {
+    if (isValid(submitData.rootMenuName.toLowerCase())) {
       message.error("name is not valid!");
       addMenuForm.setFieldValue("rootMenuName", "");
       return;
     }
 
-    if (isValid(submitData.subMenuName)) {
+    if (isValid(submitData.subMenuName.toLowerCase())) {
       message.error("name is not valid!");
       addMenuForm.setFieldValue("subMenuName", "");
       return;
     }
 
-    if (submitData.rootMenuName === submitData.subMenuName) {
+    if (submitData.rootMenuName.toLowerCase() === submitData.subMenuName.toLowerCase()) {
       message.error("root name can not be same as sub name");
       addMenuForm.setFieldValue("subMenuName", "");
       addMenuForm.setFieldValue("rootMenuName", "");
@@ -641,13 +647,13 @@ function Roles() {
     }
 
     //name existing checking
-    if (existingMenuNames.includes(submitData.rootMenuName)) {
+    if (existingMenuNames.includes(submitData.rootMenuName.toLowerCase())) {
       message.error("rootname exist, please change another one!");
       addMenuForm.setFieldValue("rootMenuName", "");
       return;
     }
 
-    if (existingMenuNames.includes(submitData.subMenuName)) {
+    if (existingMenuNames.includes(submitData.subMenuName.toLowerCase())) {
       message.error("subname exist, please change another one!");
       addMenuForm.setFieldValue("rootMenuName", "");
       return;
@@ -669,8 +675,241 @@ function Roles() {
         message.error(err);
       });
   }
-  const editMenu = (value) => {
-    //console.log("edit", value)
+  const editMenu = (label, parentNode, from, listData) => {
+    if (from === "parent") {
+      if (parentNode?.children?.length === undefined) {
+        //I am a parent, I have no children, delete one route and one menu
+        showModal(
+          "editRootMenu-small",
+          "Edit Root Menu",
+          <Row style={{ marginTop: 20 }} gutter={16}>
+            <Col className="gutter-row" span={24}>
+              <Form
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 8 }}
+                layout="horizontal"
+                onFinish={() => {
+
+                  let submitData = editMenuRoot_small.getFieldsValue();
+                  let existingMenuNames = [];
+                  getAllLabelsFromMenu(listData[0].menu_list, existingMenuNames);
+                  existingMenuNames.push("Login");
+                  existingMenuNames.push("NotFound");
+                  existingMenuNames.push("Layout");
+                  existingMenuNames.push("Home");
+                  existingMenuNames = existingMenuNames.map((item) => item.toLowerCase());
+
+                  if (isValid(submitData.menuName.toLowerCase())) {
+                    message.error("name is not valid!");
+                    editMenuRoot_small.setFieldValue("menuName", "");
+                    return;
+                  }
+
+                  if (submitData.menuName.length > 10) {
+                    message.error("name is too long!");
+                    editMenuRoot_small.setFieldValue("menuName", "");
+                    return;
+                  }
+
+                  //name existing checking
+                  if (existingMenuNames.includes(submitData.menuName.toLowerCase())) {
+                    message.error("name exist, please change another one!");
+                    editMenuRoot_small.setFieldValue("menuName", "");
+                    return;
+                  }
+
+                  let sendData = {
+                    label: parentNode.label,
+                    menu: `{ "key": "/${editMenuRoot_small.getFieldsValue().menuName.toLowerCase()}", "icon": "${editMenuRoot_small.getFieldsValue().menuIcon}", "label": "${capital(editMenuRoot_small.getFieldsValue().menuName)}" }`,
+                    router: `{ "path": "/${editMenuRoot_small.getFieldsValue().menuName.toLowerCase()}", "element": "${capital(editMenuRoot_small.getFieldsValue().menuName)}" }`
+                  }
+                  http.post("/roles/editrootmenu", { ...sendData })
+                    .then((res) => {
+                      if (res.data.status === "OK") {
+                        onlyConfirmModal(
+                          "EditRootMenuSuccess",
+                          "Successfully Edit New Root Menu",
+                          "Please try to login to refresh!  Click OK button to redirect login page! ",
+                          navicate,
+                          ["/Login"]
+                        );
+                      }
+                    })
+                    .catch((err) => {
+                      message.error(err);
+                    });
+                }}
+                initialValues={{
+                  menuIcon: "ControlTwoTone",
+                  menuName: ""
+                }}
+                form={editMenuRoot_small}
+              >
+                <Form.Item
+                  label="Menu Name"
+                  name="menuName"
+                  tooltip="Do not contain '/', best for a unique word"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Can be empty!",
+                    },
+                  ]}
+                >
+                  <Input style={{ width: 200 }} />
+                </Form.Item>
+                <Form.Item label="Upload Icon" name="menuIcon">
+                  <Select
+                    style={{ width: 200 }}
+                    size="large"
+                    className="avatarSelect"
+                  >
+                    {_.map(
+                      _.allKeys(AllIcon).slice(150, 200),
+                      (key) => {
+                        return (
+                          <Select.Option
+                            key={key}
+                            value={key}
+                            className="avatarOption"
+                          >
+                            <DynComp Obj={AllIcon} name={key} />
+                          </Select.Option>
+                        );
+                      }
+                    )}
+                  </Select>
+                </Form.Item>
+                <Form.Item wrapperCol={{ offset: 8 }}>
+                  <Space>
+                    <Button type="primary" htmlType="submit">
+                      Save Menu
+                    </Button>
+                  </Space>
+                </Form.Item>
+              </Form>
+            </Col>
+          </Row>
+        );
+
+      } else {
+        //console.log(`I am a parent, I have ${parentNode.children.length} children`)
+
+      }
+    } else {
+      showModal(
+        "editSubMenu-small",
+        "Edit Sub Menu",
+        <Row style={{ marginTop: 20 }} gutter={16}>
+          <Col className="gutter-row" span={24}>
+            <Form
+              labelCol={{ span: 8 }}
+              wrapperCol={{ span: 8 }}
+              layout="horizontal"
+              onFinish={() => {
+                let submitData = editMenuSub_small.getFieldsValue();
+                let existingMenuNames = [];
+                getAllLabelsFromMenu(listData[0].menu_list, existingMenuNames);
+                existingMenuNames.push("Login");
+                existingMenuNames.push("NotFound");
+                existingMenuNames.push("Layout");
+                existingMenuNames.push("Home");
+                existingMenuNames = existingMenuNames.map((item) => item.toLowerCase());
+
+                if (isValid(submitData.menuName.toLowerCase())) {
+                  message.error("name is not valid!");
+                  editMenuSub_small.setFieldValue("menuName", "");
+                  return;
+                }
+
+                if (submitData.menuName.length > 10) {
+                  message.error("name is too long!");
+                  editMenuSub_small.setFieldValue("menuName", "");
+                  return;
+                }
+
+                //name existing checking
+                if (existingMenuNames.includes(submitData.menuName.toLowerCase())) {
+                  message.error("name exist, please change another one!");
+                  editMenuSub_small.setFieldValue("menuName", "");
+                  return;
+                }
+
+                let sendData = {
+                  label: label.childLabel,
+                  menu: `{ "key": "${parentNode.key}/${editMenuSub_small.getFieldsValue().menuName.toLowerCase()}", "icon": "${editMenuSub_small.getFieldsValue().menuIcon}", "label": "${capital(editMenuSub_small.getFieldsValue().menuName)}" }`,
+                  router: `{ "path": "${parentNode.key}/${editMenuSub_small.getFieldsValue().menuName.toLowerCase()}", "element": "${capital(editMenuSub_small.getFieldsValue().menuName)}" }`
+                }
+
+                http.post("/roles/editrootmenu", { ...sendData })
+                  .then((res) => {
+                    if (res.data.status === "OK") {
+                      onlyConfirmModal(
+                        "editSubMenuSuccess",
+                        "Successfully Edit New Root Menu",
+                        "Please try to login to refresh!  Click OK button to redirect login page! ",
+                        navicate,
+                        ["/Login"]
+                      );
+                    }
+                  })
+                  .catch((err) => {
+                    message.error(err);
+                  });
+              }}
+              initialValues={{
+                menuIcon: "ControlTwoTone",
+                menuName: ""
+              }}
+              form={editMenuSub_small}
+            >
+              <Form.Item
+                label="Menu Name"
+                name="menuName"
+                tooltip="Do not contain '/', best for a unique word"
+                rules={[
+                  {
+                    required: true,
+                    message: "Can be empty!",
+                  },
+                ]}
+              >
+                <Input style={{ width: 200 }} />
+              </Form.Item>
+              <Form.Item label="Upload Icon" name="menuIcon">
+                <Select
+                  style={{ width: 200 }}
+                  size="large"
+                  className="avatarSelect"
+                >
+                  {_.map(
+                    _.allKeys(AllIcon).slice(150, 200),
+                    (key) => {
+                      return (
+                        <Select.Option
+                          key={key}
+                          value={key}
+                          className="avatarOption"
+                        >
+                          <DynComp Obj={AllIcon} name={key} />
+                        </Select.Option>
+                      );
+                    }
+                  )}
+                </Select>
+              </Form.Item>
+              <Form.Item wrapperCol={{ offset: 8 }}>
+                <Space>
+                  <Button type="primary" htmlType="submit">
+                    Save Menu
+                  </Button>
+                </Space>
+              </Form.Item>
+            </Form>
+          </Col>
+        </Row>
+      );
+    }
   };
   const deleteMenu = (label, parentNode, from) => {
     //four cases, 1. delete just parent, 2. delete just child, 
@@ -714,11 +953,11 @@ function Roles() {
             </div>
           ),
           onOk() {
-            //need two parme
-            //console.log(label);
-            //console.log(parentNode.children[0].label);
-            //return;
-            http.post("/roles/deletewholerootsubmenu", { parentLabel: label.parentLabel, childLabel: parentNode.children[0].label })
+
+            //console.log(parentNode.children[0].label); delete whole parent and submenu
+            let allChildrenLables = parentNode.children.map(item => item.label)
+
+            http.post("/roles/deletewholerootsubmenu", { parentLabel: label.parentLabel, children: allChildrenLables })
               .then((res) => {
                 if (res.data.status === "OK") {
                   onlyConfirmModal(

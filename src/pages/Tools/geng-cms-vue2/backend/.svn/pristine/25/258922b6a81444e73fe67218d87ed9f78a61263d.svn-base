@@ -1,0 +1,1503 @@
+[2019-12-29T16:56:12+08:00][sql] CONNECT:[ UseTime:0.001229s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008360s ]
+[2019-12-29T16:56:12+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000442s ]
+[2019-12-29T16:56:12+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000423s ]
+[2019-12-29T16:56:12+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjA5NzcyLCJuYmYiOjE1Nzc2MDk3NzIsImV4cCI6MTYxMzYwOTc3MiwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.ZYxaxyAcH3WAJDClYUQwvt88YS3NozWGSTzV8b0yZm0'  WHERE  `id` = 1 [ RunTime:0.000388s ]
+[2019-12-29T16:56:12+08:00][sql] CONNECT:[ UseTime:0.010296s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009608s ]
+[2019-12-29T16:56:12+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[2019-12-29T16:56:12+08:00][sql] CONNECT:[ UseTime:0.010210s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012438s ]
+[2019-12-29T16:56:12+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000326s ]
+[2019-12-29T16:56:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008311s ]
+[2019-12-29T16:56:12+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000490s ]
+[2019-12-29T16:56:18+08:00][sql] CONNECT:[ UseTime:0.001079s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.006856s ]
+[2019-12-29T16:56:18+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000303s ]
+[2019-12-29T16:56:18+08:00][sql] CONNECT:[ UseTime:0.010463s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007333s ]
+[2019-12-29T16:56:18+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000332s ]
+[2019-12-29T16:56:22+08:00][sql] CONNECT:[ UseTime:0.009987s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007076s ]
+[2019-12-29T16:56:22+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000327s ]
+[2019-12-29T16:56:22+08:00][sql] CONNECT:[ UseTime:0.010806s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.011467s ]
+[2019-12-29T16:56:22+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000643s ]
+[2019-12-29T16:56:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009018s ]
+[2019-12-29T16:56:22+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000526s ]
+[2019-12-29T16:56:23+08:00][sql] CONNECT:[ UseTime:0.010769s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:56:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.011176s ]
+[2019-12-29T16:56:23+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000395s ]
+[2019-12-29T16:56:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007161s ]
+[2019-12-29T16:56:23+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000532s ]
+[2019-12-29T16:57:47+08:00][sql] CONNECT:[ UseTime:0.011360s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:57:47+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.006790s ]
+[2019-12-29T16:57:47+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000373s ]
+[2019-12-29T16:57:47+08:00][sql] CONNECT:[ UseTime:0.010209s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T16:57:47+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.015956s ]
+[2019-12-29T16:57:47+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000399s ]
+[2019-12-29T17:03:20+08:00][sql] CONNECT:[ UseTime:0.000733s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007967s ]
+[2019-12-29T17:03:20+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000388s ]
+[2019-12-29T17:03:20+08:00][sql] CONNECT:[ UseTime:0.000606s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.006674s ]
+[2019-12-29T17:03:20+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000286s ]
+[2019-12-29T17:03:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.006877s ]
+[2019-12-29T17:03:20+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000507s ]
+[2019-12-29T17:03:21+08:00][sql] CONNECT:[ UseTime:0.010656s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.023775s ]
+[2019-12-29T17:03:21+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.001419s ]
+[2019-12-29T17:03:21+08:00][sql] CONNECT:[ UseTime:0.000665s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.006504s ]
+[2019-12-29T17:03:21+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000256s ]
+[2019-12-29T17:03:53+08:00][sql] CONNECT:[ UseTime:0.000647s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007177s ]
+[2019-12-29T17:03:53+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000375s ]
+[2019-12-29T17:03:53+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.015367s ]
+[2019-12-29T17:03:53+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjEwMjMzLCJuYmYiOjE1Nzc2MTAyMzMsImV4cCI6MTYxMzYxMDIzMywiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.XxC9dp2oqHOXA9g6HCkjv_kO86ndczQNqV_9NmAe_D0'  WHERE  `id` = 1 [ RunTime:0.000401s ]
+[2019-12-29T17:03:53+08:00][sql] CONNECT:[ UseTime:0.000564s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.006565s ]
+[2019-12-29T17:03:53+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000306s ]
+[2019-12-29T17:03:53+08:00][sql] CONNECT:[ UseTime:0.011427s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008656s ]
+[2019-12-29T17:03:53+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000342s ]
+[2019-12-29T17:03:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.006824s ]
+[2019-12-29T17:03:53+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000533s ]
+[2019-12-29T17:03:53+08:00][sql] CONNECT:[ UseTime:0.011415s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.006783s ]
+[2019-12-29T17:03:53+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000307s ]
+[2019-12-29T17:03:54+08:00][sql] CONNECT:[ UseTime:0.000674s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:54+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008053s ]
+[2019-12-29T17:03:54+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000453s ]
+[2019-12-29T17:03:57+08:00][sql] CONNECT:[ UseTime:0.010395s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.013478s ]
+[2019-12-29T17:03:57+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000461s ]
+[2019-12-29T17:03:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007193s ]
+[2019-12-29T17:03:57+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000538s ]
+[2019-12-29T17:03:58+08:00][sql] CONNECT:[ UseTime:0.010669s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.006664s ]
+[2019-12-29T17:03:58+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000319s ]
+[2019-12-29T17:03:59+08:00][sql] CONNECT:[ UseTime:0.010270s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:03:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.006941s ]
+[2019-12-29T17:03:59+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000358s ]
+[2019-12-29T17:03:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.006611s ]
+[2019-12-29T17:03:59+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000471s ]
+[2019-12-29T17:04:00+08:00][sql] CONNECT:[ UseTime:0.011968s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:04:00+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008522s ]
+[2019-12-29T17:04:00+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000393s ]
+[2019-12-29T17:04:00+08:00][sql] CONNECT:[ UseTime:0.010205s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:04:00+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.011313s ]
+[2019-12-29T17:04:00+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000467s ]
+[2019-12-29T17:05:55+08:00][sql] CONNECT:[ UseTime:0.000649s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:05:55+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009424s ]
+[2019-12-29T17:05:55+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000392s ]
+[2019-12-29T17:05:55+08:00][sql] CONNECT:[ UseTime:0.011404s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:05:55+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009434s ]
+[2019-12-29T17:05:55+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000425s ]
+[2019-12-29T17:05:55+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007163s ]
+[2019-12-29T17:05:55+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000471s ]
+[2019-12-29T17:05:56+08:00][sql] CONNECT:[ UseTime:0.010581s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:05:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007741s ]
+[2019-12-29T17:05:56+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000366s ]
+[2019-12-29T17:05:56+08:00][sql] CONNECT:[ UseTime:0.000588s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:05:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007099s ]
+[2019-12-29T17:05:56+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000349s ]
+[2019-12-29T17:07:28+08:00][sql] CONNECT:[ UseTime:0.001342s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007917s ]
+[2019-12-29T17:07:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000384s ]
+[2019-12-29T17:07:28+08:00][sql] CONNECT:[ UseTime:0.000697s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007138s ]
+[2019-12-29T17:07:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000309s ]
+[2019-12-29T17:07:28+08:00][sql] CONNECT:[ UseTime:0.000580s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008225s ]
+[2019-12-29T17:07:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000352s ]
+[2019-12-29T17:07:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.006532s ]
+[2019-12-29T17:07:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000416s ]
+[2019-12-29T17:07:28+08:00][sql] CONNECT:[ UseTime:0.000719s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008030s ]
+[2019-12-29T17:07:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000438s ]
+[2019-12-29T17:07:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007751s ]
+[2019-12-29T17:07:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000542s ]
+[2019-12-29T17:07:29+08:00][sql] CONNECT:[ UseTime:0.000704s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008364s ]
+[2019-12-29T17:07:29+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000310s ]
+[2019-12-29T17:07:29+08:00][sql] CONNECT:[ UseTime:0.000685s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.006560s ]
+[2019-12-29T17:07:29+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000294s ]
+[2019-12-29T17:07:39+08:00][sql] CONNECT:[ UseTime:0.000816s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:39+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007162s ]
+[2019-12-29T17:07:39+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.008312s ]
+[2019-12-29T17:07:39+08:00][sql] CONNECT:[ UseTime:0.000614s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:39+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008742s ]
+[2019-12-29T17:07:39+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000452s ]
+[2019-12-29T17:07:40+08:00][sql] CONNECT:[ UseTime:0.000567s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.006935s ]
+[2019-12-29T17:07:40+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000352s ]
+[2019-12-29T17:07:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.010547s ]
+[2019-12-29T17:07:40+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000582s ]
+[2019-12-29T17:07:40+08:00][sql] CONNECT:[ UseTime:0.000637s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007254s ]
+[2019-12-29T17:07:40+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000325s ]
+[2019-12-29T17:07:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007595s ]
+[2019-12-29T17:07:40+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000535s ]
+[2019-12-29T17:07:40+08:00][sql] CONNECT:[ UseTime:0.000753s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010579s ]
+[2019-12-29T17:07:40+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000442s ]
+[2019-12-29T17:07:40+08:00][sql] CONNECT:[ UseTime:0.000658s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:07:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008127s ]
+[2019-12-29T17:07:40+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000309s ]
+[2019-12-29T17:24:29+08:00][sql] CONNECT:[ UseTime:0.000753s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:24:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008784s ]
+[2019-12-29T17:24:29+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000411s ]
+[2019-12-29T17:24:29+08:00][sql] CONNECT:[ UseTime:0.000654s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:24:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007456s ]
+[2019-12-29T17:24:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000324s ]
+[2019-12-29T17:24:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008045s ]
+[2019-12-29T17:24:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000482s ]
+[2019-12-29T17:25:51+08:00][sql] CONNECT:[ UseTime:0.000706s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:25:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007667s ]
+[2019-12-29T17:25:51+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000351s ]
+[2019-12-29T17:25:52+08:00][sql] CONNECT:[ UseTime:0.010526s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:25:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.010504s ]
+[2019-12-29T17:25:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000341s ]
+[2019-12-29T17:25:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007292s ]
+[2019-12-29T17:25:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000441s ]
+[2019-12-29T17:27:32+08:00][sql] CONNECT:[ UseTime:0.000635s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:27:32+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008385s ]
+[2019-12-29T17:27:32+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000316s ]
+[2019-12-29T17:27:32+08:00][sql] CONNECT:[ UseTime:0.011565s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:27:32+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007471s ]
+[2019-12-29T17:27:32+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000340s ]
+[2019-12-29T17:27:32+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007223s ]
+[2019-12-29T17:27:32+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000439s ]
+[2019-12-29T17:27:42+08:00][sql] CONNECT:[ UseTime:0.000847s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:27:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009487s ]
+[2019-12-29T17:27:42+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000439s ]
+[2019-12-29T17:27:42+08:00][sql] CONNECT:[ UseTime:0.000721s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:27:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.013029s ]
+[2019-12-29T17:27:42+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000358s ]
+[2019-12-29T17:27:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008380s ]
+[2019-12-29T17:27:42+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000490s ]
+[2019-12-29T17:28:43+08:00][sql] CONNECT:[ UseTime:0.000710s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:28:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010656s ]
+[2019-12-29T17:28:43+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000377s ]
+[2019-12-29T17:28:43+08:00][sql] CONNECT:[ UseTime:0.000646s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:28:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007526s ]
+[2019-12-29T17:28:43+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000345s ]
+[2019-12-29T17:28:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.012694s ]
+[2019-12-29T17:28:43+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000469s ]
+[2019-12-29T17:28:53+08:00][sql] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:28:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009242s ]
+[2019-12-29T17:28:53+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000428s ]
+[2019-12-29T17:28:54+08:00][sql] CONNECT:[ UseTime:0.000657s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:28:54+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.016730s ]
+[2019-12-29T17:28:54+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000478s ]
+[2019-12-29T17:28:54+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007906s ]
+[2019-12-29T17:28:54+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000531s ]
+[2019-12-29T17:30:20+08:00][sql] CONNECT:[ UseTime:0.000655s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:30:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009002s ]
+[2019-12-29T17:30:20+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000441s ]
+[2019-12-29T17:30:20+08:00][sql] CONNECT:[ UseTime:0.011118s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:30:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.025535s ]
+[2019-12-29T17:30:20+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000355s ]
+[2019-12-29T17:30:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007686s ]
+[2019-12-29T17:30:20+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000478s ]
+[2019-12-29T17:30:52+08:00][sql] CONNECT:[ UseTime:0.000701s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:30:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009364s ]
+[2019-12-29T17:30:52+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000444s ]
+[2019-12-29T17:30:52+08:00][sql] CONNECT:[ UseTime:0.011121s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:30:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.016807s ]
+[2019-12-29T17:30:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000421s ]
+[2019-12-29T17:30:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008716s ]
+[2019-12-29T17:30:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000548s ]
+[2019-12-29T17:31:37+08:00][sql] CONNECT:[ UseTime:0.000674s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:31:37+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007554s ]
+[2019-12-29T17:31:37+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000418s ]
+[2019-12-29T17:31:37+08:00][sql] CONNECT:[ UseTime:0.011408s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:31:37+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007509s ]
+[2019-12-29T17:31:37+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000342s ]
+[2019-12-29T17:31:37+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007237s ]
+[2019-12-29T17:31:37+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000466s ]
+[2019-12-29T17:31:48+08:00][sql] CONNECT:[ UseTime:0.000600s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:31:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010280s ]
+[2019-12-29T17:31:48+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000439s ]
+[2019-12-29T17:31:48+08:00][sql] CONNECT:[ UseTime:0.000626s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:31:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007439s ]
+[2019-12-29T17:31:48+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000411s ]
+[2019-12-29T17:31:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007387s ]
+[2019-12-29T17:31:48+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000470s ]
+[2019-12-29T17:32:09+08:00][sql] CONNECT:[ UseTime:0.001661s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:32:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.023957s ]
+[2019-12-29T17:32:09+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000776s ]
+[2019-12-29T17:32:10+08:00][sql] CONNECT:[ UseTime:0.000823s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:32:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.020817s ]
+[2019-12-29T17:32:10+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000490s ]
+[2019-12-29T17:32:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008741s ]
+[2019-12-29T17:32:10+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000427s ]
+[2019-12-29T17:32:40+08:00][sql] CONNECT:[ UseTime:0.000583s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:32:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010881s ]
+[2019-12-29T17:32:40+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000383s ]
+[2019-12-29T17:32:40+08:00][sql] CONNECT:[ UseTime:0.000641s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:32:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008175s ]
+[2019-12-29T17:32:40+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000313s ]
+[2019-12-29T17:32:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007817s ]
+[2019-12-29T17:32:40+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000506s ]
+[2019-12-29T17:37:41+08:00][sql] CONNECT:[ UseTime:0.000849s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:37:41+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007580s ]
+[2019-12-29T17:37:41+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000350s ]
+[2019-12-29T17:37:41+08:00][sql] CONNECT:[ UseTime:0.011183s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:37:41+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007508s ]
+[2019-12-29T17:37:41+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000419s ]
+[2019-12-29T17:37:41+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007976s ]
+[2019-12-29T17:37:41+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000458s ]
+[2019-12-29T17:46:08+08:00][sql] CONNECT:[ UseTime:0.000930s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:46:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009895s ]
+[2019-12-29T17:46:08+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000600s ]
+[2019-12-29T17:46:08+08:00][sql] CONNECT:[ UseTime:0.000771s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:46:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009119s ]
+[2019-12-29T17:46:08+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000332s ]
+[2019-12-29T17:46:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007401s ]
+[2019-12-29T17:46:08+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000548s ]
+[2019-12-29T17:47:05+08:00][sql] CONNECT:[ UseTime:0.000665s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:47:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010471s ]
+[2019-12-29T17:47:05+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000330s ]
+[2019-12-29T17:47:05+08:00][sql] CONNECT:[ UseTime:0.000654s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:47:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008364s ]
+[2019-12-29T17:47:05+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000362s ]
+[2019-12-29T17:47:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009981s ]
+[2019-12-29T17:47:05+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000481s ]
+[2019-12-29T17:47:08+08:00][sql] CONNECT:[ UseTime:0.000624s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:47:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008747s ]
+[2019-12-29T17:47:08+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000328s ]
+[2019-12-29T17:47:08+08:00][sql] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:47:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008329s ]
+[2019-12-29T17:47:08+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000377s ]
+[2019-12-29T17:47:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007880s ]
+[2019-12-29T17:47:08+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000486s ]
+[2019-12-29T17:47:08+08:00][sql] CONNECT:[ UseTime:0.000700s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:47:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007521s ]
+[2019-12-29T17:47:08+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000325s ]
+[2019-12-29T17:47:08+08:00][sql] CONNECT:[ UseTime:0.000645s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:47:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009318s ]
+[2019-12-29T17:47:08+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000318s ]
+[2019-12-29T17:48:04+08:00][sql] CONNECT:[ UseTime:0.000779s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:48:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010318s ]
+[2019-12-29T17:48:04+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000447s ]
+[2019-12-29T17:48:04+08:00][sql] CONNECT:[ UseTime:0.000912s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:48:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008508s ]
+[2019-12-29T17:48:04+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000445s ]
+[2019-12-29T17:48:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008903s ]
+[2019-12-29T17:48:04+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000534s ]
+[2019-12-29T17:48:04+08:00][sql] CONNECT:[ UseTime:0.000636s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:48:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008222s ]
+[2019-12-29T17:48:04+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000371s ]
+[2019-12-29T17:48:04+08:00][sql] CONNECT:[ UseTime:0.000669s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:48:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008126s ]
+[2019-12-29T17:48:04+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000408s ]
+[2019-12-29T17:48:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008965s ]
+[2019-12-29T17:48:04+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000504s ]
+[2019-12-29T17:50:25+08:00][sql] CONNECT:[ UseTime:0.010541s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:25+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007896s ]
+[2019-12-29T17:50:25+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000343s ]
+[2019-12-29T17:50:25+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000317s ]
+[2019-12-29T17:50:25+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjEzMDI1LCJuYmYiOjE1Nzc2MTMwMjUsImV4cCI6MTYxMzYxMzAyNSwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.5XpCS8THuiu08GsAmaQPRIwIgTUWXQhey0A-_TW6igA'  WHERE  `id` = 1 [ RunTime:0.000315s ]
+[2019-12-29T17:50:25+08:00][sql] CONNECT:[ UseTime:0.010189s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:25+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008000s ]
+[2019-12-29T17:50:25+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000450s ]
+[2019-12-29T17:50:25+08:00][sql] CONNECT:[ UseTime:0.010579s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:25+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007363s ]
+[2019-12-29T17:50:25+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000423s ]
+[2019-12-29T17:50:25+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007707s ]
+[2019-12-29T17:50:25+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000465s ]
+[2019-12-29T17:50:34+08:00][sql] CONNECT:[ UseTime:0.002565s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009801s ]
+[2019-12-29T17:50:34+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000368s ]
+[2019-12-29T17:50:34+08:00][sql] CONNECT:[ UseTime:0.000586s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007336s ]
+[2019-12-29T17:50:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000444s ]
+[2019-12-29T17:50:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.014670s ]
+[2019-12-29T17:50:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000430s ]
+[2019-12-29T17:50:47+08:00][sql] CONNECT:[ UseTime:0.010649s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:47+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009496s ]
+[2019-12-29T17:50:47+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000441s ]
+[2019-12-29T17:50:47+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000312s ]
+[2019-12-29T17:50:47+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjEzMDQ3LCJuYmYiOjE1Nzc2MTMwNDcsImV4cCI6MTYxMzYxMzA0NywiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.NFzg31VHBP4jGZWenhuiKBVJCOstf5ZXrUJaH7Zwxks'  WHERE  `id` = 1 [ RunTime:0.000284s ]
+[2019-12-29T17:50:48+08:00][sql] CONNECT:[ UseTime:0.010510s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007459s ]
+[2019-12-29T17:50:48+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000342s ]
+[2019-12-29T17:50:48+08:00][sql] CONNECT:[ UseTime:0.000718s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:50:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007434s ]
+[2019-12-29T17:50:48+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000354s ]
+[2019-12-29T17:50:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007464s ]
+[2019-12-29T17:50:48+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000595s ]
+[2019-12-29T17:51:00+08:00][sql] CONNECT:[ UseTime:0.000598s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:51:00+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008672s ]
+[2019-12-29T17:51:00+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000455s ]
+[2019-12-29T17:51:00+08:00][sql] CONNECT:[ UseTime:0.010610s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:51:00+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009534s ]
+[2019-12-29T17:51:00+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000410s ]
+[2019-12-29T17:51:00+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.010198s ]
+[2019-12-29T17:51:00+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000657s ]
+[2019-12-29T17:51:10+08:00][sql] CONNECT:[ UseTime:0.000852s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:51:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010954s ]
+[2019-12-29T17:51:10+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000575s ]
+[2019-12-29T17:51:10+08:00][sql] CONNECT:[ UseTime:0.000666s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T17:51:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008134s ]
+[2019-12-29T17:51:10+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000377s ]
+[2019-12-29T17:51:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.016794s ]
+[2019-12-29T17:51:10+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000691s ]
+[2019-12-29T18:02:40+08:00][sql] CONNECT:[ UseTime:0.000913s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:02:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007606s ]
+[2019-12-29T18:02:40+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000323s ]
+[2019-12-29T18:02:40+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000315s ]
+[2019-12-29T18:02:40+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjEzNzYwLCJuYmYiOjE1Nzc2MTM3NjAsImV4cCI6MTYxMzYxMzc2MCwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.MCEYHts9YRaEwaCswkzZ30iTLUd9ehDLJEG9q8myuEA'  WHERE  `id` = 1 [ RunTime:0.000310s ]
+[2019-12-29T18:02:40+08:00][sql] CONNECT:[ UseTime:0.011461s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:02:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008196s ]
+[2019-12-29T18:02:40+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000372s ]
+[2019-12-29T18:02:40+08:00][sql] CONNECT:[ UseTime:0.011769s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:02:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007597s ]
+[2019-12-29T18:02:40+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000352s ]
+[2019-12-29T18:02:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007909s ]
+[2019-12-29T18:02:40+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000470s ]
+[2019-12-29T18:08:33+08:00][sql] CONNECT:[ UseTime:0.000852s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:08:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007566s ]
+[2019-12-29T18:08:33+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001620s ]
+[2019-12-29T18:08:33+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000414s ]
+[2019-12-29T18:08:33+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjE0MTEzLCJuYmYiOjE1Nzc2MTQxMTMsImV4cCI6MTYxMzYxNDExMywiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.VIJ0W908ApD_Esk69A0AFKVs60EguJpfZIyW3NrQIZM'  WHERE  `id` = 1 [ RunTime:0.000363s ]
+[2019-12-29T18:08:33+08:00][sql] CONNECT:[ UseTime:0.010376s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:08:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.011204s ]
+[2019-12-29T18:08:33+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000410s ]
+[2019-12-29T18:08:34+08:00][sql] CONNECT:[ UseTime:0.010341s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:08:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009738s ]
+[2019-12-29T18:08:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000406s ]
+[2019-12-29T18:08:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007474s ]
+[2019-12-29T18:08:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000597s ]
+[2019-12-29T18:09:12+08:00][sql] CONNECT:[ UseTime:0.000763s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:09:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007715s ]
+[2019-12-29T18:09:12+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000338s ]
+[2019-12-29T18:09:12+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000330s ]
+[2019-12-29T18:09:12+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjE0MTUyLCJuYmYiOjE1Nzc2MTQxNTIsImV4cCI6MTYxMzYxNDE1MiwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.5DyH6gfGOqNeqHJiejQ-jQSKPWoVXsV3D0OIAM13Cqk'  WHERE  `id` = 1 [ RunTime:0.000305s ]
+[2019-12-29T18:09:12+08:00][sql] CONNECT:[ UseTime:0.010437s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:09:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007901s ]
+[2019-12-29T18:09:12+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000347s ]
+[2019-12-29T18:09:13+08:00][sql] CONNECT:[ UseTime:0.010523s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:09:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012850s ]
+[2019-12-29T18:09:13+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000497s ]
+[2019-12-29T18:09:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007901s ]
+[2019-12-29T18:09:13+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000479s ]
+[2019-12-29T18:11:29+08:00][sql] CONNECT:[ UseTime:0.000596s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:11:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007881s ]
+[2019-12-29T18:11:29+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000322s ]
+[2019-12-29T18:11:29+08:00][sql] CONNECT:[ UseTime:0.010795s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:11:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007930s ]
+[2019-12-29T18:11:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000341s ]
+[2019-12-29T18:11:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007578s ]
+[2019-12-29T18:11:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000459s ]
+[2019-12-29T18:11:42+08:00][sql] CONNECT:[ UseTime:0.000753s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:11:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008140s ]
+[2019-12-29T18:11:42+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000315s ]
+[2019-12-29T18:11:42+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000314s ]
+[2019-12-29T18:11:42+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjE0MzAyLCJuYmYiOjE1Nzc2MTQzMDIsImV4cCI6MTYxMzYxNDMwMiwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.4I6TQH3s4I0W_xAC1ancdElrO12k7g0IKnXKai9B1io'  WHERE  `id` = 1 [ RunTime:0.000307s ]
+[2019-12-29T18:11:42+08:00][sql] CONNECT:[ UseTime:0.011446s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:11:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.012014s ]
+[2019-12-29T18:11:42+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000354s ]
+[2019-12-29T18:11:43+08:00][sql] CONNECT:[ UseTime:0.010336s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:11:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.017189s ]
+[2019-12-29T18:11:43+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000354s ]
+[2019-12-29T18:11:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007229s ]
+[2019-12-29T18:11:43+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000468s ]
+[2019-12-29T18:11:49+08:00][sql] CONNECT:[ UseTime:0.010496s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:11:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.016403s ]
+[2019-12-29T18:11:49+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000410s ]
+[2019-12-29T18:11:49+08:00][sql] CONNECT:[ UseTime:0.000647s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:11:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008391s ]
+[2019-12-29T18:11:49+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000500s ]
+[2019-12-29T18:12:01+08:00][sql] CONNECT:[ UseTime:0.000781s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:01+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.013805s ]
+[2019-12-29T18:12:01+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000861s ]
+[2019-12-29T18:12:02+08:00][sql] CONNECT:[ UseTime:0.011539s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:02+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007975s ]
+[2019-12-29T18:12:02+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000432s ]
+[2019-12-29T18:12:02+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008073s ]
+[2019-12-29T18:12:02+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000429s ]
+[2019-12-29T18:12:02+08:00][sql] CONNECT:[ UseTime:0.010954s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:02+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007522s ]
+[2019-12-29T18:12:02+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000332s ]
+[2019-12-29T18:12:02+08:00][sql] CONNECT:[ UseTime:0.011071s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:02+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008702s ]
+[2019-12-29T18:12:02+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000337s ]
+[2019-12-29T18:12:20+08:00][sql] CONNECT:[ UseTime:0.001019s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008955s ]
+[2019-12-29T18:12:20+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000392s ]
+[2019-12-29T18:12:20+08:00][sql] CONNECT:[ UseTime:0.011425s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007919s ]
+[2019-12-29T18:12:20+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000360s ]
+[2019-12-29T18:12:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007308s ]
+[2019-12-29T18:12:20+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000442s ]
+[2019-12-29T18:12:20+08:00][sql] CONNECT:[ UseTime:0.000586s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010869s ]
+[2019-12-29T18:12:20+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000312s ]
+[2019-12-29T18:12:20+08:00][sql] CONNECT:[ UseTime:0.010517s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:12:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.024222s ]
+[2019-12-29T18:12:20+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000399s ]
+[2019-12-29T18:45:04+08:00][sql] CONNECT:[ UseTime:0.000774s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008264s ]
+[2019-12-29T18:45:04+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000414s ]
+[2019-12-29T18:45:05+08:00][sql] CONNECT:[ UseTime:0.010781s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007902s ]
+[2019-12-29T18:45:05+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000407s ]
+[2019-12-29T18:45:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007672s ]
+[2019-12-29T18:45:05+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000539s ]
+[2019-12-29T18:45:05+08:00][sql] CONNECT:[ UseTime:0.000614s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009721s ]
+[2019-12-29T18:45:05+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000404s ]
+[2019-12-29T18:45:05+08:00][sql] CONNECT:[ UseTime:0.000573s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008214s ]
+[2019-12-29T18:45:05+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000278s ]
+[2019-12-29T18:45:18+08:00][sql] CONNECT:[ UseTime:0.010796s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.015052s ]
+[2019-12-29T18:45:18+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000277s ]
+[2019-12-29T18:45:18+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000320s ]
+[2019-12-29T18:45:18+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjE2MzE4LCJuYmYiOjE1Nzc2MTYzMTgsImV4cCI6MTYxMzYxNjMxOCwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.Bdff1UXwgU8n-Xks-0hBkgiLjEicWdtg4aA80Qad5d4'  WHERE  `id` = 1 [ RunTime:0.000317s ]
+[2019-12-29T18:45:18+08:00][sql] CONNECT:[ UseTime:0.010396s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007500s ]
+[2019-12-29T18:45:18+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000350s ]
+[2019-12-29T18:45:18+08:00][sql] CONNECT:[ UseTime:0.010779s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.013327s ]
+[2019-12-29T18:45:18+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000559s ]
+[2019-12-29T18:45:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008705s ]
+[2019-12-29T18:45:18+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000464s ]
+[2019-12-29T18:45:18+08:00][sql] CONNECT:[ UseTime:0.010720s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007748s ]
+[2019-12-29T18:45:18+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000331s ]
+[2019-12-29T18:45:19+08:00][sql] CONNECT:[ UseTime:0.010743s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:45:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007841s ]
+[2019-12-29T18:45:19+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000462s ]
+[2019-12-29T18:46:26+08:00][sql] CONNECT:[ UseTime:0.000648s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:46:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007836s ]
+[2019-12-29T18:46:26+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000331s ]
+[2019-12-29T18:46:26+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000277s ]
+[2019-12-29T18:46:26+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjE2Mzg2LCJuYmYiOjE1Nzc2MTYzODYsImV4cCI6MTYxMzYxNjM4NiwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.IAQrgEhCpwJt_ZM5gyRqGt3gK8r10ry_fwxZtnp7vQw'  WHERE  `id` = 1 [ RunTime:0.000415s ]
+[2019-12-29T18:46:27+08:00][sql] CONNECT:[ UseTime:0.011361s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:46:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008068s ]
+[2019-12-29T18:46:27+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000413s ]
+[2019-12-29T18:46:27+08:00][sql] CONNECT:[ UseTime:0.010300s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:46:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.014768s ]
+[2019-12-29T18:46:27+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000345s ]
+[2019-12-29T18:46:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007685s ]
+[2019-12-29T18:46:27+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000465s ]
+[2019-12-29T18:46:27+08:00][sql] CONNECT:[ UseTime:0.011434s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:46:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008303s ]
+[2019-12-29T18:46:27+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000432s ]
+[2019-12-29T18:46:27+08:00][sql] CONNECT:[ UseTime:0.010207s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:46:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008139s ]
+[2019-12-29T18:46:27+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000358s ]
+[2019-12-29T18:50:07+08:00][sql] CONNECT:[ UseTime:0.011632s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008970s ]
+[2019-12-29T18:50:07+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000352s ]
+[2019-12-29T18:50:07+08:00][sql] CONNECT:[ UseTime:0.011482s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007919s ]
+[2019-12-29T18:50:07+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000356s ]
+[2019-12-29T18:50:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008071s ]
+[2019-12-29T18:50:07+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000516s ]
+[2019-12-29T18:50:08+08:00][sql] CONNECT:[ UseTime:0.000575s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008782s ]
+[2019-12-29T18:50:08+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000395s ]
+[2019-12-29T18:50:08+08:00][sql] CONNECT:[ UseTime:0.000639s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008511s ]
+[2019-12-29T18:50:08+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000338s ]
+[2019-12-29T18:50:42+08:00][sql] CONNECT:[ UseTime:0.000651s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008115s ]
+[2019-12-29T18:50:42+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000328s ]
+[2019-12-29T18:50:42+08:00][sql] CONNECT:[ UseTime:0.011270s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.015251s ]
+[2019-12-29T18:50:42+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000350s ]
+[2019-12-29T18:50:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007376s ]
+[2019-12-29T18:50:42+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000461s ]
+[2019-12-29T18:50:43+08:00][sql] CONNECT:[ UseTime:0.000965s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007791s ]
+[2019-12-29T18:50:43+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000325s ]
+[2019-12-29T18:50:43+08:00][sql] CONNECT:[ UseTime:0.011606s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:50:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009479s ]
+[2019-12-29T18:50:43+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000356s ]
+[2019-12-29T18:51:04+08:00][sql] CONNECT:[ UseTime:0.000614s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:51:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010575s ]
+[2019-12-29T18:51:04+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.005572s ]
+[2019-12-29T18:51:04+08:00][sql] CONNECT:[ UseTime:0.000632s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:51:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009597s ]
+[2019-12-29T18:51:04+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000426s ]
+[2019-12-29T18:51:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.012827s ]
+[2019-12-29T18:51:04+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000555s ]
+[2019-12-29T18:51:04+08:00][sql] CONNECT:[ UseTime:0.000584s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:51:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010145s ]
+[2019-12-29T18:51:04+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000313s ]
+[2019-12-29T18:51:04+08:00][sql] CONNECT:[ UseTime:0.000611s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:51:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.010354s ]
+[2019-12-29T18:51:04+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000353s ]
+[2019-12-29T18:52:07+08:00][sql] CONNECT:[ UseTime:0.000605s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:52:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010201s ]
+[2019-12-29T18:52:07+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000362s ]
+[2019-12-29T18:52:07+08:00][sql] CONNECT:[ UseTime:0.000774s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:52:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008551s ]
+[2019-12-29T18:52:07+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000364s ]
+[2019-12-29T18:52:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007804s ]
+[2019-12-29T18:52:07+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000499s ]
+[2019-12-29T18:52:07+08:00][sql] CONNECT:[ UseTime:0.000692s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:52:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007627s ]
+[2019-12-29T18:52:07+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000292s ]
+[2019-12-29T18:52:08+08:00][sql] CONNECT:[ UseTime:0.000801s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T18:52:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008994s ]
+[2019-12-29T18:52:08+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000336s ]
+[2019-12-29T20:52:15+08:00][sql] CONNECT:[ UseTime:0.000928s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:52:15+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.021487s ]
+[2019-12-29T20:52:15+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000457s ]
+[2019-12-29T20:52:15+08:00][sql] CONNECT:[ UseTime:0.010973s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:52:15+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.016526s ]
+[2019-12-29T20:52:15+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000498s ]
+[2019-12-29T20:52:15+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.010010s ]
+[2019-12-29T20:52:15+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000620s ]
+[2019-12-29T20:52:16+08:00][sql] CONNECT:[ UseTime:0.000632s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:52:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009534s ]
+[2019-12-29T20:52:16+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000452s ]
+[2019-12-29T20:52:16+08:00][sql] CONNECT:[ UseTime:0.011619s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:52:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007676s ]
+[2019-12-29T20:52:16+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000337s ]
+[2019-12-29T20:53:56+08:00][sql] CONNECT:[ UseTime:0.009971s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:53:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007845s ]
+[2019-12-29T20:53:56+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000366s ]
+[2019-12-29T20:53:56+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000376s ]
+[2019-12-29T20:53:56+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC93d3cuMW9oMS5jbiIsImF1ZCI6Imh0dHA6XC9cL3d3dy4xb2gxLmNuIiwiaWF0IjoxNTc3NjI0MDM1LCJuYmYiOjE1Nzc2MjQwMzUsImV4cCI6MTYxMzYyNDAzNSwiZGF0YSI6eyJ1c2VyaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifX0.JoexilxY6deHqBsPVLAYDTq9PgbihQ6aw6a4BkvvkWg'  WHERE  `id` = 1 [ RunTime:0.000357s ]
+[2019-12-29T20:53:56+08:00][sql] CONNECT:[ UseTime:0.011232s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:53:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007531s ]
+[2019-12-29T20:53:56+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000416s ]
+[2019-12-29T20:53:56+08:00][sql] CONNECT:[ UseTime:0.011143s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:53:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007826s ]
+[2019-12-29T20:53:56+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000376s ]
+[2019-12-29T20:53:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008039s ]
+[2019-12-29T20:53:56+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000504s ]
+[2019-12-29T20:53:56+08:00][sql] CONNECT:[ UseTime:0.000661s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:53:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008561s ]
+[2019-12-29T20:53:56+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000285s ]
+[2019-12-29T20:53:56+08:00][sql] CONNECT:[ UseTime:0.011304s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:53:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008878s ]
+[2019-12-29T20:53:56+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000432s ]
+[2019-12-29T20:54:12+08:00][sql] CONNECT:[ UseTime:0.000647s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008657s ]
+[2019-12-29T20:54:12+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000380s ]
+[2019-12-29T20:54:12+08:00][sql] CONNECT:[ UseTime:0.000620s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007836s ]
+[2019-12-29T20:54:12+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000344s ]
+[2019-12-29T20:54:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.015560s ]
+[2019-12-29T20:54:12+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000484s ]
+[2019-12-29T20:54:12+08:00][sql] CONNECT:[ UseTime:0.000635s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007618s ]
+[2019-12-29T20:54:12+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000328s ]
+[2019-12-29T20:54:12+08:00][sql] CONNECT:[ UseTime:0.010502s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.011828s ]
+[2019-12-29T20:54:12+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000320s ]
+[2019-12-29T20:54:20+08:00][sql] CONNECT:[ UseTime:0.000595s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007757s ]
+[2019-12-29T20:54:20+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000318s ]
+[2019-12-29T20:54:20+08:00][sql] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007483s ]
+[2019-12-29T20:54:20+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000321s ]
+[2019-12-29T20:54:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.018740s ]
+[2019-12-29T20:54:20+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000478s ]
+[2019-12-29T20:54:21+08:00][sql] CONNECT:[ UseTime:0.000662s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.037470s ]
+[2019-12-29T20:54:21+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000413s ]
+[2019-12-29T20:54:21+08:00][sql] CONNECT:[ UseTime:0.000604s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.015526s ]
+[2019-12-29T20:54:21+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000308s ]
+[2019-12-29T20:54:39+08:00][sql] CONNECT:[ UseTime:0.010189s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:39+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008103s ]
+[2019-12-29T20:54:39+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000339s ]
+[2019-12-29T20:54:39+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007275s ]
+[2019-12-29T20:54:39+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000474s ]
+[2019-12-29T20:54:39+08:00][sql] CONNECT:[ UseTime:0.011930s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:39+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012932s ]
+[2019-12-29T20:54:39+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000473s ]
+[2019-12-29T20:54:42+08:00][sql] CONNECT:[ UseTime:0.000659s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:54:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007314s ]
+[2019-12-29T20:54:42+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000388s ]
+[2019-12-29T20:54:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007810s ]
+[2019-12-29T20:54:42+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000533s ]
+[2019-12-29T20:55:20+08:00][sql] CONNECT:[ UseTime:0.000597s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:55:20+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009364s ]
+[2019-12-29T20:55:20+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000375s ]
+[2019-12-29T20:55:21+08:00][sql] CONNECT:[ UseTime:0.000678s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:55:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.035962s ]
+[2019-12-29T20:55:21+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.001436s ]
+[2019-12-29T20:55:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.056670s ]
+[2019-12-29T20:55:21+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000919s ]
+[2019-12-29T20:55:21+08:00][sql] CONNECT:[ UseTime:0.000890s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:55:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.010080s ]
+[2019-12-29T20:55:21+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000446s ]
+[2019-12-29T20:55:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009906s ]
+[2019-12-29T20:55:21+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000480s ]
+[2019-12-29T20:56:19+08:00][sql] CONNECT:[ UseTime:0.000662s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:56:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008371s ]
+[2019-12-29T20:56:19+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000380s ]
+[2019-12-29T20:56:19+08:00][sql] CONNECT:[ UseTime:0.011199s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:56:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007880s ]
+[2019-12-29T20:56:19+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000400s ]
+[2019-12-29T20:56:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007504s ]
+[2019-12-29T20:56:19+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000532s ]
+[2019-12-29T20:56:19+08:00][sql] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:56:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008279s ]
+[2019-12-29T20:56:19+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000391s ]
+[2019-12-29T20:56:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008071s ]
+[2019-12-29T20:56:19+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000477s ]
+[2019-12-29T20:56:27+08:00][sql] CONNECT:[ UseTime:0.000791s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:56:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008707s ]
+[2019-12-29T20:56:27+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000319s ]
+[2019-12-29T20:56:28+08:00][sql] CONNECT:[ UseTime:0.000699s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:56:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031640s ]
+[2019-12-29T20:56:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000355s ]
+[2019-12-29T20:56:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.036851s ]
+[2019-12-29T20:56:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000467s ]
+[2019-12-29T20:56:28+08:00][sql] CONNECT:[ UseTime:0.000701s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:56:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009014s ]
+[2019-12-29T20:56:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000346s ]
+[2019-12-29T20:56:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007933s ]
+[2019-12-29T20:56:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000664s ]
+[2019-12-29T20:59:27+08:00][sql] CONNECT:[ UseTime:0.001381s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:59:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007840s ]
+[2019-12-29T20:59:27+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000434s ]
+[2019-12-29T20:59:28+08:00][sql] CONNECT:[ UseTime:0.011180s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:59:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.034211s ]
+[2019-12-29T20:59:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.001624s ]
+[2019-12-29T20:59:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.027552s ]
+[2019-12-29T20:59:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000963s ]
+[2019-12-29T20:59:28+08:00][sql] CONNECT:[ UseTime:0.001115s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T20:59:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009874s ]
+[2019-12-29T20:59:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000425s ]
+[2019-12-29T20:59:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008943s ]
+[2019-12-29T20:59:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000539s ]
+[2019-12-29T21:01:05+08:00][sql] CONNECT:[ UseTime:0.011243s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008748s ]
+[2019-12-29T21:01:05+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[2019-12-29T21:01:05+08:00][sql] CONNECT:[ UseTime:0.010820s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.015341s ]
+[2019-12-29T21:01:05+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000428s ]
+[2019-12-29T21:01:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007595s ]
+[2019-12-29T21:01:05+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000527s ]
+[2019-12-29T21:01:05+08:00][sql] CONNECT:[ UseTime:0.000778s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007642s ]
+[2019-12-29T21:01:05+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000912s ]
+[2019-12-29T21:01:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009776s ]
+[2019-12-29T21:01:05+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.003537s ]
+[2019-12-29T21:01:08+08:00][sql] CONNECT:[ UseTime:0.010950s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007891s ]
+[2019-12-29T21:01:08+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000405s ]
+[2019-12-29T21:01:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007727s ]
+[2019-12-29T21:01:08+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000551s ]
+[2019-12-29T21:01:08+08:00][sql] CONNECT:[ UseTime:0.011137s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007457s ]
+[2019-12-29T21:01:08+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000398s ]
+[2019-12-29T21:01:43+08:00][sql] CONNECT:[ UseTime:0.000760s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008703s ]
+[2019-12-29T21:01:43+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000341s ]
+[2019-12-29T21:01:43+08:00][sql] CONNECT:[ UseTime:0.000660s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008103s ]
+[2019-12-29T21:01:43+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000712s ]
+[2019-12-29T21:01:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008727s ]
+[2019-12-29T21:01:43+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000604s ]
+[2019-12-29T21:01:44+08:00][sql] CONNECT:[ UseTime:0.000815s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009717s ]
+[2019-12-29T21:01:44+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000595s ]
+[2019-12-29T21:01:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009079s ]
+[2019-12-29T21:01:44+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000632s ]
+[2019-12-29T21:01:44+08:00][sql] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.017865s ]
+[2019-12-29T21:01:44+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000442s ]
+[2019-12-29T21:01:51+08:00][sql] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.041002s ]
+[2019-12-29T21:01:51+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000365s ]
+[2019-12-29T21:01:51+08:00][sql] CONNECT:[ UseTime:0.000763s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008402s ]
+[2019-12-29T21:01:51+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000306s ]
+[2019-12-29T21:01:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007800s ]
+[2019-12-29T21:01:51+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000450s ]
+[2019-12-29T21:01:51+08:00][sql] CONNECT:[ UseTime:0.000757s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008133s ]
+[2019-12-29T21:01:51+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000351s ]
+[2019-12-29T21:01:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007926s ]
+[2019-12-29T21:01:51+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000440s ]
+[2019-12-29T21:01:51+08:00][sql] CONNECT:[ UseTime:0.000678s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008756s ]
+[2019-12-29T21:01:51+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000419s ]
+[2019-12-29T21:01:53+08:00][sql] CONNECT:[ UseTime:0.010859s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007238s ]
+[2019-12-29T21:01:53+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000396s ]
+[2019-12-29T21:01:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007585s ]
+[2019-12-29T21:01:53+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000532s ]
+[2019-12-29T21:01:57+08:00][sql] CONNECT:[ UseTime:0.010737s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009623s ]
+[2019-12-29T21:01:57+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000324s ]
+[2019-12-29T21:01:57+08:00][sql] CONNECT:[ UseTime:0.011279s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:01:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.011291s ]
+[2019-12-29T21:01:57+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000444s ]
+[2019-12-29T21:02:18+08:00][sql] CONNECT:[ UseTime:0.010429s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.013510s ]
+[2019-12-29T21:02:18+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000642s ]
+[2019-12-29T21:02:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008755s ]
+[2019-12-29T21:02:18+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000469s ]
+[2019-12-29T21:02:18+08:00][sql] CONNECT:[ UseTime:0.011855s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012487s ]
+[2019-12-29T21:02:18+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000370s ]
+[2019-12-29T21:02:19+08:00][sql] CONNECT:[ UseTime:0.011020s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007520s ]
+[2019-12-29T21:02:19+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000395s ]
+[2019-12-29T21:02:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007722s ]
+[2019-12-29T21:02:19+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000540s ]
+[2019-12-29T21:02:23+08:00][sql] CONNECT:[ UseTime:0.011465s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_tip` [ RunTime:0.016490s ]
+[2019-12-29T21:02:23+08:00][sql] SELECT * FROM `admin_tip` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000379s ]
+[2019-12-29T21:02:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_tip_data` [ RunTime:0.007798s ]
+[2019-12-29T21:02:23+08:00][sql] SELECT SUM(`vote_left`) AS think_sum FROM `admin_tip_data` [ RunTime:0.000315s ]
+[2019-12-29T21:02:23+08:00][sql] SELECT SUM(`vote_right`) AS think_sum FROM `admin_tip_data` [ RunTime:0.000260s ]
+[2019-12-29T21:02:34+08:00][sql] CONNECT:[ UseTime:0.010690s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007321s ]
+[2019-12-29T21:02:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000334s ]
+[2019-12-29T21:02:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007405s ]
+[2019-12-29T21:02:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000469s ]
+[2019-12-29T21:02:34+08:00][sql] CONNECT:[ UseTime:0.011361s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007243s ]
+[2019-12-29T21:02:34+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000294s ]
+[2019-12-29T21:02:36+08:00][sql] CONNECT:[ UseTime:0.011259s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007392s ]
+[2019-12-29T21:02:36+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000400s ]
+[2019-12-29T21:02:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007595s ]
+[2019-12-29T21:02:36+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000496s ]
+[2019-12-29T21:02:38+08:00][sql] CONNECT:[ UseTime:0.010630s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008043s ]
+[2019-12-29T21:02:38+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000450s ]
+[2019-12-29T21:02:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007927s ]
+[2019-12-29T21:02:38+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000532s ]
+[2019-12-29T21:02:38+08:00][sql] CONNECT:[ UseTime:0.011221s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007643s ]
+[2019-12-29T21:02:38+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000345s ]
+[2019-12-29T21:02:44+08:00][sql] CONNECT:[ UseTime:0.000657s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007472s ]
+[2019-12-29T21:02:44+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000336s ]
+[2019-12-29T21:02:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007460s ]
+[2019-12-29T21:02:44+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000471s ]
+[2019-12-29T21:02:44+08:00][sql] CONNECT:[ UseTime:0.011134s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008529s ]
+[2019-12-29T21:02:44+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000363s ]
+[2019-12-29T21:02:45+08:00][sql] CONNECT:[ UseTime:0.010977s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:02:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007520s ]
+[2019-12-29T21:02:45+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000409s ]
+[2019-12-29T21:02:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008572s ]
+[2019-12-29T21:02:45+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000539s ]
+[2019-12-29T21:03:06+08:00][sql] CONNECT:[ UseTime:0.011071s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:03:06+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010436s ]
+[2019-12-29T21:03:06+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000315s ]
+[2019-12-29T21:03:06+08:00][sql] CONNECT:[ UseTime:0.000649s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:03:06+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007485s ]
+[2019-12-29T21:03:06+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000327s ]
+[2019-12-29T21:03:09+08:00][sql] CONNECT:[ UseTime:0.011387s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:03:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008666s ]
+[2019-12-29T21:03:09+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000442s ]
+[2019-12-29T21:03:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007664s ]
+[2019-12-29T21:03:09+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000424s ]
+[2019-12-29T21:04:45+08:00][sql] CONNECT:[ UseTime:0.009710s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:04:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_tip` [ RunTime:0.007930s ]
+[2019-12-29T21:04:45+08:00][sql] SELECT * FROM `admin_tip` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000394s ]
+[2019-12-29T21:04:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_tip_data` [ RunTime:0.007222s ]
+[2019-12-29T21:04:45+08:00][sql] SELECT SUM(`vote_left`) AS think_sum FROM `admin_tip_data` [ RunTime:0.000330s ]
+[2019-12-29T21:04:45+08:00][sql] SELECT SUM(`vote_right`) AS think_sum FROM `admin_tip_data` [ RunTime:0.000351s ]
+[2019-12-29T21:10:40+08:00][sql] CONNECT:[ UseTime:0.000839s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:10:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008418s ]
+[2019-12-29T21:10:40+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000770s ]
+[2019-12-29T21:10:40+08:00][sql] CONNECT:[ UseTime:0.000886s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:10:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008534s ]
+[2019-12-29T21:10:40+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.005477s ]
+[2019-12-29T21:10:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.014381s ]
+[2019-12-29T21:10:40+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000461s ]
+[2019-12-29T21:10:45+08:00][sql] CONNECT:[ UseTime:0.010617s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:10:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008838s ]
+[2019-12-29T21:10:45+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000330s ]
+[2019-12-29T21:10:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007491s ]
+[2019-12-29T21:10:45+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000699s ]
+[2019-12-29T21:11:51+08:00][sql] CONNECT:[ UseTime:0.010563s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:11:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007561s ]
+[2019-12-29T21:11:51+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '自定义表单' [ RunTime:0.000497s ]
+[2019-12-29T21:11:51+08:00][sql] INSERT INTO `admin_menu` SET `title` = '自定义表单' , `name` = '自定义表单' , `path` = 'custom-form' , `component` = 'admin-pages/custom-form/custom-form' , `alwaysShow` = 0 , `pid` = 68 , `rank` = 101 , `icon` = 'form' [ RunTime:0.000439s ]
+[2019-12-29T21:11:51+08:00][sql] CONNECT:[ UseTime:0.009743s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:11:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007969s ]
+[2019-12-29T21:11:51+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000391s ]
+[2019-12-29T21:11:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007307s ]
+[2019-12-29T21:11:51+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000518s ]
+[2019-12-29T21:11:56+08:00][sql] CONNECT:[ UseTime:0.011161s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:11:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007354s ]
+[2019-12-29T21:11:56+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000355s ]
+[2019-12-29T21:11:56+08:00][sql] CONNECT:[ UseTime:0.011208s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:11:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009821s ]
+[2019-12-29T21:11:56+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000391s ]
+[2019-12-29T21:11:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007356s ]
+[2019-12-29T21:11:56+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000494s ]
+[2019-12-29T21:11:57+08:00][sql] CONNECT:[ UseTime:0.000953s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:11:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007524s ]
+[2019-12-29T21:11:57+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000403s ]
+[2019-12-29T21:11:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007715s ]
+[2019-12-29T21:11:57+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000534s ]
+[2019-12-29T21:11:59+08:00][sql] CONNECT:[ UseTime:0.000686s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:11:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007556s ]
+[2019-12-29T21:11:59+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000417s ]
+[2019-12-29T21:11:59+08:00][sql] CONNECT:[ UseTime:0.010938s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:11:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.013541s ]
+[2019-12-29T21:11:59+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000510s ]
+[2019-12-29T21:12:22+08:00][sql] CONNECT:[ UseTime:0.000816s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008509s ]
+[2019-12-29T21:12:22+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000341s ]
+[2019-12-29T21:12:22+08:00][sql] CONNECT:[ UseTime:0.000645s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007842s ]
+[2019-12-29T21:12:22+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000397s ]
+[2019-12-29T21:12:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.014978s ]
+[2019-12-29T21:12:22+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000529s ]
+[2019-12-29T21:12:22+08:00][sql] CONNECT:[ UseTime:0.011361s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008482s ]
+[2019-12-29T21:12:22+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000352s ]
+[2019-12-29T21:12:23+08:00][sql] CONNECT:[ UseTime:0.011530s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007982s ]
+[2019-12-29T21:12:23+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000308s ]
+[2019-12-29T21:12:24+08:00][sql] CONNECT:[ UseTime:0.000885s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:24+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007505s ]
+[2019-12-29T21:12:24+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000364s ]
+[2019-12-29T21:12:24+08:00][sql] CONNECT:[ UseTime:0.010436s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:24+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012187s ]
+[2019-12-29T21:12:24+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000351s ]
+[2019-12-29T21:12:29+08:00][sql] CONNECT:[ UseTime:0.010348s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007995s ]
+[2019-12-29T21:12:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000410s ]
+[2019-12-29T21:12:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009027s ]
+[2019-12-29T21:12:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000606s ]
+[2019-12-29T21:12:43+08:00][sql] CONNECT:[ UseTime:0.011233s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007393s ]
+[2019-12-29T21:12:43+08:00][sql] SELECT * FROM `admin_menu` WHERE  `id` = 75 LIMIT 1 [ RunTime:0.000391s ]
+[2019-12-29T21:12:43+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '自定义表单' LIMIT 1 [ RunTime:0.000401s ]
+[2019-12-29T21:12:43+08:00][sql] UPDATE `admin_menu`  SET `alwaysShow` = 0 , `rank` = 0  WHERE  `id` = 75 [ RunTime:0.000290s ]
+[2019-12-29T21:12:43+08:00][sql] CONNECT:[ UseTime:0.010308s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007832s ]
+[2019-12-29T21:12:43+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000294s ]
+[2019-12-29T21:12:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007294s ]
+[2019-12-29T21:12:43+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000490s ]
+[2019-12-29T21:12:46+08:00][sql] CONNECT:[ UseTime:0.000602s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:46+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009303s ]
+[2019-12-29T21:12:46+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000711s ]
+[2019-12-29T21:12:46+08:00][sql] CONNECT:[ UseTime:0.000912s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:46+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007494s ]
+[2019-12-29T21:12:46+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000427s ]
+[2019-12-29T21:12:46+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008344s ]
+[2019-12-29T21:12:46+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000437s ]
+[2019-12-29T21:12:46+08:00][sql] CONNECT:[ UseTime:0.000990s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:46+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007394s ]
+[2019-12-29T21:12:46+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000319s ]
+[2019-12-29T21:12:46+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007975s ]
+[2019-12-29T21:12:46+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000491s ]
+[2019-12-29T21:12:48+08:00][sql] CONNECT:[ UseTime:0.010742s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007267s ]
+[2019-12-29T21:12:48+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000352s ]
+[2019-12-29T21:12:48+08:00][sql] CONNECT:[ UseTime:0.011354s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:12:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007402s ]
+[2019-12-29T21:12:48+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000317s ]
+[2019-12-29T21:13:34+08:00][sql] CONNECT:[ UseTime:0.000692s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.019894s ]
+[2019-12-29T21:13:34+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000439s ]
+[2019-12-29T21:13:34+08:00][sql] CONNECT:[ UseTime:0.010557s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007446s ]
+[2019-12-29T21:13:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000381s ]
+[2019-12-29T21:13:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007679s ]
+[2019-12-29T21:13:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000495s ]
+[2019-12-29T21:13:35+08:00][sql] CONNECT:[ UseTime:0.011481s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.013922s ]
+[2019-12-29T21:13:35+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000533s ]
+[2019-12-29T21:13:35+08:00][sql] CONNECT:[ UseTime:0.009751s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007420s ]
+[2019-12-29T21:13:35+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000343s ]
+[2019-12-29T21:13:37+08:00][sql] CONNECT:[ UseTime:0.010568s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:37+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.014076s ]
+[2019-12-29T21:13:37+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000363s ]
+[2019-12-29T21:13:37+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007647s ]
+[2019-12-29T21:13:37+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000514s ]
+[2019-12-29T21:13:38+08:00][sql] CONNECT:[ UseTime:0.011249s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010333s ]
+[2019-12-29T21:13:38+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000464s ]
+[2019-12-29T21:13:38+08:00][sql] CONNECT:[ UseTime:0.013329s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012372s ]
+[2019-12-29T21:13:38+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000453s ]
+[2019-12-29T21:13:43+08:00][sql] CONNECT:[ UseTime:0.009784s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007842s ]
+[2019-12-29T21:13:43+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000436s ]
+[2019-12-29T21:13:43+08:00][sql] CONNECT:[ UseTime:0.011031s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:13:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.012552s ]
+[2019-12-29T21:13:43+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000470s ]
+[2019-12-29T21:28:28+08:00][sql] CONNECT:[ UseTime:0.001148s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:28:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010527s ]
+[2019-12-29T21:28:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000512s ]
+[2019-12-29T21:28:28+08:00][sql] CONNECT:[ UseTime:0.000815s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:28:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.019196s ]
+[2019-12-29T21:28:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000419s ]
+[2019-12-29T21:28:28+08:00][sql] CONNECT:[ UseTime:0.000646s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:28:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008258s ]
+[2019-12-29T21:28:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000320s ]
+[2019-12-29T21:28:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009109s ]
+[2019-12-29T21:28:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000512s ]
+[2019-12-29T21:28:29+08:00][sql] CONNECT:[ UseTime:0.000595s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:28:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007895s ]
+[2019-12-29T21:28:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000324s ]
+[2019-12-29T21:28:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.010992s ]
+[2019-12-29T21:28:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000559s ]
+[2019-12-29T21:29:09+08:00][sql] CONNECT:[ UseTime:0.000794s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:29:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009683s ]
+[2019-12-29T21:29:09+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[2019-12-29T21:29:10+08:00][sql] CONNECT:[ UseTime:0.000643s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:29:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008660s ]
+[2019-12-29T21:29:10+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000403s ]
+[2019-12-29T21:29:10+08:00][sql] CONNECT:[ UseTime:0.000837s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:29:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008150s ]
+[2019-12-29T21:29:10+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000492s ]
+[2019-12-29T21:29:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008824s ]
+[2019-12-29T21:29:10+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000510s ]
+[2019-12-29T21:29:10+08:00][sql] CONNECT:[ UseTime:0.000601s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:29:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008601s ]
+[2019-12-29T21:29:10+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000386s ]
+[2019-12-29T21:29:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009533s ]
+[2019-12-29T21:29:10+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000573s ]
+[2019-12-29T21:44:27+08:00][sql] CONNECT:[ UseTime:0.000788s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:44:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009807s ]
+[2019-12-29T21:44:27+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000515s ]
+[2019-12-29T21:44:27+08:00][sql] CONNECT:[ UseTime:0.000811s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:44:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007923s ]
+[2019-12-29T21:44:27+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000340s ]
+[2019-12-29T21:44:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008470s ]
+[2019-12-29T21:44:27+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000555s ]
+[2019-12-29T21:54:23+08:00][sql] CONNECT:[ UseTime:0.000766s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:54:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.011795s ]
+[2019-12-29T21:54:23+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000482s ]
+[2019-12-29T21:54:23+08:00][sql] CONNECT:[ UseTime:0.000831s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:54:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008027s ]
+[2019-12-29T21:54:23+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000298s ]
+[2019-12-29T21:54:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008129s ]
+[2019-12-29T21:54:23+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000568s ]
+[2019-12-29T21:55:24+08:00][sql] CONNECT:[ UseTime:0.000733s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:55:24+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008872s ]
+[2019-12-29T21:55:24+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000701s ]
+[2019-12-29T21:55:24+08:00][sql] CONNECT:[ UseTime:0.000594s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:55:24+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007839s ]
+[2019-12-29T21:55:24+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000353s ]
+[2019-12-29T21:55:24+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008038s ]
+[2019-12-29T21:55:24+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000421s ]
+[2019-12-29T21:59:09+08:00][sql] CONNECT:[ UseTime:0.000962s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:59:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008823s ]
+[2019-12-29T21:59:09+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000383s ]
+[2019-12-29T21:59:10+08:00][sql] CONNECT:[ UseTime:0.000590s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T21:59:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007861s ]
+[2019-12-29T21:59:10+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000298s ]
+[2019-12-29T21:59:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007184s ]
+[2019-12-29T21:59:10+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000412s ]
+[2019-12-29T22:08:28+08:00][sql] CONNECT:[ UseTime:0.000984s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:08:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008358s ]
+[2019-12-29T22:08:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000419s ]
+[2019-12-29T22:08:28+08:00][sql] CONNECT:[ UseTime:0.000704s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:08:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007800s ]
+[2019-12-29T22:08:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000330s ]
+[2019-12-29T22:08:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008288s ]
+[2019-12-29T22:08:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000483s ]
+[2019-12-29T22:14:28+08:00][sql] CONNECT:[ UseTime:0.001031s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:14:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009529s ]
+[2019-12-29T22:14:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000406s ]
+[2019-12-29T22:14:29+08:00][sql] CONNECT:[ UseTime:0.000794s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:14:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009684s ]
+[2019-12-29T22:14:29+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000616s ]
+[2019-12-29T22:14:29+08:00][sql] CONNECT:[ UseTime:0.000603s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:14:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007614s ]
+[2019-12-29T22:14:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000315s ]
+[2019-12-29T22:14:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008933s ]
+[2019-12-29T22:14:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000454s ]
+[2019-12-29T22:14:29+08:00][sql] CONNECT:[ UseTime:0.000737s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:14:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.011227s ]
+[2019-12-29T22:14:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000398s ]
+[2019-12-29T22:14:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009766s ]
+[2019-12-29T22:14:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000668s ]
+[2019-12-29T22:16:01+08:00][sql] CONNECT:[ UseTime:0.000798s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:16:01+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.014536s ]
+[2019-12-29T22:16:01+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000447s ]
+[2019-12-29T22:16:01+08:00][sql] CONNECT:[ UseTime:0.010908s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:16:01+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007694s ]
+[2019-12-29T22:16:01+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000427s ]
+[2019-12-29T22:16:01+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008260s ]
+[2019-12-29T22:16:01+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000448s ]
+[2019-12-29T22:16:04+08:00][sql] CONNECT:[ UseTime:0.011173s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T22:16:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007484s ]
+[2019-12-29T22:16:04+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000377s ]
+[2019-12-29T22:16:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007851s ]
+[2019-12-29T22:16:04+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000474s ]
+[2019-12-29T23:14:51+08:00][sql] CONNECT:[ UseTime:0.000916s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:14:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.011514s ]
+[2019-12-29T23:14:51+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000450s ]
+[2019-12-29T23:14:52+08:00][sql] CONNECT:[ UseTime:0.000917s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:14:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.018169s ]
+[2019-12-29T23:14:52+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000489s ]
+[2019-12-29T23:14:52+08:00][sql] CONNECT:[ UseTime:0.001180s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:14:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.016595s ]
+[2019-12-29T23:14:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000437s ]
+[2019-12-29T23:14:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008952s ]
+[2019-12-29T23:14:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000500s ]
+[2019-12-29T23:14:52+08:00][sql] CONNECT:[ UseTime:0.000799s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:14:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009358s ]
+[2019-12-29T23:14:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000330s ]
+[2019-12-29T23:14:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007893s ]
+[2019-12-29T23:14:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000443s ]
+[2019-12-29T23:14:52+08:00][sql] CONNECT:[ UseTime:0.000765s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:14:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007372s ]
+[2019-12-29T23:14:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000414s ]
+[2019-12-29T23:14:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007156s ]
+[2019-12-29T23:14:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000493s ]
+[2019-12-29T23:16:17+08:00][sql] CONNECT:[ UseTime:0.000652s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:16:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.011559s ]
+[2019-12-29T23:16:17+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000435s ]
+[2019-12-29T23:16:17+08:00][sql] CONNECT:[ UseTime:0.000755s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:16:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009255s ]
+[2019-12-29T23:16:17+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000353s ]
+[2019-12-29T23:16:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009949s ]
+[2019-12-29T23:16:17+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000680s ]
+[2019-12-29T23:16:17+08:00][sql] CONNECT:[ UseTime:0.010980s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:16:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.010714s ]
+[2019-12-29T23:16:17+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000407s ]
+[2019-12-29T23:16:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007632s ]
+[2019-12-29T23:16:17+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000456s ]
+[2019-12-29T23:17:19+08:00][sql] CONNECT:[ UseTime:0.001304s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:17:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007784s ]
+[2019-12-29T23:17:19+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000382s ]
+[2019-12-29T23:17:19+08:00][sql] CONNECT:[ UseTime:0.000605s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:17:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009372s ]
+[2019-12-29T23:17:19+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000383s ]
+[2019-12-29T23:17:19+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009370s ]
+[2019-12-29T23:17:19+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000462s ]
+[2019-12-29T23:21:16+08:00][sql] CONNECT:[ UseTime:0.000751s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:21:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008150s ]
+[2019-12-29T23:21:16+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000356s ]
+[2019-12-29T23:21:16+08:00][sql] CONNECT:[ UseTime:0.000702s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:21:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007854s ]
+[2019-12-29T23:21:16+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000418s ]
+[2019-12-29T23:21:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008510s ]
+[2019-12-29T23:21:16+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000497s ]
+[2019-12-29T23:22:06+08:00][sql] CONNECT:[ UseTime:0.000838s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:22:06+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008391s ]
+[2019-12-29T23:22:06+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000983s ]
+[2019-12-29T23:22:06+08:00][sql] CONNECT:[ UseTime:0.011320s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:22:06+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007672s ]
+[2019-12-29T23:22:06+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000303s ]
+[2019-12-29T23:22:06+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007645s ]
+[2019-12-29T23:22:06+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000505s ]
+[2019-12-29T23:23:18+08:00][sql] CONNECT:[ UseTime:0.000634s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:23:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009182s ]
+[2019-12-29T23:23:18+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000392s ]
+[2019-12-29T23:23:18+08:00][sql] CONNECT:[ UseTime:0.000691s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:23:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009110s ]
+[2019-12-29T23:23:18+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000437s ]
+[2019-12-29T23:23:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008727s ]
+[2019-12-29T23:23:18+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000461s ]
+[2019-12-29T23:23:38+08:00][sql] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:23:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.015564s ]
+[2019-12-29T23:23:38+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000485s ]
+[2019-12-29T23:23:38+08:00][sql] CONNECT:[ UseTime:0.000601s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:23:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007379s ]
+[2019-12-29T23:23:38+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000357s ]
+[2019-12-29T23:23:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007846s ]
+[2019-12-29T23:23:38+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000431s ]
+[2019-12-29T23:23:57+08:00][sql] CONNECT:[ UseTime:0.000587s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:23:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007475s ]
+[2019-12-29T23:23:57+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000376s ]
+[2019-12-29T23:23:57+08:00][sql] CONNECT:[ UseTime:0.010924s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:23:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007363s ]
+[2019-12-29T23:23:57+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000359s ]
+[2019-12-29T23:23:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008297s ]
+[2019-12-29T23:23:57+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000490s ]
+[2019-12-29T23:26:31+08:00][sql] CONNECT:[ UseTime:0.011672s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:26:31+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007936s ]
+[2019-12-29T23:26:31+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000399s ]
+[2019-12-29T23:26:31+08:00][sql] CONNECT:[ UseTime:0.011092s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:26:31+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.015332s ]
+[2019-12-29T23:26:31+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000536s ]
+[2019-12-29T23:26:31+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009395s ]
+[2019-12-29T23:26:31+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000502s ]
+[2019-12-29T23:28:09+08:00][sql] CONNECT:[ UseTime:0.000685s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:28:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009035s ]
+[2019-12-29T23:28:09+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[2019-12-29T23:28:09+08:00][sql] CONNECT:[ UseTime:0.000614s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:28:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009980s ]
+[2019-12-29T23:28:09+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000376s ]
+[2019-12-29T23:28:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.015759s ]
+[2019-12-29T23:28:09+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000428s ]
+[2019-12-29T23:32:11+08:00][sql] CONNECT:[ UseTime:0.000879s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:32:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009378s ]
+[2019-12-29T23:32:11+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000400s ]
+[2019-12-29T23:32:11+08:00][sql] CONNECT:[ UseTime:0.000626s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:32:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007749s ]
+[2019-12-29T23:32:11+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000309s ]
+[2019-12-29T23:32:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008153s ]
+[2019-12-29T23:32:11+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000511s ]
+[2019-12-29T23:32:48+08:00][sql] CONNECT:[ UseTime:0.000676s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:32:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009349s ]
+[2019-12-29T23:32:48+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000419s ]
+[2019-12-29T23:32:49+08:00][sql] CONNECT:[ UseTime:0.000805s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:32:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009290s ]
+[2019-12-29T23:32:49+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000300s ]
+[2019-12-29T23:32:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008235s ]
+[2019-12-29T23:32:49+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000462s ]
+[2019-12-29T23:32:58+08:00][sql] CONNECT:[ UseTime:0.001135s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:32:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009809s ]
+[2019-12-29T23:32:58+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000377s ]
+[2019-12-29T23:32:59+08:00][sql] CONNECT:[ UseTime:0.000591s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:32:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007473s ]
+[2019-12-29T23:32:59+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000296s ]
+[2019-12-29T23:32:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008198s ]
+[2019-12-29T23:32:59+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000456s ]
+[2019-12-29T23:33:10+08:00][sql] CONNECT:[ UseTime:0.000875s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:33:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008963s ]
+[2019-12-29T23:33:10+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000505s ]
+[2019-12-29T23:33:11+08:00][sql] CONNECT:[ UseTime:0.000638s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:33:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.010972s ]
+[2019-12-29T23:33:11+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000330s ]
+[2019-12-29T23:33:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007550s ]
+[2019-12-29T23:33:11+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000448s ]
+[2019-12-29T23:33:27+08:00][sql] CONNECT:[ UseTime:0.000660s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:33:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008431s ]
+[2019-12-29T23:33:27+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000381s ]
+[2019-12-29T23:33:27+08:00][sql] CONNECT:[ UseTime:0.011010s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:33:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008167s ]
+[2019-12-29T23:33:27+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000460s ]
+[2019-12-29T23:33:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008711s ]
+[2019-12-29T23:33:27+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000499s ]
+[2019-12-29T23:35:18+08:00][sql] CONNECT:[ UseTime:0.000842s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:35:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009055s ]
+[2019-12-29T23:35:18+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000340s ]
+[2019-12-29T23:35:18+08:00][sql] CONNECT:[ UseTime:0.000740s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:35:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009678s ]
+[2019-12-29T23:35:18+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000377s ]
+[2019-12-29T23:35:18+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.010812s ]
+[2019-12-29T23:35:18+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000460s ]
+[2019-12-29T23:35:42+08:00][sql] CONNECT:[ UseTime:0.011564s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:35:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010550s ]
+[2019-12-29T23:35:42+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000421s ]
+[2019-12-29T23:35:42+08:00][sql] CONNECT:[ UseTime:0.000602s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:35:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007746s ]
+[2019-12-29T23:35:42+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000350s ]
+[2019-12-29T23:35:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007927s ]
+[2019-12-29T23:35:42+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000627s ]
+[2019-12-29T23:35:58+08:00][sql] CONNECT:[ UseTime:0.000630s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:35:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009294s ]
+[2019-12-29T23:35:58+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001102s ]
+[2019-12-29T23:35:58+08:00][sql] CONNECT:[ UseTime:0.000860s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:35:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007467s ]
+[2019-12-29T23:35:58+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000359s ]
+[2019-12-29T23:35:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008467s ]
+[2019-12-29T23:35:58+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000456s ]
+[2019-12-29T23:36:48+08:00][sql] CONNECT:[ UseTime:0.000697s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:36:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009862s ]
+[2019-12-29T23:36:48+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000443s ]
+[2019-12-29T23:36:48+08:00][sql] CONNECT:[ UseTime:0.000935s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:36:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007857s ]
+[2019-12-29T23:36:48+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000358s ]
+[2019-12-29T23:36:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008978s ]
+[2019-12-29T23:36:48+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000431s ]
+[2019-12-29T23:36:53+08:00][sql] CONNECT:[ UseTime:0.001038s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:36:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010063s ]
+[2019-12-29T23:36:53+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[2019-12-29T23:36:53+08:00][sql] CONNECT:[ UseTime:0.000692s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:36:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008822s ]
+[2019-12-29T23:36:53+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000441s ]
+[2019-12-29T23:36:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008278s ]
+[2019-12-29T23:36:53+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000529s ]
+[2019-12-29T23:36:55+08:00][sql] CONNECT:[ UseTime:0.011292s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:36:55+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008050s ]
+[2019-12-29T23:36:55+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000397s ]
+[2019-12-29T23:36:55+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009150s ]
+[2019-12-29T23:36:55+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000513s ]
+[2019-12-29T23:37:10+08:00][sql] CONNECT:[ UseTime:0.000649s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:37:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009113s ]
+[2019-12-29T23:37:10+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[2019-12-29T23:37:10+08:00][sql] CONNECT:[ UseTime:0.000726s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:37:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007827s ]
+[2019-12-29T23:37:10+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000410s ]
+[2019-12-29T23:37:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008100s ]
+[2019-12-29T23:37:10+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000437s ]
+[2019-12-29T23:37:29+08:00][sql] CONNECT:[ UseTime:0.000609s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:37:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.014404s ]
+[2019-12-29T23:37:29+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000366s ]
+[2019-12-29T23:37:29+08:00][sql] CONNECT:[ UseTime:0.000597s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:37:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007425s ]
+[2019-12-29T23:37:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000301s ]
+[2019-12-29T23:37:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007572s ]
+[2019-12-29T23:37:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000454s ]
+[2019-12-29T23:39:30+08:00][sql] CONNECT:[ UseTime:0.000911s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:39:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009248s ]
+[2019-12-29T23:39:30+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000357s ]
+[2019-12-29T23:39:30+08:00][sql] CONNECT:[ UseTime:0.011102s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:39:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009217s ]
+[2019-12-29T23:39:30+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000334s ]
+[2019-12-29T23:39:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007664s ]
+[2019-12-29T23:39:30+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000515s ]
+[2019-12-29T23:39:36+08:00][sql] CONNECT:[ UseTime:0.010697s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:39:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.007995s ]
+[2019-12-29T23:39:36+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000319s ]
+[2019-12-29T23:39:36+08:00][sql] CONNECT:[ UseTime:0.010340s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:39:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007906s ]
+[2019-12-29T23:39:36+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000300s ]
+[2019-12-29T23:39:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007707s ]
+[2019-12-29T23:39:36+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000547s ]
+[2019-12-29T23:39:50+08:00][sql] CONNECT:[ UseTime:0.000618s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:39:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010775s ]
+[2019-12-29T23:39:50+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.008867s ]
+[2019-12-29T23:39:50+08:00][sql] CONNECT:[ UseTime:0.010989s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:39:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007558s ]
+[2019-12-29T23:39:50+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000386s ]
+[2019-12-29T23:39:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007951s ]
+[2019-12-29T23:39:50+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000498s ]
+[2019-12-29T23:41:26+08:00][sql] CONNECT:[ UseTime:0.000854s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:41:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.020275s ]
+[2019-12-29T23:41:26+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000403s ]
+[2019-12-29T23:41:26+08:00][sql] CONNECT:[ UseTime:0.000747s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:41:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007493s ]
+[2019-12-29T23:41:26+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000375s ]
+[2019-12-29T23:41:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008018s ]
+[2019-12-29T23:41:26+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000480s ]
+[2019-12-29T23:46:01+08:00][sql] CONNECT:[ UseTime:0.012462s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:01+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.011265s ]
+[2019-12-29T23:46:01+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000510s ]
+[2019-12-29T23:46:01+08:00][sql] CONNECT:[ UseTime:0.000653s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:01+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008405s ]
+[2019-12-29T23:46:01+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000330s ]
+[2019-12-29T23:46:01+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008025s ]
+[2019-12-29T23:46:01+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000475s ]
+[2019-12-29T23:46:04+08:00][sql] CONNECT:[ UseTime:0.000670s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008796s ]
+[2019-12-29T23:46:04+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000402s ]
+[2019-12-29T23:46:05+08:00][sql] CONNECT:[ UseTime:0.000593s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007406s ]
+[2019-12-29T23:46:05+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000291s ]
+[2019-12-29T23:46:05+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007968s ]
+[2019-12-29T23:46:05+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000533s ]
+[2019-12-29T23:46:49+08:00][sql] CONNECT:[ UseTime:0.000650s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009418s ]
+[2019-12-29T23:46:49+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000338s ]
+[2019-12-29T23:46:49+08:00][sql] CONNECT:[ UseTime:0.000612s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008078s ]
+[2019-12-29T23:46:49+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000306s ]
+[2019-12-29T23:46:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007518s ]
+[2019-12-29T23:46:49+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000427s ]
+[2019-12-29T23:46:53+08:00][sql] CONNECT:[ UseTime:0.000871s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008069s ]
+[2019-12-29T23:46:53+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000312s ]
+[2019-12-29T23:46:53+08:00][sql] CONNECT:[ UseTime:0.000629s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:46:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008314s ]
+[2019-12-29T23:46:53+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000363s ]
+[2019-12-29T23:46:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007426s ]
+[2019-12-29T23:46:53+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000549s ]
+[2019-12-29T23:47:59+08:00][sql] CONNECT:[ UseTime:0.000820s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:47:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009958s ]
+[2019-12-29T23:47:59+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000521s ]
+[2019-12-29T23:47:59+08:00][sql] CONNECT:[ UseTime:0.000654s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:47:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008656s ]
+[2019-12-29T23:47:59+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000350s ]
+[2019-12-29T23:47:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007622s ]
+[2019-12-29T23:47:59+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000449s ]
+[2019-12-29T23:48:44+08:00][sql] CONNECT:[ UseTime:0.010709s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:48:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009960s ]
+[2019-12-29T23:48:44+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000375s ]
+[2019-12-29T23:48:44+08:00][sql] CONNECT:[ UseTime:0.000606s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:48:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007582s ]
+[2019-12-29T23:48:44+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000351s ]
+[2019-12-29T23:48:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007898s ]
+[2019-12-29T23:48:44+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000465s ]
+[2019-12-29T23:48:47+08:00][sql] CONNECT:[ UseTime:0.011554s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:48:47+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008128s ]
+[2019-12-29T23:48:47+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000419s ]
+[2019-12-29T23:48:48+08:00][sql] CONNECT:[ UseTime:0.000668s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:48:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007910s ]
+[2019-12-29T23:48:48+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000359s ]
+[2019-12-29T23:48:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.009155s ]
+[2019-12-29T23:48:48+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000820s ]
+[2019-12-29T23:49:32+08:00][sql] CONNECT:[ UseTime:0.001220s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:49:32+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008046s ]
+[2019-12-29T23:49:32+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000362s ]
+[2019-12-29T23:49:33+08:00][sql] CONNECT:[ UseTime:0.000728s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:49:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009948s ]
+[2019-12-29T23:49:33+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000316s ]
+[2019-12-29T23:49:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.013938s ]
+[2019-12-29T23:49:33+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000433s ]
+[2019-12-29T23:50:25+08:00][sql] CONNECT:[ UseTime:0.000630s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:50:25+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009149s ]
+[2019-12-29T23:50:25+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001306s ]
+[2019-12-29T23:50:26+08:00][sql] CONNECT:[ UseTime:0.000721s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:50:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007781s ]
+[2019-12-29T23:50:26+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000405s ]
+[2019-12-29T23:50:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.018835s ]
+[2019-12-29T23:50:26+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000533s ]
+[2019-12-29T23:52:33+08:00][sql] CONNECT:[ UseTime:0.000761s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:52:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010101s ]
+[2019-12-29T23:52:33+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000427s ]
+[2019-12-29T23:52:33+08:00][sql] CONNECT:[ UseTime:0.000622s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:52:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008749s ]
+[2019-12-29T23:52:33+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000320s ]
+[2019-12-29T23:52:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008255s ]
+[2019-12-29T23:52:33+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000520s ]
+[2019-12-29T23:52:39+08:00][sql] CONNECT:[ UseTime:0.010862s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:52:39+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008226s ]
+[2019-12-29T23:52:39+08:00][sql] SELECT `id`,`username`,`name`,`roles`,`introduction`,`avatar` FROM `admin_users` [ RunTime:0.000331s ]
+[2019-12-29T23:52:39+08:00][sql] CONNECT:[ UseTime:0.010469s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:52:39+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.009009s ]
+[2019-12-29T23:52:39+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000355s ]
+[2019-12-29T23:52:49+08:00][sql] CONNECT:[ UseTime:0.011053s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:52:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012325s ]
+[2019-12-29T23:52:49+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000415s ]
+[2019-12-29T23:52:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008837s ]
+[2019-12-29T23:52:49+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000650s ]
+[2019-12-29T23:52:49+08:00][sql] CONNECT:[ UseTime:0.010099s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:52:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008393s ]
+[2019-12-29T23:52:49+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.000293s ]
+[2019-12-29T23:52:51+08:00][sql] CONNECT:[ UseTime:0.009806s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:52:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.013122s ]
+[2019-12-29T23:52:51+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000409s ]
+[2019-12-29T23:52:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.019462s ]
+[2019-12-29T23:52:51+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000654s ]
+[2019-12-29T23:53:43+08:00][sql] CONNECT:[ UseTime:0.000648s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:53:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.011497s ]
+[2019-12-29T23:53:43+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000429s ]
+[2019-12-29T23:53:43+08:00][sql] CONNECT:[ UseTime:0.000625s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:53:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007977s ]
+[2019-12-29T23:53:43+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000416s ]
+[2019-12-29T23:53:43+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.010193s ]
+[2019-12-29T23:53:43+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000444s ]
+[2019-12-29T23:54:03+08:00][sql] CONNECT:[ UseTime:0.000859s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:03+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010343s ]
+[2019-12-29T23:54:03+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000474s ]
+[2019-12-29T23:54:03+08:00][sql] CONNECT:[ UseTime:0.000608s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:03+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008274s ]
+[2019-12-29T23:54:03+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000519s ]
+[2019-12-29T23:54:03+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008108s ]
+[2019-12-29T23:54:03+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000447s ]
+[2019-12-29T23:54:06+08:00][sql] CONNECT:[ UseTime:0.000739s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:06+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008966s ]
+[2019-12-29T23:54:06+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000374s ]
+[2019-12-29T23:54:07+08:00][sql] CONNECT:[ UseTime:0.000589s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007508s ]
+[2019-12-29T23:54:07+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000285s ]
+[2019-12-29T23:54:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008810s ]
+[2019-12-29T23:54:07+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000595s ]
+[2019-12-29T23:54:28+08:00][sql] CONNECT:[ UseTime:0.000672s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010450s ]
+[2019-12-29T23:54:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000467s ]
+[2019-12-29T23:54:28+08:00][sql] CONNECT:[ UseTime:0.000620s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008087s ]
+[2019-12-29T23:54:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000313s ]
+[2019-12-29T23:54:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008660s ]
+[2019-12-29T23:54:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.003502s ]
+[2019-12-29T23:54:44+08:00][sql] CONNECT:[ UseTime:0.000739s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009478s ]
+[2019-12-29T23:54:44+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000412s ]
+[2019-12-29T23:54:44+08:00][sql] CONNECT:[ UseTime:0.001059s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:54:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.012853s ]
+[2019-12-29T23:54:44+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000580s ]
+[2019-12-29T23:54:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.011539s ]
+[2019-12-29T23:54:44+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.001028s ]
+[2019-12-29T23:55:11+08:00][sql] CONNECT:[ UseTime:0.000707s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:55:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010115s ]
+[2019-12-29T23:55:11+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000414s ]
+[2019-12-29T23:55:11+08:00][sql] CONNECT:[ UseTime:0.000658s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:55:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008621s ]
+[2019-12-29T23:55:11+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000332s ]
+[2019-12-29T23:55:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007884s ]
+[2019-12-29T23:55:11+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000511s ]
+[2019-12-29T23:55:28+08:00][sql] CONNECT:[ UseTime:0.000716s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:55:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009136s ]
+[2019-12-29T23:55:28+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000354s ]
+[2019-12-29T23:55:28+08:00][sql] CONNECT:[ UseTime:0.000723s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:55:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008602s ]
+[2019-12-29T23:55:28+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000384s ]
+[2019-12-29T23:55:28+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007719s ]
+[2019-12-29T23:55:28+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000508s ]
+[2019-12-29T23:56:14+08:00][sql] CONNECT:[ UseTime:0.000621s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:56:14+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009669s ]
+[2019-12-29T23:56:14+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000443s ]
+[2019-12-29T23:56:14+08:00][sql] CONNECT:[ UseTime:0.000679s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:56:14+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007859s ]
+[2019-12-29T23:56:14+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000301s ]
+[2019-12-29T23:56:14+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008545s ]
+[2019-12-29T23:56:14+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000509s ]
+[2019-12-29T23:56:53+08:00][sql] CONNECT:[ UseTime:0.000618s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:56:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009955s ]
+[2019-12-29T23:56:53+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000753s ]
+[2019-12-29T23:56:53+08:00][sql] CONNECT:[ UseTime:0.000892s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:56:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007452s ]
+[2019-12-29T23:56:53+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000302s ]
+[2019-12-29T23:56:53+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008052s ]
+[2019-12-29T23:56:53+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000436s ]
+[2019-12-29T23:57:57+08:00][sql] CONNECT:[ UseTime:0.013751s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:57:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010469s ]
+[2019-12-29T23:57:57+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000335s ]
+[2019-12-29T23:57:57+08:00][sql] CONNECT:[ UseTime:0.000644s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:57:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007918s ]
+[2019-12-29T23:57:57+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000335s ]
+[2019-12-29T23:57:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.007454s ]
+[2019-12-29T23:57:57+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000731s ]
+[2019-12-29T23:58:26+08:00][sql] CONNECT:[ UseTime:0.000670s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:58:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009005s ]
+[2019-12-29T23:58:26+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000336s ]
+[2019-12-29T23:58:26+08:00][sql] CONNECT:[ UseTime:0.000678s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:58:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007926s ]
+[2019-12-29T23:58:26+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000301s ]
+[2019-12-29T23:58:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008096s ]
+[2019-12-29T23:58:26+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000426s ]
+[2019-12-29T23:58:30+08:00][sql] CONNECT:[ UseTime:0.000725s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:58:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009800s ]
+[2019-12-29T23:58:30+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000571s ]
+[2019-12-29T23:58:30+08:00][sql] CONNECT:[ UseTime:0.000624s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:58:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.011699s ]
+[2019-12-29T23:58:30+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000288s ]
+[2019-12-29T23:58:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.010071s ]
+[2019-12-29T23:58:30+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000563s ]
+[2019-12-29T23:58:40+08:00][sql] CONNECT:[ UseTime:0.001012s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:58:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009642s ]
+[2019-12-29T23:58:40+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000373s ]
+[2019-12-29T23:58:40+08:00][sql] CONNECT:[ UseTime:0.000641s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:58:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007904s ]
+[2019-12-29T23:58:40+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.001604s ]
+[2019-12-29T23:58:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.021299s ]
+[2019-12-29T23:58:40+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000513s ]
+[2019-12-29T23:59:12+08:00][sql] CONNECT:[ UseTime:0.000625s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008983s ]
+[2019-12-29T23:59:12+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000514s ]
+[2019-12-29T23:59:13+08:00][sql] CONNECT:[ UseTime:0.000598s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.007658s ]
+[2019-12-29T23:59:13+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000402s ]
+[2019-12-29T23:59:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008173s ]
+[2019-12-29T23:59:13+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000433s ]
+[2019-12-29T23:59:27+08:00][sql] CONNECT:[ UseTime:0.000711s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.010503s ]
+[2019-12-29T23:59:27+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000345s ]
+[2019-12-29T23:59:27+08:00][sql] CONNECT:[ UseTime:0.011038s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008515s ]
+[2019-12-29T23:59:27+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000583s ]
+[2019-12-29T23:59:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008546s ]
+[2019-12-29T23:59:27+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000537s ]
+[2019-12-29T23:59:34+08:00][sql] CONNECT:[ UseTime:0.000666s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.008285s ]
+[2019-12-29T23:59:34+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001350s ]
+[2019-12-29T23:59:34+08:00][sql] CONNECT:[ UseTime:0.000639s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008191s ]
+[2019-12-29T23:59:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000412s ]
+[2019-12-29T23:59:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.008004s ]
+[2019-12-29T23:59:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000436s ]
+[2019-12-29T23:59:49+08:00][sql] CONNECT:[ UseTime:0.000711s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:49+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.009617s ]
+[2019-12-29T23:59:49+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000343s ]
+[2019-12-29T23:59:50+08:00][sql] CONNECT:[ UseTime:0.000601s ] mysql:host=127.0.0.1;port=3306;dbname=admin;charset=utf8
+[2019-12-29T23:59:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.008033s ]
+[2019-12-29T23:59:50+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.000331s ]
+[2019-12-29T23:59:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.019020s ]
+[2019-12-29T23:59:50+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.000439s ]

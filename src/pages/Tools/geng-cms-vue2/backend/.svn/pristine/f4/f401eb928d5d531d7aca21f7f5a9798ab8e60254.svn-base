@@ -1,0 +1,600 @@
+[2020-08-19T09:45:29+08:00][sql] CONNECT:[ UseTime:0.017247s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T09:45:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.040988s ]
+[2020-08-19T09:45:29+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.010421s ]
+[2020-08-19T09:45:29+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.011237s ]
+[2020-08-19T09:45:29+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvc29jaWFsLmRvY3Rvcm1lZXRpbmcuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3NvY2lhbC5kb2N0b3JtZWV0aW5nLmNvbSIsImlhdCI6MTU5NzgwMTUyOSwibmJmIjoxNTk3ODAxNTI5LCJleHAiOjE1OTg1MjE1MjksImRhdGEiOnsidXNlcmlkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZW5kdGltZSI6MTU5ODUyMTUyOX19.e_Dgi5jTltTZxSYClRy7G_vAaEGxEZ0WJ_Vzfwk0xio'  WHERE  `id` = 1 [ RunTime:0.011014s ]
+[2020-08-19T09:45:29+08:00][sql] CONNECT:[ UseTime:0.016555s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T09:45:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.021612s ]
+[2020-08-19T09:45:29+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010858s ]
+[2020-08-19T09:45:30+08:00][sql] CONNECT:[ UseTime:0.022522s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T09:45:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.035022s ]
+[2020-08-19T09:45:30+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015113s ]
+[2020-08-19T09:45:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.034369s ]
+[2020-08-19T09:45:30+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015573s ]
+[2020-08-19T11:49:31+08:00][sql] CONNECT:[ UseTime:0.022745s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:49:31+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.040266s ]
+[2020-08-19T11:49:31+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.015053s ]
+[2020-08-19T11:49:34+08:00][sql] CONNECT:[ UseTime:0.022147s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:49:34+08:00][sql] SHOW FULL COLUMNS FROM `wx_user_info` [ RunTime:0.043737s ]
+[2020-08-19T11:49:34+08:00][sql] SELECT * FROM `wx_user_info` [ RunTime:0.011715s ]
+[2020-08-19T11:49:34+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.028505s ]
+[2020-08-19T11:49:34+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.011822s ]
+[2020-08-19T11:51:26+08:00][sql] CONNECT:[ UseTime:0.023925s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:51:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.036654s ]
+[2020-08-19T11:51:26+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016579s ]
+[2020-08-19T11:51:27+08:00][sql] CONNECT:[ UseTime:0.023685s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:51:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.030901s ]
+[2020-08-19T11:51:27+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015902s ]
+[2020-08-19T11:51:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.033861s ]
+[2020-08-19T11:51:27+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016700s ]
+[2020-08-19T11:51:45+08:00][sql] CONNECT:[ UseTime:0.024921s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:51:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.046186s ]
+[2020-08-19T11:51:45+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016629s ]
+[2020-08-19T11:51:45+08:00][sql] CONNECT:[ UseTime:0.016683s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:51:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.027793s ]
+[2020-08-19T11:51:45+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011627s ]
+[2020-08-19T11:51:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025633s ]
+[2020-08-19T11:51:45+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011873s ]
+[2020-08-19T11:52:30+08:00][sql] CONNECT:[ UseTime:0.025110s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:52:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.038722s ]
+[2020-08-19T11:52:30+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016578s ]
+[2020-08-19T11:52:30+08:00][sql] CONNECT:[ UseTime:0.019057s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:52:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032501s ]
+[2020-08-19T11:52:30+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012843s ]
+[2020-08-19T11:52:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.027381s ]
+[2020-08-19T11:52:30+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.013216s ]
+[2020-08-19T11:52:48+08:00][sql] CONNECT:[ UseTime:0.019756s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:52:48+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.033326s ]
+[2020-08-19T11:52:48+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.013122s ]
+[2020-08-19T11:53:35+08:00][sql] CONNECT:[ UseTime:0.023854s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:53:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.040117s ]
+[2020-08-19T11:53:35+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015897s ]
+[2020-08-19T11:53:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.029434s ]
+[2020-08-19T11:53:35+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016122s ]
+[2020-08-19T11:54:03+08:00][sql] CONNECT:[ UseTime:0.024690s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:54:03+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.038141s ]
+[2020-08-19T11:54:03+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016440s ]
+[2020-08-19T11:54:04+08:00][sql] CONNECT:[ UseTime:0.028168s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:54:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.033238s ]
+[2020-08-19T11:54:04+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.017409s ]
+[2020-08-19T11:54:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030812s ]
+[2020-08-19T11:54:04+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.017758s ]
+[2020-08-19T11:54:04+08:00][sql] CONNECT:[ UseTime:0.019722s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:54:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.035623s ]
+[2020-08-19T11:54:04+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.013272s ]
+[2020-08-19T11:54:04+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.026888s ]
+[2020-08-19T11:54:04+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.013782s ]
+[2020-08-19T11:54:51+08:00][sql] CONNECT:[ UseTime:0.025926s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:54:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.037756s ]
+[2020-08-19T11:54:51+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016952s ]
+[2020-08-19T11:54:52+08:00][sql] CONNECT:[ UseTime:0.026337s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:54:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032675s ]
+[2020-08-19T11:54:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.017493s ]
+[2020-08-19T11:54:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.031146s ]
+[2020-08-19T11:54:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.017851s ]
+[2020-08-19T11:54:52+08:00][sql] CONNECT:[ UseTime:0.023628s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:54:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.040142s ]
+[2020-08-19T11:54:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016147s ]
+[2020-08-19T11:54:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030257s ]
+[2020-08-19T11:54:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016687s ]
+[2020-08-19T11:55:23+08:00][sql] CONNECT:[ UseTime:0.023626s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.037055s ]
+[2020-08-19T11:55:23+08:00][sql] SELECT * FROM `admin_menu` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.013635s ]
+[2020-08-19T11:55:23+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '动态列表' LIMIT 1 [ RunTime:0.013546s ]
+[2020-08-19T11:55:23+08:00][sql] UPDATE `admin_menu`  SET `alwaysShow` = 0 , `name` = '动态列表' , `title` = '动态列表'  WHERE  `id` = 79 [ RunTime:0.013119s ]
+[2020-08-19T11:55:23+08:00][sql] CONNECT:[ UseTime:0.019635s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031572s ]
+[2020-08-19T11:55:23+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.013029s ]
+[2020-08-19T11:55:23+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.031312s ]
+[2020-08-19T11:55:23+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.014016s ]
+[2020-08-19T11:55:33+08:00][sql] CONNECT:[ UseTime:0.025967s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.040913s ]
+[2020-08-19T11:55:33+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.017322s ]
+[2020-08-19T11:55:33+08:00][sql] CONNECT:[ UseTime:0.024502s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.035855s ]
+[2020-08-19T11:55:33+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016544s ]
+[2020-08-19T11:55:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.032682s ]
+[2020-08-19T11:55:33+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.017069s ]
+[2020-08-19T11:55:33+08:00][sql] CONNECT:[ UseTime:0.025575s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.036317s ]
+[2020-08-19T11:55:33+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016918s ]
+[2020-08-19T11:55:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030661s ]
+[2020-08-19T11:55:33+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.017396s ]
+[2020-08-19T11:55:47+08:00][sql] CONNECT:[ UseTime:0.015969s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:47+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.031108s ]
+[2020-08-19T11:55:47+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010883s ]
+[2020-08-19T11:55:48+08:00][sql] CONNECT:[ UseTime:0.023264s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031080s ]
+[2020-08-19T11:55:48+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015588s ]
+[2020-08-19T11:55:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030177s ]
+[2020-08-19T11:55:48+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015860s ]
+[2020-08-19T11:55:48+08:00][sql] CONNECT:[ UseTime:0.016747s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:55:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.030954s ]
+[2020-08-19T11:55:48+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011397s ]
+[2020-08-19T11:55:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.028730s ]
+[2020-08-19T11:55:48+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011927s ]
+[2020-08-19T11:56:40+08:00][sql] CONNECT:[ UseTime:0.018243s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:56:40+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.040537s ]
+[2020-08-19T11:56:40+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '动态管理' [ RunTime:0.012270s ]
+[2020-08-19T11:56:40+08:00][sql] INSERT INTO `admin_menu` SET `title` = '动态管理' , `name` = '动态管理' , `path` = '/dong' , `component` = 'Layout' , `alwaysShow` = 1 , `pid` = 0 , `rank` = 101 , `icon` = 'guide' [ RunTime:0.012358s ]
+[2020-08-19T11:56:41+08:00][sql] CONNECT:[ UseTime:0.023130s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:56:41+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031359s ]
+[2020-08-19T11:56:41+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015461s ]
+[2020-08-19T11:56:41+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024717s ]
+[2020-08-19T11:56:41+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016289s ]
+[2020-08-19T11:56:44+08:00][sql] CONNECT:[ UseTime:0.025277s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:56:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.036564s ]
+[2020-08-19T11:56:44+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016693s ]
+[2020-08-19T11:56:44+08:00][sql] CONNECT:[ UseTime:0.027112s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:56:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.043583s ]
+[2020-08-19T11:56:44+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.017883s ]
+[2020-08-19T11:56:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030969s ]
+[2020-08-19T11:56:44+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.018595s ]
+[2020-08-19T11:56:45+08:00][sql] CONNECT:[ UseTime:0.018307s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:56:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.024468s ]
+[2020-08-19T11:56:45+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011890s ]
+[2020-08-19T11:56:45+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.020098s ]
+[2020-08-19T11:56:45+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012603s ]
+[2020-08-19T11:57:02+08:00][sql] CONNECT:[ UseTime:0.016265s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:02+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.036959s ]
+[2020-08-19T11:57:02+08:00][sql] SELECT * FROM `admin_menu` WHERE  `id` = 79 LIMIT 1 [ RunTime:0.011411s ]
+[2020-08-19T11:57:02+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '动态列表' LIMIT 1 [ RunTime:0.011412s ]
+[2020-08-19T11:57:02+08:00][sql] UPDATE `admin_menu`  SET `alwaysShow` = 0 , `pid` = 88  WHERE  `id` = 79 [ RunTime:0.010790s ]
+[2020-08-19T11:57:03+08:00][sql] CONNECT:[ UseTime:0.017379s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:03+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.029390s ]
+[2020-08-19T11:57:03+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011930s ]
+[2020-08-19T11:57:03+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.020985s ]
+[2020-08-19T11:57:03+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012164s ]
+[2020-08-19T11:57:13+08:00][sql] CONNECT:[ UseTime:0.024581s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.036078s ]
+[2020-08-19T11:57:13+08:00][sql] SELECT * FROM `admin_menu` WHERE  `id` = 80 LIMIT 1 [ RunTime:0.016663s ]
+[2020-08-19T11:57:13+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '查看动态详情' LIMIT 1 [ RunTime:0.016861s ]
+[2020-08-19T11:57:13+08:00][sql] UPDATE `admin_menu`  SET `alwaysShow` = 0 , `pid` = 88  WHERE  `id` = 80 [ RunTime:0.016243s ]
+[2020-08-19T11:57:13+08:00][sql] CONNECT:[ UseTime:0.020941s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.029180s ]
+[2020-08-19T11:57:13+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010268s ]
+[2020-08-19T11:57:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.023884s ]
+[2020-08-19T11:57:13+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.010977s ]
+[2020-08-19T11:57:16+08:00][sql] CONNECT:[ UseTime:0.019611s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.037083s ]
+[2020-08-19T11:57:16+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.014024s ]
+[2020-08-19T11:57:16+08:00][sql] CONNECT:[ UseTime:0.023511s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.036746s ]
+[2020-08-19T11:57:16+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016299s ]
+[2020-08-19T11:57:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.033386s ]
+[2020-08-19T11:57:16+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015892s ]
+[2020-08-19T11:57:17+08:00][sql] CONNECT:[ UseTime:0.016002s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.025239s ]
+[2020-08-19T11:57:17+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010763s ]
+[2020-08-19T11:57:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.019568s ]
+[2020-08-19T11:57:17+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.010975s ]
+[2020-08-19T11:57:26+08:00][sql] CONNECT:[ UseTime:0.023427s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.035507s ]
+[2020-08-19T11:57:26+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.015653s ]
+[2020-08-19T11:57:27+08:00][sql] CONNECT:[ UseTime:0.016351s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.025787s ]
+[2020-08-19T11:57:27+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012291s ]
+[2020-08-19T11:57:27+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024570s ]
+[2020-08-19T11:57:27+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011321s ]
+[2020-08-19T11:57:56+08:00][sql] CONNECT:[ UseTime:0.018164s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:56+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.032352s ]
+[2020-08-19T11:57:56+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.012244s ]
+[2020-08-19T11:57:57+08:00][sql] CONNECT:[ UseTime:0.022699s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:57:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.029959s ]
+[2020-08-19T11:57:57+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015465s ]
+[2020-08-19T11:57:57+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.029446s ]
+[2020-08-19T11:57:57+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015803s ]
+[2020-08-19T11:58:20+08:00][sql] CONNECT:[ UseTime:0.023407s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:58:20+08:00][sql] SHOW FULL COLUMNS FROM `home_page_banner` [ RunTime:0.034336s ]
+[2020-08-19T11:58:20+08:00][sql] SELECT * FROM `home_page_banner` [ RunTime:0.013114s ]
+[2020-08-19T11:58:29+08:00][sql] CONNECT:[ UseTime:0.016447s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:58:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.030862s ]
+[2020-08-19T11:58:29+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011043s ]
+[2020-08-19T11:58:29+08:00][sql] CONNECT:[ UseTime:0.026607s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:58:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031252s ]
+[2020-08-19T11:58:29+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016294s ]
+[2020-08-19T11:58:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.031844s ]
+[2020-08-19T11:58:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016803s ]
+[2020-08-19T11:58:34+08:00][sql] CONNECT:[ UseTime:0.023178s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:58:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.033192s ]
+[2020-08-19T11:58:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012975s ]
+[2020-08-19T11:58:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.026090s ]
+[2020-08-19T11:58:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.013425s ]
+[2020-08-19T11:58:58+08:00][sql] CONNECT:[ UseTime:0.016096s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:58:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.030459s ]
+[2020-08-19T11:58:58+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010550s ]
+[2020-08-19T11:58:58+08:00][sql] CONNECT:[ UseTime:0.022966s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:58:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.030067s ]
+[2020-08-19T11:58:58+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015142s ]
+[2020-08-19T11:58:58+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.028730s ]
+[2020-08-19T11:58:58+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015548s ]
+[2020-08-19T11:58:59+08:00][sql] CONNECT:[ UseTime:0.017646s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:58:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031042s ]
+[2020-08-19T11:58:59+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011876s ]
+[2020-08-19T11:58:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.026042s ]
+[2020-08-19T11:58:59+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012282s ]
+[2020-08-19T11:59:07+08:00][sql] CONNECT:[ UseTime:0.022259s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.036303s ]
+[2020-08-19T11:59:07+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.014680s ]
+[2020-08-19T11:59:07+08:00][sql] CONNECT:[ UseTime:0.017454s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031420s ]
+[2020-08-19T11:59:07+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011794s ]
+[2020-08-19T11:59:07+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025527s ]
+[2020-08-19T11:59:07+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012058s ]
+[2020-08-19T11:59:08+08:00][sql] CONNECT:[ UseTime:0.025887s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.027271s ]
+[2020-08-19T11:59:08+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.017160s ]
+[2020-08-19T11:59:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025841s ]
+[2020-08-19T11:59:08+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.017475s ]
+[2020-08-19T11:59:34+08:00][sql] CONNECT:[ UseTime:0.025243s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.039694s ]
+[2020-08-19T11:59:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '小组管理' [ RunTime:0.017068s ]
+[2020-08-19T11:59:34+08:00][sql] INSERT INTO `admin_menu` SET `title` = '小组管理' , `name` = '小组管理' , `path` = '/group' , `component` = 'Layout' , `alwaysShow` = 1 , `pid` = 0 , `rank` = 103 , `icon` = 'peoples' [ RunTime:0.016894s ]
+[2020-08-19T11:59:34+08:00][sql] CONNECT:[ UseTime:0.017190s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031475s ]
+[2020-08-19T11:59:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011551s ]
+[2020-08-19T11:59:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025011s ]
+[2020-08-19T11:59:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012153s ]
+[2020-08-19T11:59:37+08:00][sql] CONNECT:[ UseTime:0.015782s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:37+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.038750s ]
+[2020-08-19T11:59:37+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010237s ]
+[2020-08-19T11:59:38+08:00][sql] CONNECT:[ UseTime:0.024696s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031370s ]
+[2020-08-19T11:59:38+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016575s ]
+[2020-08-19T11:59:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030576s ]
+[2020-08-19T11:59:38+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016789s ]
+[2020-08-19T11:59:38+08:00][sql] CONNECT:[ UseTime:0.022254s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.030950s ]
+[2020-08-19T11:59:38+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011769s ]
+[2020-08-19T11:59:38+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024987s ]
+[2020-08-19T11:59:38+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012251s ]
+[2020-08-19T11:59:50+08:00][sql] CONNECT:[ UseTime:0.025384s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.039373s ]
+[2020-08-19T11:59:50+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.017359s ]
+[2020-08-19T11:59:50+08:00][sql] CONNECT:[ UseTime:0.017993s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.027476s ]
+[2020-08-19T11:59:50+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011976s ]
+[2020-08-19T11:59:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025938s ]
+[2020-08-19T11:59:50+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011881s ]
+[2020-08-19T11:59:51+08:00][sql] CONNECT:[ UseTime:0.026423s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T11:59:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.037731s ]
+[2020-08-19T11:59:51+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.018224s ]
+[2020-08-19T11:59:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.031790s ]
+[2020-08-19T11:59:51+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.018767s ]
+[2020-08-19T12:00:34+08:00][sql] CONNECT:[ UseTime:0.027738s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:00:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.040783s ]
+[2020-08-19T12:00:34+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016261s ]
+[2020-08-19T12:00:35+08:00][sql] CONNECT:[ UseTime:0.018840s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:00:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.028536s ]
+[2020-08-19T12:00:35+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012896s ]
+[2020-08-19T12:00:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.026763s ]
+[2020-08-19T12:00:35+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.013307s ]
+[2020-08-19T12:00:35+08:00][sql] CONNECT:[ UseTime:0.023148s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:00:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.025662s ]
+[2020-08-19T12:00:35+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015970s ]
+[2020-08-19T12:00:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.035056s ]
+[2020-08-19T12:00:35+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016208s ]
+[2020-08-19T12:00:51+08:00][sql] CONNECT:[ UseTime:0.021328s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:00:51+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.033083s ]
+[2020-08-19T12:00:51+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010640s ]
+[2020-08-19T12:00:52+08:00][sql] CONNECT:[ UseTime:0.020157s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:00:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.028488s ]
+[2020-08-19T12:00:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.013561s ]
+[2020-08-19T12:00:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030083s ]
+[2020-08-19T12:00:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.013874s ]
+[2020-08-19T12:00:52+08:00][sql] CONNECT:[ UseTime:0.015384s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:00:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.024863s ]
+[2020-08-19T12:00:52+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010141s ]
+[2020-08-19T12:00:52+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.031758s ]
+[2020-08-19T12:00:52+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011256s ]
+[2020-08-19T12:01:33+08:00][sql] CONNECT:[ UseTime:0.017619s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:01:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.032600s ]
+[2020-08-19T12:01:33+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '小组列表' [ RunTime:0.011887s ]
+[2020-08-19T12:01:33+08:00][sql] INSERT INTO `admin_menu` SET `title` = '小组列表' , `name` = '小组列表' , `path` = 'group' , `component` = 'admin-pages/group/grouplist' , `alwaysShow` = 0 , `pid` = 89 , `rank` = 103 , `icon` = 'list' [ RunTime:0.011870s ]
+[2020-08-19T12:01:33+08:00][sql] CONNECT:[ UseTime:0.024713s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:01:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032310s ]
+[2020-08-19T12:01:33+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016885s ]
+[2020-08-19T12:01:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.034913s ]
+[2020-08-19T12:01:33+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.017687s ]
+[2020-08-19T12:01:36+08:00][sql] CONNECT:[ UseTime:0.016156s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:01:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.031957s ]
+[2020-08-19T12:01:36+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010050s ]
+[2020-08-19T12:01:36+08:00][sql] CONNECT:[ UseTime:0.023884s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:01:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.033621s ]
+[2020-08-19T12:01:36+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016687s ]
+[2020-08-19T12:01:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030888s ]
+[2020-08-19T12:01:36+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016822s ]
+[2020-08-19T12:01:36+08:00][sql] CONNECT:[ UseTime:0.022411s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:01:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.034926s ]
+[2020-08-19T12:01:36+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.014941s ]
+[2020-08-19T12:01:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.029922s ]
+[2020-08-19T12:01:36+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015293s ]
+[2020-08-19T12:02:42+08:00][sql] CONNECT:[ UseTime:0.015529s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:02:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032605s ]
+[2020-08-19T12:02:42+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010413s ]
+[2020-08-19T12:02:42+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.023121s ]
+[2020-08-19T12:02:42+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.010781s ]
+[2020-08-19T12:03:13+08:00][sql] CONNECT:[ UseTime:0.018646s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:03:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.038659s ]
+[2020-08-19T12:03:13+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.012247s ]
+[2020-08-19T12:03:13+08:00][sql] CONNECT:[ UseTime:0.018656s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:03:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.028510s ]
+[2020-08-19T12:03:13+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012265s ]
+[2020-08-19T12:03:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025386s ]
+[2020-08-19T12:03:13+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012766s ]
+[2020-08-19T12:03:14+08:00][sql] CONNECT:[ UseTime:0.017755s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:03:14+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031403s ]
+[2020-08-19T12:03:14+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011757s ]
+[2020-08-19T12:03:14+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024967s ]
+[2020-08-19T12:03:14+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012336s ]
+[2020-08-19T12:03:34+08:00][sql] CONNECT:[ UseTime:0.018545s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:03:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.031722s ]
+[2020-08-19T12:03:34+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.012166s ]
+[2020-08-19T12:03:34+08:00][sql] CONNECT:[ UseTime:0.017184s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:03:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.027407s ]
+[2020-08-19T12:03:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010743s ]
+[2020-08-19T12:03:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.029268s ]
+[2020-08-19T12:03:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011961s ]
+[2020-08-19T12:03:35+08:00][sql] CONNECT:[ UseTime:0.017525s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:03:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.026660s ]
+[2020-08-19T12:03:35+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011644s ]
+[2020-08-19T12:03:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024679s ]
+[2020-08-19T12:03:35+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012154s ]
+[2020-08-19T12:04:29+08:00][sql] CONNECT:[ UseTime:0.023387s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:04:29+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.033771s ]
+[2020-08-19T12:04:29+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '查看小组详情' [ RunTime:0.013075s ]
+[2020-08-19T12:04:29+08:00][sql] INSERT INTO `admin_menu` SET `title` = '查看小组详情' , `name` = '查看小组详情' , `path` = 'groupdetail/:id(\\d+)' , `component` = 'admin-pages/group/groupdetail' , `alwaysShow` = 0 , `pid` = 89 , `rank` = 0 , `icon` = 'documentation' [ RunTime:0.012840s ]
+[2020-08-19T12:04:30+08:00][sql] CONNECT:[ UseTime:0.016554s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:04:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.029312s ]
+[2020-08-19T12:04:30+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011033s ]
+[2020-08-19T12:04:30+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.021056s ]
+[2020-08-19T12:04:30+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012097s ]
+[2020-08-19T12:04:33+08:00][sql] CONNECT:[ UseTime:0.017948s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:04:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.031810s ]
+[2020-08-19T12:04:33+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.012051s ]
+[2020-08-19T12:04:33+08:00][sql] CONNECT:[ UseTime:0.022880s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:04:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.030558s ]
+[2020-08-19T12:04:33+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.014828s ]
+[2020-08-19T12:04:33+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.029351s ]
+[2020-08-19T12:04:33+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016103s ]
+[2020-08-19T12:04:34+08:00][sql] CONNECT:[ UseTime:0.023618s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:04:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.036924s ]
+[2020-08-19T12:04:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016410s ]
+[2020-08-19T12:04:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030925s ]
+[2020-08-19T12:04:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016940s ]
+[2020-08-19T12:05:02+08:00][sql] CONNECT:[ UseTime:0.017375s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:05:02+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.036320s ]
+[2020-08-19T12:05:02+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011572s ]
+[2020-08-19T12:05:02+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024824s ]
+[2020-08-19T12:05:02+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012276s ]
+[2020-08-19T12:05:12+08:00][sql] CONNECT:[ UseTime:0.025011s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:05:12+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.040520s ]
+[2020-08-19T12:05:12+08:00][sql] SELECT * FROM `admin_menu` WHERE  `id` = 90 LIMIT 1 [ RunTime:0.017027s ]
+[2020-08-19T12:05:12+08:00][sql] SELECT * FROM `admin_menu` WHERE  `title` = '小组列表' LIMIT 1 [ RunTime:0.017278s ]
+[2020-08-19T12:05:12+08:00][sql] UPDATE `admin_menu`  SET `alwaysShow` = 0 , `path` = 'grouplist'  WHERE  `id` = 90 [ RunTime:0.016963s ]
+[2020-08-19T12:05:13+08:00][sql] CONNECT:[ UseTime:0.016505s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:05:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.028673s ]
+[2020-08-19T12:05:13+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011280s ]
+[2020-08-19T12:05:13+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.022382s ]
+[2020-08-19T12:05:13+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011819s ]
+[2020-08-19T12:05:15+08:00][sql] CONNECT:[ UseTime:0.022940s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:05:15+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.035710s ]
+[2020-08-19T12:05:15+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.015200s ]
+[2020-08-19T12:05:15+08:00][sql] CONNECT:[ UseTime:0.025296s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:05:15+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.035891s ]
+[2020-08-19T12:05:15+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016047s ]
+[2020-08-19T12:05:15+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030189s ]
+[2020-08-19T12:05:15+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.017291s ]
+[2020-08-19T12:05:16+08:00][sql] CONNECT:[ UseTime:0.017475s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:05:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.024028s ]
+[2020-08-19T12:05:16+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012098s ]
+[2020-08-19T12:05:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.021933s ]
+[2020-08-19T12:05:16+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011986s ]
+[2020-08-19T12:06:25+08:00][sql] CONNECT:[ UseTime:0.018470s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:06:25+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.033662s ]
+[2020-08-19T12:06:25+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012497s ]
+[2020-08-19T12:06:25+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.032904s ]
+[2020-08-19T12:06:25+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.013011s ]
+[2020-08-19T12:07:34+08:00][sql] CONNECT:[ UseTime:0.024746s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:07:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.037484s ]
+[2020-08-19T12:07:34+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016687s ]
+[2020-08-19T12:07:34+08:00][sql] CONNECT:[ UseTime:0.017070s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:07:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.026052s ]
+[2020-08-19T12:07:34+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010610s ]
+[2020-08-19T12:07:34+08:00][sql] CONNECT:[ UseTime:0.024584s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:07:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.035864s ]
+[2020-08-19T12:07:34+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015887s ]
+[2020-08-19T12:07:34+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030648s ]
+[2020-08-19T12:07:34+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015725s ]
+[2020-08-19T12:07:35+08:00][sql] CONNECT:[ UseTime:0.023796s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:07:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.027461s ]
+[2020-08-19T12:07:35+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015794s ]
+[2020-08-19T12:07:35+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025413s ]
+[2020-08-19T12:07:35+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016143s ]
+[2020-08-19T12:07:54+08:00][sql] CONNECT:[ UseTime:0.016556s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:07:54+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.030570s ]
+[2020-08-19T12:07:54+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.010886s ]
+[2020-08-19T12:07:54+08:00][sql] CONNECT:[ UseTime:0.018918s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:07:54+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032610s ]
+[2020-08-19T12:07:54+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012294s ]
+[2020-08-19T12:07:54+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.026087s ]
+[2020-08-19T12:07:54+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012899s ]
+[2020-08-19T12:09:50+08:00][sql] CONNECT:[ UseTime:0.025667s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:09:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.043862s ]
+[2020-08-19T12:09:50+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015246s ]
+[2020-08-19T12:09:50+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.028181s ]
+[2020-08-19T12:09:50+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.015931s ]
+[2020-08-19T12:11:10+08:00][sql] CONNECT:[ UseTime:0.016443s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:11:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.031036s ]
+[2020-08-19T12:11:10+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011047s ]
+[2020-08-19T12:11:10+08:00][sql] CONNECT:[ UseTime:0.017334s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:11:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.026139s ]
+[2020-08-19T12:11:10+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.011191s ]
+[2020-08-19T12:11:10+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024387s ]
+[2020-08-19T12:11:10+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012064s ]
+[2020-08-19T12:11:11+08:00][sql] CONNECT:[ UseTime:0.018824s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:11:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.025977s ]
+[2020-08-19T12:11:11+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.012411s ]
+[2020-08-19T12:11:11+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.021492s ]
+[2020-08-19T12:11:11+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012898s ]
+[2020-08-19T12:21:09+08:00][sql] CONNECT:[ UseTime:0.026542s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:21:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.040314s ]
+[2020-08-19T12:21:09+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016051s ]
+[2020-08-19T12:21:09+08:00][sql] CONNECT:[ UseTime:0.024115s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:21:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.044088s ]
+[2020-08-19T12:21:09+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.013033s ]
+[2020-08-19T12:21:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.027027s ]
+[2020-08-19T12:21:09+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.013536s ]
+[2020-08-19T12:23:26+08:00][sql] CONNECT:[ UseTime:0.019559s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:23:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.036260s ]
+[2020-08-19T12:23:26+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.012924s ]
+[2020-08-19T12:23:26+08:00][sql] CONNECT:[ UseTime:0.020737s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:23:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.028010s ]
+[2020-08-19T12:23:26+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010575s ]
+[2020-08-19T12:23:26+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024335s ]
+[2020-08-19T12:23:26+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.011310s ]
+[2020-08-19T12:59:46+08:00][sql] CONNECT:[ UseTime:0.016396s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:59:46+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032729s ]
+[2020-08-19T12:59:46+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010681s ]
+[2020-08-19T12:59:46+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.031142s ]
+[2020-08-19T12:59:46+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.012500s ]
+[2020-08-19T12:59:47+08:00][sql] CONNECT:[ UseTime:0.024604s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:59:47+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.026829s ]
+[2020-08-19T12:59:47+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.015631s ]
+[2020-08-19T12:59:48+08:00][sql] CONNECT:[ UseTime:0.018650s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T12:59:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031397s ]
+[2020-08-19T12:59:48+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'editor' LIMIT 1 [ RunTime:0.012655s ]
+[2020-08-19T12:59:48+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025754s ]
+[2020-08-19T12:59:48+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1  AND `id` IN (77,78,79,80,81,82,83,84,87,85,86) [ RunTime:0.013221s ]
+[2020-08-19T13:00:03+08:00][sql] CONNECT:[ UseTime:0.020624s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:03+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032125s ]
+[2020-08-19T13:00:03+08:00][sql] SELECT * FROM `admin_roles` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.011090s ]
+[2020-08-19T13:00:03+08:00][sql] UPDATE `admin_roles`  SET `routes` = '77,78,81,82,83,84,87,85,86,88,79,80,89,90,91'  WHERE  `id` = 2 [ RunTime:0.010794s ]
+[2020-08-19T13:00:08+08:00][sql] CONNECT:[ UseTime:0.017491s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.032516s ]
+[2020-08-19T13:00:08+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011722s ]
+[2020-08-19T13:00:08+08:00][sql] CONNECT:[ UseTime:0.015808s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.025753s ]
+[2020-08-19T13:00:08+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.010381s ]
+[2020-08-19T13:00:08+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025111s ]
+[2020-08-19T13:00:08+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.010493s ]
+[2020-08-19T13:00:09+08:00][sql] CONNECT:[ UseTime:0.015772s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.031265s ]
+[2020-08-19T13:00:09+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.009607s ]
+[2020-08-19T13:00:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.023874s ]
+[2020-08-19T13:00:09+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.010698s ]
+[2020-08-19T13:00:09+08:00][sql] CONNECT:[ UseTime:0.017753s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:09+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.022193s ]
+[2020-08-19T13:00:09+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.012432s ]
+[2020-08-19T13:00:21+08:00][sql] CONNECT:[ UseTime:0.016728s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.031319s ]
+[2020-08-19T13:00:21+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011654s ]
+[2020-08-19T13:00:21+08:00][sql] CONNECT:[ UseTime:0.023658s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.036813s ]
+[2020-08-19T13:00:21+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.016200s ]
+[2020-08-19T13:00:21+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030288s ]
+[2020-08-19T13:00:21+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016629s ]
+[2020-08-19T13:00:22+08:00][sql] CONNECT:[ UseTime:0.023666s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.036770s ]
+[2020-08-19T13:00:22+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.015954s ]
+[2020-08-19T13:00:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.030195s ]
+[2020-08-19T13:00:22+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.016111s ]
+[2020-08-19T13:00:22+08:00][sql] CONNECT:[ UseTime:0.015754s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:00:22+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.024610s ]
+[2020-08-19T13:00:22+08:00][sql] SELECT * FROM `admin_roles` [ RunTime:0.009825s ]
+[2020-08-19T13:02:16+08:00][sql] CONNECT:[ UseTime:0.026931s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:16+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.037782s ]
+[2020-08-19T13:02:16+08:00][sql] SELECT `password` FROM `admin_users` WHERE  `username` = 'hhk' LIMIT 1 [ RunTime:0.016151s ]
+[2020-08-19T13:02:16+08:00][sql] SELECT * FROM `admin_users` WHERE  `username` = 'hhk' LIMIT 1 [ RunTime:0.016289s ]
+[2020-08-19T13:02:16+08:00][sql] UPDATE `admin_users`  SET `token` = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvc29jaWFsLmRvY3Rvcm1lZXRpbmcuY29tIiwiYXVkIjoiaHR0cHM6XC9cL3NvY2lhbC5kb2N0b3JtZWV0aW5nLmNvbSIsImlhdCI6MTU5NzgxMzMzNiwibmJmIjoxNTk3ODEzMzM2LCJleHAiOjE1OTg1MzMzMzYsImRhdGEiOnsidXNlcmlkIjo1LCJ1c2VybmFtZSI6ImhoayIsImVuZHRpbWUiOjE1OTg1MzMzMzZ9fQ.6zx7pYwCXsIkHCU2uhW09pwHd3V3vnNZwiYAPCGdGFg'  WHERE  `id` = 5 [ RunTime:0.015191s ]
+[2020-08-19T13:02:17+08:00][sql] CONNECT:[ UseTime:0.023298s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.029987s ]
+[2020-08-19T13:02:17+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.015590s ]
+[2020-08-19T13:02:17+08:00][sql] CONNECT:[ UseTime:0.016536s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032877s ]
+[2020-08-19T13:02:17+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'editor' LIMIT 1 [ RunTime:0.012029s ]
+[2020-08-19T13:02:17+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.024774s ]
+[2020-08-19T13:02:17+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1  AND `id` IN (77,78,81,82,83,84,87,85,86,88,79,80,89,90,91) [ RunTime:0.012247s ]
+[2020-08-19T13:02:22+08:00][sql] CONNECT:[ UseTime:0.016248s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:22+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.036683s ]
+[2020-08-19T13:02:22+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.012106s ]
+[2020-08-19T13:02:24+08:00][sql] CONNECT:[ UseTime:0.024161s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:24+08:00][sql] SHOW FULL COLUMNS FROM `wx_user_info` [ RunTime:0.036346s ]
+[2020-08-19T13:02:24+08:00][sql] SELECT * FROM `wx_user_info` [ RunTime:0.016199s ]
+[2020-08-19T13:02:24+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.029695s ]
+[2020-08-19T13:02:24+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.015779s ]
+[2020-08-19T13:02:32+08:00][sql] CONNECT:[ UseTime:0.017032s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:32+08:00][sql] SHOW FULL COLUMNS FROM `user_integral_consume_log` [ RunTime:0.038464s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT COUNT(*) AS think_count FROM `user_integral_consume_log` [ RunTime:0.010869s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `user_integral_consume_log` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.010742s ]
+[2020-08-19T13:02:32+08:00][sql] SHOW FULL COLUMNS FROM `wx_user_info` [ RunTime:0.024978s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.011643s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.011664s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.011524s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.011894s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.011615s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.011046s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.011173s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.010470s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.010203s ]
+[2020-08-19T13:02:32+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.011863s ]
+[2020-08-19T13:02:34+08:00][sql] CONNECT:[ UseTime:0.023598s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:34+08:00][sql] SHOW FULL COLUMNS FROM `user_integral_add_log` [ RunTime:0.034660s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT COUNT(*) AS think_count FROM `user_integral_add_log` [ RunTime:0.015179s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `user_integral_add_log` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.014675s ]
+[2020-08-19T13:02:34+08:00][sql] SHOW FULL COLUMNS FROM `wx_user_info` [ RunTime:0.028918s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.014856s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.014998s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.015829s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.015761s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.015160s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.015650s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.015405s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.015315s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.014178s ]
+[2020-08-19T13:02:34+08:00][sql] SELECT * FROM `wx_user_info` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.015424s ]
+[2020-08-19T13:02:36+08:00][sql] CONNECT:[ UseTime:0.021762s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:36+08:00][sql] SHOW FULL COLUMNS FROM `home_page_banner` [ RunTime:0.031473s ]
+[2020-08-19T13:02:36+08:00][sql] SELECT * FROM `home_page_banner` [ RunTime:0.011655s ]
+[2020-08-19T13:02:41+08:00][sql] CONNECT:[ UseTime:0.022845s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:41+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.036188s ]
+[2020-08-19T13:02:41+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.013665s ]
+[2020-08-19T13:02:44+08:00][sql] CONNECT:[ UseTime:0.024424s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.037055s ]
+[2020-08-19T13:02:44+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.015935s ]
+[2020-08-19T13:02:44+08:00][sql] CONNECT:[ UseTime:0.018016s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.032649s ]
+[2020-08-19T13:02:44+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'editor' LIMIT 1 [ RunTime:0.010447s ]
+[2020-08-19T13:02:44+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.025553s ]
+[2020-08-19T13:02:44+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1  AND `id` IN (77,78,81,82,83,84,87,85,86,88,79,80,89,90,91) [ RunTime:0.011928s ]
+[2020-08-19T13:02:44+08:00][sql] CONNECT:[ UseTime:0.022302s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:02:44+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.036036s ]
+[2020-08-19T13:02:44+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.014689s ]
+[2020-08-19T13:04:14+08:00][sql] CONNECT:[ UseTime:0.025295s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:04:14+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.040276s ]
+[2020-08-19T13:04:14+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.017637s ]
+[2020-08-19T13:04:55+08:00][sql] CONNECT:[ UseTime:0.018038s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:04:55+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.032061s ]
+[2020-08-19T13:04:55+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.012107s ]
+[2020-08-19T13:04:57+08:00][sql] CONNECT:[ UseTime:0.016856s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:04:57+08:00][sql] SHOW FULL COLUMNS FROM `wx_user_info` [ RunTime:0.032000s ]
+[2020-08-19T13:04:57+08:00][sql] SELECT * FROM `wx_user_info` [ RunTime:0.012014s ]
+[2020-08-19T13:04:57+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.027098s ]
+[2020-08-19T13:04:57+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.011683s ]
+[2020-08-19T13:06:36+08:00][sql] CONNECT:[ UseTime:0.027605s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:06:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_tip` [ RunTime:0.038882s ]
+[2020-08-19T13:06:36+08:00][sql] SELECT * FROM `admin_tip` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.017844s ]
+[2020-08-19T13:06:36+08:00][sql] SHOW FULL COLUMNS FROM `admin_tip_data` [ RunTime:0.036857s ]
+[2020-08-19T13:06:36+08:00][sql] SELECT SUM(`vote_left`) AS think_sum FROM `admin_tip_data` [ RunTime:0.017579s ]
+[2020-08-19T13:06:36+08:00][sql] SELECT SUM(`vote_right`) AS think_sum FROM `admin_tip_data` [ RunTime:0.017071s ]
+[2020-08-19T13:06:41+08:00][sql] CONNECT:[ UseTime:0.023387s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:06:41+08:00][sql] SHOW FULL COLUMNS FROM `doctor_user_info` [ RunTime:0.035774s ]
+[2020-08-19T13:06:41+08:00][sql] SELECT * FROM `doctor_user_info` [ RunTime:0.015502s ]
+[2020-08-19T13:06:59+08:00][sql] CONNECT:[ UseTime:0.024818s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:06:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_users` [ RunTime:0.046995s ]
+[2020-08-19T13:06:59+08:00][sql] SELECT * FROM `admin_users` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.016452s ]
+[2020-08-19T13:06:59+08:00][sql] CONNECT:[ UseTime:0.022061s ] mysql:host=47.99.35.129;port=3306;dbname=social;charset=utf8
+[2020-08-19T13:06:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_roles` [ RunTime:0.034855s ]
+[2020-08-19T13:06:59+08:00][sql] SELECT * FROM `admin_roles` WHERE  `name` = 'admin' LIMIT 1 [ RunTime:0.014909s ]
+[2020-08-19T13:06:59+08:00][sql] SHOW FULL COLUMNS FROM `admin_menu` [ RunTime:0.031366s ]
+[2020-08-19T13:06:59+08:00][sql] SELECT * FROM `admin_menu` WHERE  `display` = 1 [ RunTime:0.014113s ]

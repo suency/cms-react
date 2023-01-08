@@ -415,7 +415,7 @@ function Roles() {
     http
       .post("/roles/updateRoleName", { editRoleIcon, editRoleName, editRoleId })
       .then((res) => {
-        console.log(res);
+        //console.log(res);
         if (res.data.status === "OK") {
           message.success({
             content: "Save successfully!",

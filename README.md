@@ -24,11 +24,11 @@
 
 
 
-![](https://gitee.com/suency/cms-react/raw/master/screenshots/content1.png)
+![](https://raw.githubusercontent.com/suency/cms-react/master/screenshots/content1.png)
 
-![](https://gitee.com/suency/cms-react/raw/master/screenshots/content2.png)
+![](https://raw.githubusercontent.com/suency/cms-react/master/screenshots/content2.png)
 
-![](https://gitee.com/suency/cms-react/raw/master/screenshots/login.png)
+![](https://raw.githubusercontent.com/suency/cms-react/master/screenshots/login.png)
 
 ## Key Features
 

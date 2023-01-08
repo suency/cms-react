@@ -29,18 +29,14 @@ when finished, i will post api document
 <h4 align="center">CMS with reactive.js and node backend</h4>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
-  </a>
-  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
-  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
-  </a>
-  <a href="https://www.paypal.me/AmitMerchant">
-    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
-  </a>
+  <img src="https://badgen.net/badge/license/MIT/blue">
+  <img src="https://badgen.net/badge/license/MIT/blue">
+  <img src="https://badgen.net/badge/license/MIT/blue">
+  <img src="https://badgen.net/badge/license/MIT/blue">
+  <img src="https://badgen.net/badge/license/MIT/blue">
+  <img src="https://badgen.net/badge/license/MIT/blue">
 </p>
+
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
@@ -50,8 +46,11 @@ when finished, i will post api document
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
+![screenshot](https://gitee.com/suency/cms-react/raw/master/screenshots/content1.png)
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+![screenshot](https://gitee.com/suency/cms-react/raw/master/screenshots/login.png)
+
+![screenshot](https://gitee.com/suency/cms-react/raw/master/screenshots/content2.png)
 
 ## Key Features
 
